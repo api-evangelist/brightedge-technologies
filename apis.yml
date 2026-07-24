@@ -1,23 +1,730 @@
 aid: brightedge-technologies
 name: BrightEdge Technologies
-description: BrightEdge Technologies is a company surfaced as a portfolio company of battery-ventures
-  and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the
-  enrichment pipeline.
+description: >-
+  BrightEdge is an enterprise SEO and content performance marketing platform,
+  founded in 2007 and headquartered in Foster City, California. Its S3 platform
+  uses AI and machine learning (the BrightEdge "Data Cube" and Copilot/Autopilot
+  engines) to help brands research keywords, optimize content, analyze
+  competitors, audit sites, track SERP features and AI answers, and measure
+  organic search performance against revenue. The BrightEdge Platform API (v5.0)
+  is a REST interface that exposes accounts, keywords, keyword groups,
+  competitors, domains, backlinks, page crawl and cache, Core Web Vitals, market
+  insights, SERP and People-Also-Ask data, AI Catalyst share-of-answer metrics,
+  bulk export jobs, and user administration, letting enterprise customers pull
+  BrightEdge insights into platforms such as Salesforce Marketing Cloud, Domo,
+  and Marketo. BrightEdge serves 1,700+ brands including dozens of the Fortune 100.
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://logos.brightedge.com/images/be_logo.png
 url: https://raw.githubusercontent.com/api-evangelist/brightedge-technologies/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - battery-ventures
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: profiled
+x-tier-reason: enrichment-openapi-found
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
+- SEO
+- Content Marketing
+- Search
+- Marketing
+- Analytics
+- Competitive Intelligence
+- Keywords
+- Enterprise
 - Company
-apis: []
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+apis:
+- aid: brightedge-technologies:brightedge-technologies-accounts-api
+  name: BrightEdge Technologies accounts API
+  description: Operation related to accounts
+  humanURL: https://api.brightedge.com/portal
+  baseURL: https://api.brightedge.com
+  tags:
+  - accounts
+  properties:
+  - type: OpenAPI
+    url: openapi/brightedge-technologies-accounts-api-openapi.yml
+  - type: Documentation
+    url: https://api.brightedge.com/portal
+  - type: APIReference
+    url: https://api.brightedge.com/portal
+- aid: brightedge-technologies:brightedge-technologies-ai-catalyst-api
+  name: BrightEdge Technologies ai_catalyst API
+  description: APIs for ai_catalyst dataset
+  humanURL: https://api.brightedge.com/portal
+  baseURL: https://api.brightedge.com
+  tags:
+  - ai_catalyst
+  properties:
+  - type: OpenAPI
+    url: openapi/brightedge-technologies-ai-catalyst-api-openapi.yml
+  - type: Documentation
+    url: https://api.brightedge.com/portal
+  - type: APIReference
+    url: https://api.brightedge.com/portal
+- aid: brightedge-technologies:brightedge-technologies-autopilot-api
+  name: BrightEdge Technologies autopilot API
+  description: The autopilot API from BrightEdge Technologies — 4 operation(s) for autopilot.
+  humanURL: https://api.brightedge.com/portal
+  baseURL: https://api.brightedge.com
+  tags:
+  - autopilot
+  properties:
+  - type: OpenAPI
+    url: openapi/brightedge-technologies-autopilot-api-openapi.yml
+  - type: Documentation
+    url: https://api.brightedge.com/portal
+  - type: APIReference
+    url: https://api.brightedge.com/portal
+- aid: brightedge-technologies:brightedge-technologies-backlinks-api
+  name: BrightEdge Technologies backlinks API
+  description: Operation related to backlinks
+  humanURL: https://api.brightedge.com/portal
+  baseURL: https://api.brightedge.com
+  tags:
+  - backlinks
+  properties:
+  - type: OpenAPI
+    url: openapi/brightedge-technologies-backlinks-api-openapi.yml
+  - type: Documentation
+    url: https://api.brightedge.com/portal
+  - type: APIReference
+    url: https://api.brightedge.com/portal
+- aid: brightedge-technologies:brightedge-technologies-be-local-api
+  name: BrightEdge Technologies be_local API
+  description: Operation related to BE Local
+  humanURL: https://api.brightedge.com/portal
+  baseURL: https://api.brightedge.com
+  tags:
+  - be_local
+  properties:
+  - type: OpenAPI
+    url: openapi/brightedge-technologies-be-local-api-openapi.yml
+  - type: Documentation
+    url: https://api.brightedge.com/portal
+  - type: APIReference
+    url: https://api.brightedge.com/portal
+- aid: brightedge-technologies:brightedge-technologies-budd-api
+  name: BrightEdge Technologies budd API
+  description: The budd API from BrightEdge Technologies — 2 operation(s) for budd.
+  humanURL: https://api.brightedge.com/portal
+  baseURL: https://api.brightedge.com
+  tags:
+  - budd
+  properties:
+  - type: OpenAPI
+    url: openapi/brightedge-technologies-budd-api-openapi.yml
+  - type: Documentation
+    url: https://api.brightedge.com/portal
+  - type: APIReference
+    url: https://api.brightedge.com/portal
+- aid: brightedge-technologies:brightedge-technologies-bulk-export-api
+  name: BrightEdge Technologies bulk_export API
+  description: The bulk_export API from BrightEdge Technologies — 6 operation(s) for bulk_export.
+  humanURL: https://api.brightedge.com/portal
+  baseURL: https://api.brightedge.com
+  tags:
+  - bulk_export
+  properties:
+  - type: OpenAPI
+    url: openapi/brightedge-technologies-bulk-export-api-openapi.yml
+  - type: Documentation
+    url: https://api.brightedge.com/portal
+  - type: APIReference
+    url: https://api.brightedge.com/portal
+- aid: brightedge-technologies:brightedge-technologies-chrome-extension-api
+  name: BrightEdge Technologies chrome_extension API
+  description: >-
+    The chrome_extension API from BrightEdge Technologies — 12 operation(s) for chrome_extension.
+  humanURL: https://api.brightedge.com/portal
+  baseURL: https://api.brightedge.com
+  tags:
+  - chrome_extension
+  properties:
+  - type: OpenAPI
+    url: openapi/brightedge-technologies-chrome-extension-api-openapi.yml
+  - type: Documentation
+    url: https://api.brightedge.com/portal
+  - type: APIReference
+    url: https://api.brightedge.com/portal
+- aid: brightedge-technologies:brightedge-technologies-chrome-extension-keywords-api
+  name: BrightEdge Technologies Chrome Extension Keywords API
+  description: >-
+    The Chrome Extension Keywords API from BrightEdge Technologies — 6 operation(s) for chrome extension
+    keywords.
+  humanURL: https://api.brightedge.com/portal
+  baseURL: https://api.brightedge.com
+  tags:
+  - Chrome Extension Keywords
+  properties:
+  - type: OpenAPI
+    url: openapi/brightedge-technologies-chrome-extension-keywords-api-openapi.yml
+  - type: Documentation
+    url: https://api.brightedge.com/portal
+  - type: APIReference
+    url: https://api.brightedge.com/portal
+- aid: brightedge-technologies:brightedge-technologies-chrome-extension-overview-api
+  name: BrightEdge Technologies Chrome Extension Overview API
+  description: >-
+    The Chrome Extension Overview API from BrightEdge Technologies — 6 operation(s) for chrome extension
+    overview.
+  humanURL: https://api.brightedge.com/portal
+  baseURL: https://api.brightedge.com
+  tags:
+  - Chrome Extension Overview
+  properties:
+  - type: OpenAPI
+    url: openapi/brightedge-technologies-chrome-extension-overview-api-openapi.yml
+  - type: Documentation
+    url: https://api.brightedge.com/portal
+  - type: APIReference
+    url: https://api.brightedge.com/portal
+- aid: brightedge-technologies:brightedge-technologies-chromeextension-api
+  name: BrightEdge Technologies chromeextension API
+  description: Supports ChromeExtension functionality.
+  humanURL: https://api.brightedge.com/portal
+  baseURL: https://api.brightedge.com
+  tags:
+  - chromeextension
+  properties:
+  - type: OpenAPI
+    url: openapi/brightedge-technologies-chromeextension-api-openapi.yml
+  - type: Documentation
+    url: https://api.brightedge.com/portal
+  - type: APIReference
+    url: https://api.brightedge.com/portal
+- aid: brightedge-technologies:brightedge-technologies-competitors-api
+  name: BrightEdge Technologies competitors API
+  description: The competitors API from BrightEdge Technologies — 4 operation(s) for competitors.
+  humanURL: https://api.brightedge.com/portal
+  baseURL: https://api.brightedge.com
+  tags:
+  - competitors
+  properties:
+  - type: OpenAPI
+    url: openapi/brightedge-technologies-competitors-api-openapi.yml
+  - type: Documentation
+    url: https://api.brightedge.com/portal
+  - type: APIReference
+    url: https://api.brightedge.com/portal
+- aid: brightedge-technologies:brightedge-technologies-core-api
+  name: BrightEdge Technologies core API
+  description: The core API from BrightEdge Technologies — 6 operation(s) for core.
+  humanURL: https://api.brightedge.com/portal
+  baseURL: https://api.brightedge.com
+  tags:
+  - core
+  properties:
+  - type: OpenAPI
+    url: openapi/brightedge-technologies-core-api-openapi.yml
+  - type: Documentation
+    url: https://api.brightedge.com/portal
+  - type: APIReference
+    url: https://api.brightedge.com/portal
+- aid: brightedge-technologies:brightedge-technologies-datacube-searchengines-api
+  name: BrightEdge Technologies datacube_searchengines API
+  description: >-
+    The datacube_searchengines API from BrightEdge Technologies — 2 operation(s) for datacube_searchengines.
+  humanURL: https://api.brightedge.com/portal
+  baseURL: https://api.brightedge.com
+  tags:
+  - datacube_searchengines
+  properties:
+  - type: OpenAPI
+    url: openapi/brightedge-technologies-datacube-searchengines-api-openapi.yml
+  - type: Documentation
+    url: https://api.brightedge.com/portal
+  - type: APIReference
+    url: https://api.brightedge.com/portal
+- aid: brightedge-technologies:brightedge-technologies-dataset-api
+  name: BrightEdge Technologies dataset API
+  description: APIs for brightedge dataset
+  humanURL: https://api.brightedge.com/portal
+  baseURL: https://api.brightedge.com
+  tags:
+  - dataset
+  properties:
+  - type: OpenAPI
+    url: openapi/brightedge-technologies-dataset-api-openapi.yml
+  - type: Documentation
+    url: https://api.brightedge.com/portal
+  - type: APIReference
+    url: https://api.brightedge.com/portal
+- aid: brightedge-technologies:brightedge-technologies-domains-api
+  name: BrightEdge Technologies domains API
+  description: Operation related to domains
+  humanURL: https://api.brightedge.com/portal
+  baseURL: https://api.brightedge.com
+  tags:
+  - domains
+  properties:
+  - type: OpenAPI
+    url: openapi/brightedge-technologies-domains-api-openapi.yml
+  - type: Documentation
+    url: https://api.brightedge.com/portal
+  - type: APIReference
+    url: https://api.brightedge.com/portal
+- aid: brightedge-technologies:brightedge-technologies-instant-api
+  name: BrightEdge Technologies instant API
+  description: The instant API from BrightEdge Technologies — 6 operation(s) for instant.
+  humanURL: https://api.brightedge.com/portal
+  baseURL: https://api.brightedge.com
+  tags:
+  - instant
+  properties:
+  - type: OpenAPI
+    url: openapi/brightedge-technologies-instant-api-openapi.yml
+  - type: Documentation
+    url: https://api.brightedge.com/portal
+  - type: APIReference
+    url: https://api.brightedge.com/portal
+- aid: brightedge-technologies:brightedge-technologies-keywordgroups-api
+  name: BrightEdge Technologies keywordgroups API
+  description: Operation related to keyword groups
+  humanURL: https://api.brightedge.com/portal
+  baseURL: https://api.brightedge.com
+  tags:
+  - keywordgroups
+  properties:
+  - type: OpenAPI
+    url: openapi/brightedge-technologies-keywordgroups-api-openapi.yml
+  - type: Documentation
+    url: https://api.brightedge.com/portal
+  - type: APIReference
+    url: https://api.brightedge.com/portal
+- aid: brightedge-technologies:brightedge-technologies-keywords-api
+  name: BrightEdge Technologies keywords API
+  description: Operation related to keywords
+  humanURL: https://api.brightedge.com/portal
+  baseURL: https://api.brightedge.com
+  tags:
+  - keywords
+  properties:
+  - type: OpenAPI
+    url: openapi/brightedge-technologies-keywords-api-openapi.yml
+  - type: Documentation
+    url: https://api.brightedge.com/portal
+  - type: APIReference
+    url: https://api.brightedge.com/portal
+- aid: brightedge-technologies:brightedge-technologies-latest5-api
+  name: BrightEdge Technologies Latest5 API
+  description: The Latest5 API from BrightEdge Technologies — 2 operation(s) for latest5.
+  humanURL: https://api.brightedge.com/portal
+  baseURL: https://api.brightedge.com
+  tags:
+  - Latest5
+  properties:
+  - type: OpenAPI
+    url: openapi/brightedge-technologies-latest5-api-openapi.yml
+  - type: Documentation
+    url: https://api.brightedge.com/portal
+  - type: APIReference
+    url: https://api.brightedge.com/portal
+- aid: brightedge-technologies:brightedge-technologies-legacy-api
+  name: BrightEdge Technologies legacy API
+  description: Operation ported over from legacy API
+  humanURL: https://api.brightedge.com/portal
+  baseURL: https://api.brightedge.com
+  tags:
+  - legacy
+  properties:
+  - type: OpenAPI
+    url: openapi/brightedge-technologies-legacy-api-openapi.yml
+  - type: Documentation
+    url: https://api.brightedge.com/portal
+  - type: APIReference
+    url: https://api.brightedge.com/portal
+- aid: brightedge-technologies:brightedge-technologies-marketinsights-api
+  name: BrightEdge Technologies marketinsights API
+  description: Operation related to Market Insights
+  humanURL: https://api.brightedge.com/portal
+  baseURL: https://api.brightedge.com
+  tags:
+  - marketinsights
+  properties:
+  - type: OpenAPI
+    url: openapi/brightedge-technologies-marketinsights-api-openapi.yml
+  - type: Documentation
+    url: https://api.brightedge.com/portal
+  - type: APIReference
+    url: https://api.brightedge.com/portal
+- aid: brightedge-technologies:brightedge-technologies-marketo-api
+  name: BrightEdge Technologies marketo API
+  description: APIs for marketo
+  humanURL: https://api.brightedge.com/portal
+  baseURL: https://api.brightedge.com
+  tags:
+  - marketo
+  properties:
+  - type: OpenAPI
+    url: openapi/brightedge-technologies-marketo-api-openapi.yml
+  - type: Documentation
+    url: https://api.brightedge.com/portal
+  - type: APIReference
+    url: https://api.brightedge.com/portal
+- aid: brightedge-technologies:brightedge-technologies-organizations-api
+  name: BrightEdge Technologies organizations API
+  description: Operation related to organizations
+  humanURL: https://api.brightedge.com/portal
+  baseURL: https://api.brightedge.com
+  tags:
+  - organizations
+  properties:
+  - type: OpenAPI
+    url: openapi/brightedge-technologies-organizations-api-openapi.yml
+  - type: Documentation
+    url: https://api.brightedge.com/portal
+  - type: APIReference
+    url: https://api.brightedge.com/portal
+- aid: brightedge-technologies:brightedge-technologies-paa-per-keyword-api
+  name: BrightEdge Technologies paa per keyword API
+  description: >-
+    The paa per keyword API from BrightEdge Technologies — 4 operation(s) for paa per keyword.
+  humanURL: https://api.brightedge.com/portal
+  baseURL: https://api.brightedge.com
+  tags:
+  - paa per keyword
+  properties:
+  - type: OpenAPI
+    url: openapi/brightedge-technologies-paa-per-keyword-api-openapi.yml
+  - type: Documentation
+    url: https://api.brightedge.com/portal
+  - type: APIReference
+    url: https://api.brightedge.com/portal
+- aid: brightedge-technologies:brightedge-technologies-page-cache-api
+  name: BrightEdge Technologies page cache API
+  description: The page cache API from BrightEdge Technologies — 4 operation(s) for page cache.
+  humanURL: https://api.brightedge.com/portal
+  baseURL: https://api.brightedge.com
+  tags:
+  - page cache
+  properties:
+  - type: OpenAPI
+    url: openapi/brightedge-technologies-page-cache-api-openapi.yml
+  - type: Documentation
+    url: https://api.brightedge.com/portal
+  - type: APIReference
+    url: https://api.brightedge.com/portal
+- aid: brightedge-technologies:brightedge-technologies-page-crawl-api
+  name: BrightEdge Technologies page crawl API
+  description: The page crawl API from BrightEdge Technologies — 4 operation(s) for page crawl.
+  humanURL: https://api.brightedge.com/portal
+  baseURL: https://api.brightedge.com
+  tags:
+  - page crawl
+  properties:
+  - type: OpenAPI
+    url: openapi/brightedge-technologies-page-crawl-api-openapi.yml
+  - type: Documentation
+    url: https://api.brightedge.com/portal
+  - type: APIReference
+    url: https://api.brightedge.com/portal
+- aid: brightedge-technologies:brightedge-technologies-pages-api
+  name: BrightEdge Technologies Pages API
+  description: The Pages API from BrightEdge Technologies — 2 operation(s) for pages.
+  humanURL: https://api.brightedge.com/portal
+  baseURL: https://api.brightedge.com
+  tags:
+  - Pages
+  properties:
+  - type: OpenAPI
+    url: openapi/brightedge-technologies-pages-api-openapi.yml
+  - type: Documentation
+    url: https://api.brightedge.com/portal
+  - type: APIReference
+    url: https://api.brightedge.com/portal
+- aid: brightedge-technologies:brightedge-technologies-people-also-ask-api
+  name: BrightEdge Technologies people_also_ask API
+  description: >-
+    The people_also_ask API from BrightEdge Technologies — 8 operation(s) for people_also_ask.
+  humanURL: https://api.brightedge.com/portal
+  baseURL: https://api.brightedge.com
+  tags:
+  - people_also_ask
+  properties:
+  - type: OpenAPI
+    url: openapi/brightedge-technologies-people-also-ask-api-openapi.yml
+  - type: Documentation
+    url: https://api.brightedge.com/portal
+  - type: APIReference
+    url: https://api.brightedge.com/portal
+- aid: brightedge-technologies:brightedge-technologies-ping-api
+  name: BrightEdge Technologies ping API
+  description: The ping API from BrightEdge Technologies — 4 operation(s) for ping.
+  humanURL: https://api.brightedge.com/portal
+  baseURL: https://api.brightedge.com
+  tags:
+  - ping
+  properties:
+  - type: OpenAPI
+    url: openapi/brightedge-technologies-ping-api-openapi.yml
+  - type: Documentation
+    url: https://api.brightedge.com/portal
+  - type: APIReference
+    url: https://api.brightedge.com/portal
+- aid: brightedge-technologies:brightedge-technologies-product-grid-api
+  name: BrightEdge Technologies product_grid API
+  description: APIs for product grid
+  humanURL: https://api.brightedge.com/portal
+  baseURL: https://api.brightedge.com
+  tags:
+  - product_grid
+  properties:
+  - type: OpenAPI
+    url: openapi/brightedge-technologies-product-grid-api-openapi.yml
+  - type: Documentation
+    url: https://api.brightedge.com/portal
+  - type: APIReference
+    url: https://api.brightedge.com/portal
+- aid: brightedge-technologies:brightedge-technologies-qa-api
+  name: BrightEdge Technologies qa API
+  description: The qa API from BrightEdge Technologies — 2 operation(s) for qa.
+  humanURL: https://api.brightedge.com/portal
+  baseURL: https://api.brightedge.com
+  tags:
+  - qa
+  properties:
+  - type: OpenAPI
+    url: openapi/brightedge-technologies-qa-api-openapi.yml
+  - type: Documentation
+    url: https://api.brightedge.com/portal
+  - type: APIReference
+    url: https://api.brightedge.com/portal
+- aid: brightedge-technologies:brightedge-technologies-query-api
+  name: BrightEdge Technologies query API
+  description: Retrieving data with BQL queries
+  humanURL: https://api.brightedge.com/portal
+  baseURL: https://api.brightedge.com
+  tags:
+  - query
+  properties:
+  - type: OpenAPI
+    url: openapi/brightedge-technologies-query-api-openapi.yml
+  - type: Documentation
+    url: https://api.brightedge.com/portal
+  - type: APIReference
+    url: https://api.brightedge.com/portal
+- aid: brightedge-technologies:brightedge-technologies-recommendations-api
+  name: BrightEdge Technologies recommendations API
+  description: >-
+    The recommendations API from BrightEdge Technologies — 6 operation(s) for recommendations.
+  humanURL: https://api.brightedge.com/portal
+  baseURL: https://api.brightedge.com
+  tags:
+  - recommendations
+  properties:
+  - type: OpenAPI
+    url: openapi/brightedge-technologies-recommendations-api-openapi.yml
+  - type: Documentation
+    url: https://api.brightedge.com/portal
+  - type: APIReference
+    url: https://api.brightedge.com/portal
+- aid: brightedge-technologies:brightedge-technologies-searchengines-api
+  name: BrightEdge Technologies searchengines API
+  description: Operation related to search engines
+  humanURL: https://api.brightedge.com/portal
+  baseURL: https://api.brightedge.com
+  tags:
+  - searchengines
+  properties:
+  - type: OpenAPI
+    url: openapi/brightedge-technologies-searchengines-api-openapi.yml
+  - type: Documentation
+    url: https://api.brightedge.com/portal
+  - type: APIReference
+    url: https://api.brightedge.com/portal
+- aid: brightedge-technologies:brightedge-technologies-serp-features-api
+  name: BrightEdge Technologies Serp Features API
+  description: Operation related to Serp features like People Also Ask etc
+  humanURL: https://api.brightedge.com/portal
+  baseURL: https://api.brightedge.com
+  tags:
+  - Serp Features
+  properties:
+  - type: OpenAPI
+    url: openapi/brightedge-technologies-serp-features-api-openapi.yml
+  - type: Documentation
+    url: https://api.brightedge.com/portal
+  - type: APIReference
+    url: https://api.brightedge.com/portal
+- aid: brightedge-technologies:brightedge-technologies-time-api
+  name: BrightEdge Technologies time API
+  description: Operation related to time
+  humanURL: https://api.brightedge.com/portal
+  baseURL: https://api.brightedge.com
+  tags:
+  - time
+  properties:
+  - type: OpenAPI
+    url: openapi/brightedge-technologies-time-api-openapi.yml
+  - type: Documentation
+    url: https://api.brightedge.com/portal
+  - type: APIReference
+    url: https://api.brightedge.com/portal
+- aid: brightedge-technologies:brightedge-technologies-top-keywords-for-a-domain-api
+  name: BrightEdge Technologies top keywords for a domain API
+  description: >-
+    The top keywords for a domain API from BrightEdge Technologies — 4 operation(s) for top keywords for
+    a domain.
+  humanURL: https://api.brightedge.com/portal
+  baseURL: https://api.brightedge.com
+  tags:
+  - top keywords for a domain
+  properties:
+  - type: OpenAPI
+    url: openapi/brightedge-technologies-top-keywords-for-a-domain-api-openapi.yml
+  - type: Documentation
+    url: https://api.brightedge.com/portal
+  - type: APIReference
+    url: https://api.brightedge.com/portal
+- aid: brightedge-technologies:brightedge-technologies-top-keywords-per-page-api
+  name: BrightEdge Technologies top keywords per page API
+  description: >-
+    The top keywords per page API from BrightEdge Technologies — 4 operation(s) for top keywords per page.
+  humanURL: https://api.brightedge.com/portal
+  baseURL: https://api.brightedge.com
+  tags:
+  - top keywords per page
+  properties:
+  - type: OpenAPI
+    url: openapi/brightedge-technologies-top-keywords-per-page-api-openapi.yml
+  - type: Documentation
+    url: https://api.brightedge.com/portal
+  - type: APIReference
+    url: https://api.brightedge.com/portal
+- aid: brightedge-technologies:brightedge-technologies-top-pages-api
+  name: BrightEdge Technologies top pages API
+  description: The top pages API from BrightEdge Technologies — 4 operation(s) for top pages.
+  humanURL: https://api.brightedge.com/portal
+  baseURL: https://api.brightedge.com
+  tags:
+  - top pages
+  properties:
+  - type: OpenAPI
+    url: openapi/brightedge-technologies-top-pages-api-openapi.yml
+  - type: Documentation
+    url: https://api.brightedge.com/portal
+  - type: APIReference
+    url: https://api.brightedge.com/portal
+- aid: brightedge-technologies:brightedge-technologies-user-settings-api
+  name: BrightEdge Technologies user_settings API
+  description: The user_settings API from BrightEdge Technologies — 4 operation(s) for user_settings.
+  humanURL: https://api.brightedge.com/portal
+  baseURL: https://api.brightedge.com
+  tags:
+  - user_settings
+  properties:
+  - type: OpenAPI
+    url: openapi/brightedge-technologies-user-settings-api-openapi.yml
+  - type: Documentation
+    url: https://api.brightedge.com/portal
+  - type: APIReference
+    url: https://api.brightedge.com/portal
+- aid: brightedge-technologies:brightedge-technologies-users-api
+  name: BrightEdge Technologies users API
+  description: Operation related to users
+  humanURL: https://api.brightedge.com/portal
+  baseURL: https://api.brightedge.com
+  tags:
+  - users
+  properties:
+  - type: OpenAPI
+    url: openapi/brightedge-technologies-users-api-openapi.yml
+  - type: Documentation
+    url: https://api.brightedge.com/portal
+  - type: APIReference
+    url: https://api.brightedge.com/portal
+- aid: brightedge-technologies:brightedge-technologies-web-vitals-api
+  name: BrightEdge Technologies web_vitals API
+  description: The web_vitals API from BrightEdge Technologies — 4 operation(s) for web_vitals.
+  humanURL: https://api.brightedge.com/portal
+  baseURL: https://api.brightedge.com
+  tags:
+  - web_vitals
+  properties:
+  - type: OpenAPI
+    url: openapi/brightedge-technologies-web-vitals-api-openapi.yml
+  - type: Documentation
+    url: https://api.brightedge.com/portal
+  - type: APIReference
+    url: https://api.brightedge.com/portal
+- aid: brightedge-technologies:brightedge-technologies-webhook-api
+  name: BrightEdge Technologies webhook API
+  description: The webhook API from BrightEdge Technologies — 2 operation(s) for webhook.
+  humanURL: https://api.brightedge.com/portal
+  baseURL: https://api.brightedge.com
+  tags:
+  - webhook
+  properties:
+  - type: OpenAPI
+    url: openapi/brightedge-technologies-webhook-api-openapi.yml
+  - type: Documentation
+    url: https://api.brightedge.com/portal
+  - type: APIReference
+    url: https://api.brightedge.com/portal
+common:
+- type: DeveloperPortal
+  url: https://api.brightedge.com/portal
+- type: Documentation
+  url: https://api.brightedge.com/portal
+- type: APIReference
+  url: https://api.brightedge.com/portal
+- type: Integrations
+  url: https://www.brightedge.com/products/integrations
+- type: Blog
+  url: https://www.brightedge.com/blog
+- type: PrivacyPolicy
+  url: https://www.brightedge.com/privacy
+- type: TermsOfService
+  url: https://www.brightedge.com/legal
+- type: Support
+  url: https://www.brightedge.com/contact-us
+- type: GitHubOrganization
+  url: https://github.com/brightedge
+- type: AgenticAccess
+  url: agentic-access/brightedge-technologies-agentic-access.yml
+- type: Authentication
+  url: authentication/brightedge-technologies-authentication.yml
+- type: Conventions
+  url: conventions/brightedge-technologies-conventions.yml
+- type: ErrorCatalog
+  url: errors/brightedge-technologies-problem-types.yml
+- type: Lifecycle
+  url: lifecycle/brightedge-technologies-lifecycle.yml
+- type: MCPServer
+  url: mcp/brightedge-technologies-mcp.yml
+- type: Conformance
+  url: conformance/brightedge-technologies-conformance.yml
+- type: DataModel
+  url: data-model/brightedge-technologies-data-model.yml
+- type: LLMsTxt
+  url: llms/brightedge-technologies-llms.txt
+- type: WellKnown
+  url: well-known/brightedge-technologies-well-known.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: DomainSecurity
+  url: security/brightedge-technologies-domain-security.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

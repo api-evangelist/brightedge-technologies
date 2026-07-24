@@ -1,0 +1,31 @@
+# BrightEdge Technologies
+
+> BrightEdge is an enterprise SEO and content performance marketing platform (founded 2007, Foster City, CA). Its AI/ML "Data Cube" powers keyword research, content optimization, competitive analysis, site auditing, SERP and AI-answer tracking, and organic-search measurement for 1,700+ brands. The BrightEdge Platform API (v5.0) is a gated REST API exposing accounts, keywords, competitors, domains, backlinks, page crawl, Core Web Vitals, market insights, AI Catalyst answer metrics, bulk export, and user administration.
+
+## APIs
+- [BrightEdge Platform API (Swagger portal)](https://api.brightedge.com/portal): interactive OpenAPI 3.1 reference, 242 paths / 248 operations across 40+ tags.
+- [BrightEdge Connect API](https://www.brightedge.com/technology/integration/connect-api): REST protocol connecting content performance, social, web analytics, and marketing KPIs.
+
+## Specs & artifacts
+- [OpenAPI 3.1 spec](openapi/brightedge-technologies-platform-openapi-original.json)
+- [OpenAPI Overlay (AE enhancements)](overlays/brightedge-technologies-platform-overlay.yaml)
+- [Authentication profile](authentication/brightedge-technologies-authentication.yml)
+- [API conventions](conventions/brightedge-technologies-conventions.yml)
+- [Error catalog](errors/brightedge-technologies-problem-types.yml)
+- [Lifecycle & versioning](lifecycle/brightedge-technologies-lifecycle.yml)
+- [Data model / ERD](data-model/brightedge-technologies-data-model.yml)
+- [Conformance](conformance/brightedge-technologies-conformance.yml)
+- [MCP server (candidate tools)](mcp/brightedge-technologies-mcp.yml)
+- [Agent Skills](skills/_index.yml)
+- [Agentic access contracts](agentic-access/brightedge-technologies-agentic-access.yml)
+- [Domain security probe](security/brightedge-technologies-domain-security.yml)
+
+## Docs
+- [Developer portal / API reference](https://api.brightedge.com/portal)
+- [Integrations](https://www.brightedge.com/products/integrations)
+- [SEO Platform](https://www.brightedge.com/products/platform)
+- [Blog](https://www.brightedge.com/blog)
+- [Contact / support](https://www.brightedge.com/contact-us)
+
+## Auth
+- HTTP Basic (username/password with API permission) or token headers: X-Token, Bearer-Token, X-BRIGHTEDGE-SESSION. Contact your BrightEdge representative to enable API access. No public OAuth. No public sign-up (enterprise).

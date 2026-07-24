@@ -1,0 +1,41 @@
+generated: '2026-07-18'
+method: derived
+source: openapi/brightedge-technologies-platform-openapi-original.json
+versioning:
+  scheme: uri-path
+  current: 5.0.0
+  versions:
+  - /5.0
+  - /latest5
+  docs: https://api.brightedge.com/portal
+deprecation:
+  policy_url: null
+  sunset_header: false
+  note: No public deprecation policy or RFC 8594 Sunset/Deprecation header support documented; a "legacy"
+    tag exists on some operations.
+sla:
+  url: null
+  note: No public SLA (enterprise contract).
+status_page: null
+deprecated_operations: []
+legacy_tagged_operations:
+- get_all_accounts_3_0_objects_accounts_get
+- get_account_3_0_objects_accounts__account_id__post
+- get_all_accounts_latest3_objects_accounts_get
+- get_account_latest3_objects_accounts__account_id__post
+- get_account_keywordgroups_3_0_objects_keywordgroups__account_id__get
+- get_account_keywordgroup_detail_3_0_objects_keywordgroups__account_id___keyword_group_id__get
+- get_account_keywordgroups_latest3_objects_keywordgroups__account_id__get
+- get_account_keywordgroup_detail_latest3_objects_keywordgroups__account_id___keyword_group_id__get
+- get_user_domains_3_0_objects_domains_get
+- get_account_domain_3_0_objects_domains__account_id__get
+- get_user_domains_latest3_objects_domains_get
+- get_account_domain_latest3_objects_domains__account_id__get
+- get_account_competitors_3_0_objects_competitors__account_id__get
+- get_account_competitors_latest3_objects_competitors__account_id__get
+- get_account_keywords_3_0_objects_keywords__account_id__get
+- get_account_keywords_latest3_objects_keywords__account_id__get
+- get_time_value_3_0_objects_time__account_id___time_frequency___day__get
+- get_time_value_latest3_objects_time__account_id___time_frequency___day__get
+- get_account_datacube_searchengines_3_0_objects_datacube_searchengines__account_id__get
+- get_account_datacube_searchengines_latest3_objects_datacube_searchengines__account_id__get

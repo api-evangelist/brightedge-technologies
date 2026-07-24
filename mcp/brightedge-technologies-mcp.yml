@@ -1,0 +1,468 @@
+generated: '2026-07-18'
+method: derived
+status: candidate
+source: openapi/brightedge-technologies-platform-openapi-original.json
+note: No official BrightEdge MCP server found. Candidate tool list derived from OpenAPI operations (v5.0
+  surface, latest5 mirrors omitted). Auth is HTTP Basic / token header per authentication/.
+server:
+  name: brightedge
+  transport: http
+  url: null
+tool_count: 91
+tools:
+- name: get_all_accounts
+  description: This call returns the list of accounts this user can access
+  method: GET
+  path: /5.0/objects/accounts
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#get_all_accounts_5_0_objects_accounts_get
+- name: get_account
+  description: This call returns the details of an individual account
+  method: POST
+  path: /5.0/objects/accounts/{account_id}
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#get_account_5_0_objects_accounts__account_id__post
+- name: save_multi_edit_changes
+  description: This call saves multi edit changes
+  method: POST
+  path: /5.0/objects/be_local/save_multi_edit_changes
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#save_multi_edit_changes_5_0_objects_be_local_save_multi_edit_changes_post
+- name: update_fields
+  description: This call fetches all the quick wins tasks for a location
+  method: POST
+  path: /5.0/objects/be_local/update_fields
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#update_fields_5_0_objects_be_local_update_fields_post
+- name: get_location_details_v2
+  description: This call fetches all the locations linked to be_account
+  method: POST
+  path: /5.0/objects/be_local/get_location_details_v2
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#get_location_details_v2_5_0_objects_be_local_get_location_details_v2_post
+- name: get_all_gmb_attributes
+  description: This call fetches all the attributes
+  method: POST
+  path: /5.0/objects/be_local/get_all_gmb_attributes
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#get_all_gmb_attributes_5_0_objects_be_local_get_all_gmb_attributes_post
+- name: get_all_location_attributes
+  description: This call fetches all the location attributes
+  method: POST
+  path: /5.0/objects/be_local/get_all_location_attributes
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#get_all_location_attributes_5_0_objects_be_local_get_all_location_attributes_post
+- name: store_updates
+  description: Proxy store updates to prod platform-ui-api
+  method: POST
+  path: /5.0/objects/be_local/store_updates
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#store_updates_5_0_objects_be_local_store_updates_post
+- name: store_updates_staging
+  description: Proxy store updates to staging platform-ui-api
+  method: POST
+  path: /5.0/objects/be_local/staging/store_updates
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#store_updates_staging_5_0_objects_be_local_staging_store_updates_post
+- name: get_account_competitors
+  description: This call returns a competitors for given account id
+  method: GET
+  path: /5.0/objects/competitors/{account_id}
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#get_account_competitors_5_0_objects_competitors__account_id__get
+- name: get_brand_filters_keywords_for_account
+  description: This call returns a string of bql filters for branded keywords.
+  method: GET
+  path: /5.0/objects/brandfilters/{account_id}
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#get_brand_filters_keywords_for_account_5_0_objects_brandfilters__account_id__get
+- name: api_info
+  description: Api Info
+  method: GET
+  path: /5.0/info
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#api_info_5_0_info_get
+- name: high_latency_handle
+  description: This call is used for concurrency load test
+  method: GET
+  path: /5.0/high-latency-handle/{msec}
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#high_latency_handle_5_0_high_latency_handle__msec__get
+- name: async_high_latency_handle
+  description: This call is used for concurrency load test
+  method: GET
+  path: /5.0/async-high-latency-handle/{msec}
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#async_high_latency_handle_5_0_async_high_latency_handle__msec__get
+- name: get_time_value
+  description: This call returns the time value for a given time frequency and day
+  method: GET
+  path: /5.0/objects/time/{account_id}/{time_frequency}/{day}
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#get_time_value_5_0_objects_time__account_id___time_frequency___day__get
+- name: get_kw_groups
+  description: This call returns a list of keywordgroups for a given account
+  method: GET
+  path: /5.0/chromeextension/keywordgroups/{account_id}
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#get_kw_groups_5_0_chromeextension_keywordgroups__account_id__get
+- name: get_account_kw_kwg_id
+  description: This call returns a list of keywords with kwg_id for a given account
+  method: GET
+  path: /5.0/chromeextension/keywords/{account_id}
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#get_account_kw_kwg_id_5_0_chromeextension_keywords__account_id__get
+- name: associate_dissociate_keywords_with_group
+  description: This call adds keywords to a keyword group
+  method: POST
+  path: /5.0/chromeextension/keywordgroupactions/{account_id}
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#associate_dissociate_keywords_with_group_5_0_chromeextension_keywordgroupactions__account_id__post
+- name: get_user_domains
+  description: This call returns a list of primary domains for accounts that the user has access to.
+  method: GET
+  path: /5.0/objects/domains
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#get_user_domains_5_0_objects_domains_get
+- name: get_account_domain
+  description: This call returns a primary domain for given account id
+  method: GET
+  path: /5.0/objects/domains/{account_id}
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#get_account_domain_5_0_objects_domains__account_id__get
+- name: get_account_keywords
+  description: This call returns a list of keywords of the given account
+  method: GET
+  path: /5.0/objects/keywords/{account_id}
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#get_account_keywords_5_0_objects_keywords__account_id__get
+- name: get_keywords_activity
+  description: This call returns list of keyword activities per account
+  method: GET
+  path: /5.0/objects/keywordgroups/activity/{group_name}
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#get_keywords_activity_5_0_objects_keywordgroups_activity__group_name__get
+- name: get_account_keywordgroups
+  description: This call returns a list of keyword groups of the given account
+  method: GET
+  path: /5.0/objects/keywordgroups/{account_id}
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#get_account_keywordgroups_5_0_objects_keywordgroups__account_id__get
+- name: get_account_keywordgroup_detail
+  description: This call returns a list of keywords within the give keyword group
+  method: GET
+  path: /5.0/objects/keywordgroups/{account_id}/{keyword_group_id}
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#get_account_keywordgroup_detail_5_0_objects_keywordgroups__account_id___keyword_group_id__get
+- name: add_kw_to_kwg_in_account
+  description: '[WIP] This call adds a list of keywords to the give keyword group'
+  method: POST
+  path: /5.0/objects/keywordgroups/{account_id}/{keyword_group_id}
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#add_kw_to_kwg_in_account_5_0_objects_keywordgroups__account_id___keyword_group_id__post
+- name: organizations_self
+  description: This call returns the details of this user's organization
+  method: GET
+  path: /5.0/objects/organizations/self
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#organizations_self_5_0_objects_organizations_self_get
+- name: get_users
+  description: This call returns the details of all active users in this organization with their accounts
+  method: GET
+  path: /5.0/organizations/objects/users
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#get_users_5_0_organizations_objects_users_get
+- name: organizations_bulk_accounts
+  description: This call returns the details of all accounts in this organization
+  method: GET
+  path: /5.0/organizations/objects/accounts
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#organizations_bulk_accounts_5_0_organizations_objects_accounts_get
+- name: market_insights_data_request
+  description: Returns the list of reports available for downloading.
+  method: GET
+  path: /5.0/organizations/marketinsights/data/{date_id}
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#market_insights_data_request_5_0_organizations_marketinsights_data__date_id__get
+- name: get_query_results
+  description: '[Work in Progrees]: This call returns data based on submitted BQL (BrightEdge Query Language)
+    request'
+  method: POST
+  path: /5.0/objects/query/{account_id}
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#get_query_results_5_0_objects_query__account_id__post
+- name: get_account_searchengines
+  description: This call returns a list of search engines for given account id
+  method: GET
+  path: /5.0/objects/searchengines/{account_id}
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#get_account_searchengines_5_0_objects_searchengines__account_id__get
+- name: get_recommendation
+  description: This call returns a list of recommendations for accounts of the user's organization.
+  method: GET
+  path: /5.0/organizations/objects/recommendations
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#get_recommendation_5_0_organizations_objects_recommendations_get
+- name: get_keyword_recommendation_details
+  description: This call returns details of keyword recommendation
+  method: POST
+  path: /5.0/organizations/objects/pbr_page_keyword_pop_up/{account_id}
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#get_keyword_recommendation_details_5_0_organizations_objects_pbr_page_keyword_pop_up__account_id__post
+- name: change_keyword_priority
+  description: This endpoint allows change priority of keywords
+  method: POST
+  path: /5.0/organizations/objects/pbr_keywords/{account_id}
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#change_keyword_priority_5_0_organizations_objects_pbr_keywords__account_id__post
+- name: get_tracked_pages
+  description: This call returns list of tracked pages
+  method: GET
+  path: /5.0/organizations/objects/get_tracked_pages/{account_id}
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#get_tracked_pages_5_0_organizations_objects_get_tracked_pages__account_id__get
+- name: get_keyword_linked_questions
+  description: This call returns a list of questions asked for the keyword historically for the past n-weeks
+  method: POST
+  path: /5.0/objects/serp_features/people_also_ask_historical
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#get_keyword_linked_questions_5_0_objects_serp_features_people_also_ask_historical_post
+- name: get_live_questions
+  description: This call returns a list of questions asked for the keyword as a live call
+  method: POST
+  path: /5.0/objects/serp_features/people_also_ask_live
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#get_live_questions_5_0_objects_serp_features_people_also_ask_live_post
+- name: get_site_audit_page_group_details
+  description: This call returns a list of recommendations for accounts of the user's organization.
+  method: POST
+  path: /5.0/organizations/objects/site_audit_page_group
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#get_site_audit_page_group_details_5_0_organizations_objects_site_audit_page_group_post
+- name: get_site_audit_crawl_report
+  description: This call returns a list of recommendations for accounts of the user's organization.
+  method: POST
+  path: /5.0/organizations/objects/site_audit_crawl_report
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#get_site_audit_crawl_report_5_0_organizations_objects_site_audit_crawl_report_post
+- name: get_kw_ideas_result
+  description: Get Kw Ideas Result
+  method: POST
+  path: /5.0/instant/keywordIdeas/{organization_id}/{request_id}
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#get_kw_ideas_result_5_0_instant_keywordIdeas__organization_id___request_id__post
+- name: submit_kw_for_ideas
+  description: Submit Kw For Ideas
+  method: POST
+  path: /5.0/instant/keywordIdeas/{organization_id}
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#submit_kw_for_ideas_5_0_instant_keywordIdeas__organization_id__post
+- name: process_webhook
+  description: Process Webhook
+  method: POST
+  path: /5.0/instant/webhook/{provider}/kw_ideas/{request_id}
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#process_webhook_5_0_instant_webhook__provider__kw_ideas__request_id__post
+- name: save_site_info
+  description: Save Site Info
+  method: POST
+  path: /5.0/web_vitals/{account_id}/{device_type}
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#save_site_info_5_0_web_vitals__account_id___device_type__post
+- name: get_site_info
+  description: Get Site Info
+  method: POST
+  path: /5.0/web_vitals/results/{account_id}/{device_type}
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#get_site_info_5_0_web_vitals_results__account_id___device_type__post
+- name: get_siteaudit_settings
+  description: This call return the user settings for recommendations
+  method: GET
+  path: /5.0/user_settings/recommendations/{account_id}
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#get_siteaudit_settings_5_0_user_settings_recommendations__account_id__get
+- name: apf_update_certificate
+  description: This method allows customer to manually their SSL certificate.
+  method: POST
+  path: /5.0/autopilot/foundations/1.0/update_certificate
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#apf_update_certificate_5_0_autopilot_foundations_1_0_update_certificate_post
+- name: images
+  description: Get Image tags Alt texts
+  method: POST
+  path: /5.0/chrome_extension/overview/images
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#images_5_0_chrome_extension_overview_images_post
+- name: content
+  description: Get Page Contents
+  method: POST
+  path: /5.0/chrome_extension/overview/content
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#content_5_0_chrome_extension_overview_content_post
+- name: web_vitals
+  description: Get Web Vitals
+  method: GET
+  path: /5.0/chrome_extension/overview/web_vitals
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#web_vitals_5_0_chrome_extension_overview_web_vitals_get
+- name: track_keywords
+  description: Track Keywords
+  method: POST
+  path: /5.0/chrome_extension/keywords/track_keywords
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#track_keywords_5_0_chrome_extension_keywords_track_keywords_post
+- name: compare_domains
+  description: Compare Domains
+  method: POST
+  path: /5.0/chrome_extension/keywords/compare_domains
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#compare_domains_5_0_chrome_extension_keywords_compare_domains_post
+- name: research_keywords
+  description: Research Keywords
+  method: POST
+  path: /5.0/chrome_extension/keywords/research_keywords
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#research_keywords_5_0_chrome_extension_keywords_research_keywords_post
+- name: get_backlink_url_score
+  description: This call returns backlinks url and page authority score for given account id
+  method: GET
+  path: /5.0/objects/backlinks/{account_id}
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#get_backlink_url_score_5_0_objects_backlinks__account_id__get
+- name: ping
+  description: This is simple ping api
+  method: GET
+  path: /5.0/marketo/ping
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#ping_5_0_marketo_ping_get
+- name: get_page_cache
+  description: This API retrieves page html cache from gcs for a given url
+  method: POST
+  path: /5.0/marketo/page_cache
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#get_page_cache_5_0_marketo_page_cache_post
+- name: crawl_page_content
+  description: This API retrieves page html by crawling a given url
+  method: POST
+  path: /5.0/marketo/page_crawl
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#crawl_page_content_5_0_marketo_page_crawl_post
+- name: get_top_pages
+  description: This API retrieves top N(default 1000) pages for a given base domain
+  method: POST
+  path: /5.0/marketo/top_pages
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#get_top_pages_5_0_marketo_top_pages_post
+- name: get_top_keywords_per_page
+  description: This API retrieves top N(default 5) keywords for a given page
+  method: POST
+  path: /5.0/marketo/top_keywords_per_page
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#get_top_keywords_per_page_5_0_marketo_top_keywords_per_page_post
+- name: get_top_keywords_per_domain
+  description: This API retrieves top N(default 100) keywords for a given domain
+  method: POST
+  path: /5.0/marketo/top_keywords
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#get_top_keywords_per_domain_5_0_marketo_top_keywords_post
+- name: get_paa_per_keyword
+  description: This API retrieves top N(default 4) PAA questions for a given keyword
+  method: POST
+  path: /5.0/marketo/paa_per_keyword
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#get_paa_per_keyword_5_0_marketo_paa_per_keyword_post
+- name: create_bulk_export_job
+  description: Create bulk export job(s)
+  method: POST
+  path: /5.0/jobs
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#create_bulk_export_job_5_0_jobs_post
+- name: get_bulk_export_jobs_by_batch_id
+  description: Get all bulk export jobs by batch job ID
+  method: GET
+  path: /5.0/jobs/{job_id}
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#get_bulk_export_jobs_by_batch_id_5_0_jobs__job_id__get
+- name: get_account_bulk_export_jobs
+  description: Get all bulk export jobs for an account
+  method: GET
+  path: /5.0/jobs/account/{account_id}
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#get_account_bulk_export_jobs_5_0_jobs_account__account_id__get
+- name: get_all_collectors
+  description: This call returns the list of all collectors supported by ai catalyst
+  method: GET
+  path: /5.0/objects/aicatalyst/get_all_collectors
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#get_all_collectors_5_0_objects_aicatalyst_get_all_collectors_get
+- name: get_prompts_list
+  description: List of prompts set up in the account
+  method: GET
+  path: /5.0/objects/aicatalyst/prompts/{account_id}
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#get_prompts_list_5_0_objects_aicatalyst_prompts__account_id__get
+- name: get_prompt_group_and_prompt_name
+  description: List of prompts tied to the specified prompt group
+  method: GET
+  path: /5.0/objects/aicatalyst/promptgroups/prompts/{account_id}/{prompt_group_id}
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#get_prompt_group_and_prompt_name_5_0_objects_aicatalyst_promptgroups_prompts__account_id___prompt_group_id__get
+- name: get_enabled_collectors
+  description: View all enabled collectors for the account
+  method: GET
+  path: /5.0/objects/aicatalyst/enabled_collectors/{account_id}
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#get_enabled_collectors_5_0_objects_aicatalyst_enabled_collectors__account_id__get
+- name: list_brand_category
+  description: Get list of brand categories with filtering and sorting support
+  method: POST
+  path: /5.0/objects/aicatalyst/list_brand_categories
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#list_brand_category_5_0_objects_aicatalyst_list_brand_categories_post
+- name: share_of_data
+  description: Get the share of citations or mentions data (legacy format)
+  method: POST
+  path: /5.0/objects/aicatalyst/query
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#share_of_data_5_0_objects_aicatalyst_query_post
+- name: share_of_data_v2
+  description: Get the share of citations, mentions, or prompts data with dimensions and measures
+  method: POST
+  path: /5.0/objects/aicatalyst/v2/query
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#share_of_data_v2_5_0_objects_aicatalyst_v2_query_post
+- name: get_personas
+  description: View all personas for the account
+  method: GET
+  path: /5.0/objects/aicatalyst/personas/{account_id}
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#get_personas_5_0_objects_aicatalyst_personas__account_id__get
+- name: info
+  description: Test
+  method: POST
+  path: /5.0/productgrid/info
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#info_5_0_productgrid_info_post
+- name: get_keyword_metrics
+  description: Get keyword metrics data
+  method: POST
+  path: /5.0/productgrid/keywords
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#get_keyword_metrics_5_0_productgrid_keywords_post
+- name: get_keyword_group_metrics
+  description: Get keyword group metrics data
+  method: POST
+  path: /5.0/productgrid/keyword_groups
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#get_keyword_group_metrics_5_0_productgrid_keyword_groups_post
+- name: get_top_sellers_trend_chart
+  description: Get keyword top sellers trend chart
+  method: POST
+  path: /5.0/productgrid/top_sellers/trend_chart
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#get_top_sellers_trend_chart_5_0_productgrid_top_sellers_trend_chart_post
+- name: get_product_grid_presence_trend_chart
+  description: Get presence breakdown info
+  method: POST
+  path: /5.0/productgrid/presence/trend_chart
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#get_product_grid_presence_trend_chart_5_0_productgrid_presence_trend_chart_post
+- name: get_grid_types_trend_chart
+  description: Get grid types breakdown info
+  method: POST
+  path: /5.0/productgrid/grid_types/trend_chart
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#get_grid_types_trend_chart_5_0_productgrid_grid_types_trend_chart_post
+- name: get_top_products_trend_chart
+  description: Get keyword top products trend chart
+  method: POST
+  path: /5.0/productgrid/top_products/trend_chart
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#get_top_products_trend_chart_5_0_productgrid_top_products_trend_chart_post
+- name: get_keywords_with_product_grid_presence
+  description: Get keywords with product grid presence info
+  method: POST
+  path: /5.0/productgrid/keywords_with_product_grid_presence
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#get_keywords_with_product_grid_presence_5_0_productgrid_keywords_with_product_grid_presence_post
+- name: export_keyword_metrics_csv
+  description: Export keyword metrics data as CSV
+  method: POST
+  path: /5.0/productgrid/keywords/export
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#export_keyword_metrics_csv_5_0_productgrid_keywords_export_post
+- name: export_keyword_group_metrics_csv
+  description: Export keyword group metrics data as CSV
+  method: POST
+  path: /5.0/productgrid/keyword_groups/export
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#export_keyword_group_metrics_csv_5_0_productgrid_keyword_groups_export_post
+- name: create_user_route
+  description: Create a new user
+  method: POST
+  path: /5.0/objects/users/create
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#create_user_route_5_0_objects_users_create_post
+- name: update_user
+  description: Update user details
+  method: POST
+  path: /5.0/objects/users/update
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#update_user_5_0_objects_users_update_post
+- name: delete_user
+  description: Delete a user
+  method: DELETE
+  path: /5.0/objects/users/{login}
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#delete_user_5_0_objects_users__login__delete
+- name: grant_user_account_access
+  description: Grant account access to user
+  method: POST
+  path: /5.0/objects/users/grant_account_access
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#grant_user_account_access_5_0_objects_users_grant_account_access_post
+- name: revoke_user_account_access
+  description: Revoke account access from user
+  method: POST
+  path: /5.0/objects/users/revoke_account_access
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#revoke_user_account_access_5_0_objects_users_revoke_account_access_post
+- name: bulk_create_users
+  description: Bulk create users
+  method: POST
+  path: /5.0/objects/users/bulk-create
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#bulk_create_users_5_0_objects_users_bulk_create_post
+- name: bulk_update_users
+  description: Bulk update users
+  method: POST
+  path: /5.0/objects/users/bulk-update
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#bulk_update_users_5_0_objects_users_bulk_update_post
+- name: bulk_delete_users
+  description: Bulk delete users
+  method: POST
+  path: /5.0/objects/users/bulk-delete
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#bulk_delete_users_5_0_objects_users_bulk_delete_post
+- name: keywords
+  description: Get Primary/Secondary Keywords
+  method: GET
+  path: /5.0/pages/keywords/primary_secondary
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#keywords_5_0_pages_keywords_primary_secondary_get
+- name: pages
+  description: Get Page Details
+  method: GET
+  path: /5.0/pages/details
+  source_operation: openapi/brightedge-technologies-platform-openapi-original.json#pages_5_0_pages_details_get

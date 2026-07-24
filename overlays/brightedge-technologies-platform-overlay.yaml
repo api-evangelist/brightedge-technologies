@@ -1,0 +1,26 @@
+# generated: 2026-07-18  method: generated  source: openapi/brightedge-technologies-platform-openapi-original.json
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for BrightEdge Platform API
+  version: 1.0.0
+extends: openapi/brightedge-technologies-platform-openapi-original.json
+actions:
+- target: $.info
+  update:
+    x-apievangelist-enriched: '2026-07-18'
+    x-apievangelist-category:
+    - SEO
+    - Search
+    - Content Marketing
+    - Analytics
+    x-api-host: https://api.brightedge.com
+    x-version-prefixes:
+    - /5.0
+    - /latest5
+    x-auth-note: HTTP Basic or token headers (X-Token / Bearer-Token / X-BRIGHTEDGE-SESSION); enable API
+      access via your BrightEdge representative.
+- target: $
+  update:
+    servers:
+    - url: https://api.brightedge.com
+      description: BrightEdge Platform API (production; spec omits servers[])

@@ -1,0 +1,38 @@
+generated: '2026-07-18'
+method: derived
+source: openapi/brightedge-technologies-platform-openapi-original.json
+summary: Cross-cutting request/response conventions derived from the BrightEdge Platform API OpenAPI 3.1
+  spec. BrightEdge does not publish a public conventions guide; API access is gated to enterprise customers.
+authentication:
+  styles:
+  - http-basic
+  - apiKey-header
+  - session
+  headers:
+  - Authorization (Basic)
+  - X-Token
+  - Bearer-Token
+  - X-BRIGHTEDGE-SESSION
+  - X-Forwarded-Authorization
+  cookie: BRIGHTEDGE
+  ref: authentication/brightedge-technologies-authentication.yml
+versioning:
+  scheme: uri-path
+  versions:
+  - /5.0 (pinned)
+  - /latest5 (rolling latest v5)
+  current: 5.0.0
+pagination:
+  observed: offset-style parameters present on some list/export operations
+  note: No cursor/link-header pagination detected in spec.
+idempotency:
+  supported: false
+  note: No Idempotency-Key header or idempotency contract is declared in the OpenAPI spec.
+request_body: application/json for POST operations; many read operations use POST with a JSON filter/body
+  (account_id, date ranges).
+errors:
+  envelope: FastAPI-style validation error (HTTPValidationError) on 422; not RFC 9457 problem+json
+  ref: errors/brightedge-technologies-problem-types.yml
+rate_limiting:
+  signaled: false
+  note: No X-RateLimit headers or rate-limit schema found in spec.

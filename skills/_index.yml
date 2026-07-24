@@ -1,0 +1,16 @@
+generated: '2026-07-18'
+method: generated
+source: openapi/brightedge-technologies-platform-openapi-original.json
+skills:
+- file: brightedge-technologies-pull-keyword-rankings.md
+  name: Pull keyword rankings for a BrightEdge account
+  api: openapi/brightedge-technologies-platform-openapi-original.json
+  operations: [get_all_accounts_5_0_objects_accounts_get, get_account_keywordgroups_5_0_objects_keywordgroups__account_id__get, get_account_keywords_5_0_objects_keywords__account_id__get, get_time_value_5_0_objects_time__account_id___time_frequency___day__get]
+- file: brightedge-technologies-competitor-domain-analysis.md
+  name: Analyze competitors and compare domains in BrightEdge
+  api: openapi/brightedge-technologies-platform-openapi-original.json
+  operations: [get_all_accounts_5_0_objects_accounts_get, get_account_competitors_5_0_objects_competitors__account_id__get, get_account_domain_5_0_objects_domains__account_id__get, compare_domains_5_0_chrome_extension_keywords_compare_domains_post]
+- file: brightedge-technologies-keyword-research.md
+  name: Run keyword research and idea discovery in BrightEdge
+  api: openapi/brightedge-technologies-platform-openapi-original.json
+  operations: [submit_kw_for_ideas_5_0_instant_keywordIdeas__organization_id__post, get_kw_ideas_result_5_0_instant_keywordIdeas__organization_id___request_id__post, research_keywords_5_0_chrome_extension_keywords_research_keywords_post, track_keywords_5_0_chrome_extension_keywords_track_keywords_post]

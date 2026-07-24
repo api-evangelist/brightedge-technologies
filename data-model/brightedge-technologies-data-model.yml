@@ -1,0 +1,473 @@
+generated: '2026-07-18'
+method: derived
+source: openapi/brightedge-technologies-platform-openapi-original.json
+note: 'Entity graph derived from OpenAPI component schema $ref links. BrightEdge core domains: accounts,
+  keywords, keyword groups, competitors, domains, backlinks, page crawl/cache, web vitals, market insights,
+  AI Catalyst, bulk export, users.'
+entity_count: 180
+entities:
+- AIBDatasetType
+- AIBUser
+- AICatalystBrandCategoryRequest
+- AICatalystEnabledCollectors
+- AICatalystEnabledCollectorsForAccount
+- AICatalystEnabledEngines
+- AICatalystPersona
+- AICatalystPersonas
+- AICatalystPresenceBrandCategory
+- AICatalystPromptsList
+- AICatalystPromptsListOut
+- AICatalystsAccountOut
+- AICatalystsPromptGroup
+- AICatalystsPromptGroupOut
+- AICatalystsPromptGroupPrompt
+- AICatalystsPromptGroupPrompts
+- AICatalystsPromptGroupPromptsOut
+- AICatalystsPromptInfo
+- AICatalystsShareOfDataRequest
+- AICatalystsShareOfDataRequestV2
+- AICatalystsShareOfDataResponse
+- AICatalystsShareOfDataResponseV2
+- AccountIdIn
+- AccountIdOut
+- AccountInputModel
+- AccountOut
+- AddRemoveKeywordsToGroupRequest
+- AutoPilotCacheClearIn
+- AutoPilotCacheInvalidateIn
+- AutoPilotFoundationsCertificate
+- BELocalResponse
+- BQLQueryOut
+- BacklinksOut
+- BrandFiltersOut
+- BulkCreateUserRequest
+- BulkDeleteUserRequest
+- BulkExportJobCreateRequest
+- BulkExportJobCreateResponse
+- BulkExportJobResponse
+- BulkUpdateUserRequest
+- CSVKeywordGroupMetricsExportRequest
+- CSVKeywordMetricsExportRequest
+- CollectorInfo
+- ColumnConfig
+- CompetitorOut
+- Content
+- ContentInput
+- CreateUserRequest
+- DateRange
+- DimensionOptionsMetadata
+- DomainComparisonInput
+- DomainOut
+- FeatureName
+- GeogorianTimeTimeStringType
+- GetAccountsData
+- GetAllAttributes
+- GetLocationAttributes
+- GetWebVitalsData
+- GridTypesTrendChartResult
+- GridTypesTrendChartTimeItem
+- GridTypesTrendChartTypeItem
+- HTTPValidationError
+- Headings
+- ImagesInput
+- KeywordActivityOut
+- KeywordGroupDetail
+- KeywordGroupDetailOut
+- KeywordGroupMetricsInputModel
+- KeywordGroupMetricsItem
+- KeywordGroupMetricsResult
+- KeywordGroupOut
+- KeywordGroupOutResp
+- KeywordGroups
+- KeywordMetricsItem
+- KeywordMetricsResult
+- KeywordOut
+- KeywordOutWithGroup
+- KeywordOutWithGroupResp
+- KeywordRequestWithGroup
+- KeywordsMetricsInputModel
+- KeywordsWithProductGridPresenceInputModel
+- KeywordsWithProductGridPresenceItem
+- KeywordsWithProductGridPresenceResult
+- KwIdeasHistoryOut
+- KwValue
+- LegacyAccountIn
+- LegacyAccountOut
+- LegacyAccountShortOut
+- LegacyAccountsListOut
+- LegacyCompetitorDomainOut
+- LegacyDatacubeSearchenginesOut
+- LegacyDatacubeSearchenginesShortOut
+- LegacyDomainShortOut
+- LegacyKeywordGroupDetailKeywordShortOut
+- LegacyKeywordGroupDetailOut
+- LegacyKeywordGroupDetailShortOut
+- LegacyKeywordGroupOut
+- LegacyKeywordGroupShortOut
+- LegacyKeywordOut
+- LegacyKeywordShortOut
+- LegacySearchenginesOut
+- LegacySearchenginesShortOut
+- LegacyTimeFrequencyOut
+- LocationDetailConfigV2
+- MarketoCacheRequest
+- MarketoPaaRequest
+- MarketoPaaResponse
+- MarketoPaaResponseData
+- MarketoPaaResponseDataItem
+- MarketoResponseInfo
+- MarketoTopKeywordsPerDomainRequest
+- MarketoTopKeywordsPerDomainResponse
+- MarketoTopKeywordsPerDomainResponseData
+- MarketoTopKeywordsPerDomainResponseDataItem
+- MarketoTopKeywordsPerPageRequest
+- MarketoTopKeywordsPerPageResponse
+- MarketoTopKeywordsPerPageResponseData
+- MarketoTopKeywordsPerPageResponseDataItem
+- MarketoTopPagesRequest
+- MarketoTopPagesResponse
+- MarketoTopPagesResponseData
+- MarketoTopPagesResponseDataItem
+- OrgAccountDetailOut
+- OrganizationOut
+- OrganizationUsersOutput
+- OutputType
+- PSKeywords
+- PageDetails
+- PageDetailsInput
+- Pagination
+- PaginationInput
+- PeopleAlsoAskChatgptIn
+- PeopleAlsoAskChatgptOut
+- PeopleAlsoAskHistoricalIn
+- PeopleAlsoAskHistoricalOut
+- PeopleAlsoAskIn
+- PeopleAlsoAskLiveIn
+- PeopleAlsoAskLiveOut
+- PeopleAlsoAskOut
+- PeopleAlsoAskQuestions
+- PeopleAlsoAskQuestionsChatgpt
+- PeopleAlsoAskQuestionsLive
+- PresenceTrendChartItem
+- PresenceTrendChartResult
+- RecommendationKw
+- RecommendationKwChangePriorityRequest
+- RecommendationKwListRequest
+- RecommendationKwListResponse
+- RecommendationKwPriority
+- RecommendationOut
+- ResearchKeywordsInput
+- ResponseMetadata
+- SaveGMBMultiEdit
+- SearchEngineOut
+- SiteAuditCrawlReportOut
+- SiteAuditDimensionsIn
+- SiteAuditPageGroupIn
+- SiteAuditPageGroupOut
+- SiteAuditReportIn
+- SiteAuditReportOut
+- SiteAuditResultsOut
+- SiteAuditRulesOut
+- StoreUpdatesConfig
+- TimeFrequencyOut
+- TimeTimeStringType
+- TopProductsTrendChartInputModel
+- TopProductsTrendChartResult
+- TopSellersTrendChartInputModel
+- TopSellersTrendChartResult
+- TrackKeywordsInput
+- UpdateFieldsGmbConfig
+- UpdateUserRequest
+- UserAccountAccessRequest
+- UserAccountAccessResponse
+- UserCreateResponse
+- UserDeleteResponse
+- UserOutput
+- UserUpdateResponse
+- ValidationError
+- WebVitals
+relationships:
+- from: AICatalystEnabledCollectors
+  to: CollectorInfo
+  kind: has_many
+  via: collectors
+- from: AICatalystEnabledCollectorsForAccount
+  to: CollectorInfo
+  kind: has_many
+  via: collectors
+- from: AICatalystPersona
+  to: AIBUser
+  kind: has_one
+  via: updated_by
+- from: AICatalystPersonas
+  to: AICatalystPersona
+  kind: has_many
+  via: personas
+- from: AICatalystPromptsListOut
+  to: AICatalystPromptsList
+  kind: has_many
+  via: prompt_groups
+- from: AICatalystsPromptGroupOut
+  to: AICatalystsPromptGroup
+  kind: has_many
+  via: prompt_groups
+- from: AICatalystsPromptGroupPrompts
+  to: AICatalystsPromptGroupPrompt
+  kind: has_many
+  via: prompts
+- from: AICatalystsPromptGroupPromptsOut
+  to: AICatalystsPromptGroupPrompts
+  kind: has_many
+  via: prompt_groups
+- from: AICatalystsShareOfDataRequestV2
+  to: AIBDatasetType
+  kind: has_one
+  via: dataset
+- from: AICatalystsShareOfDataResponse
+  to: AIBDatasetType
+  kind: has_one
+  via: dataset
+- from: AICatalystsShareOfDataResponseV2
+  to: AIBDatasetType
+  kind: has_one
+  via: dataset
+- from: AICatalystsShareOfDataResponseV2
+  to: ResponseMetadata
+  kind: has_one
+  via: metadata
+- from: BulkCreateUserRequest
+  to: CreateUserRequest
+  kind: has_many
+  via: users
+- from: BulkExportJobCreateResponse
+  to: BulkExportJobResponse
+  kind: has_many
+  via: jobs
+- from: BulkUpdateUserRequest
+  to: UpdateUserRequest
+  kind: has_many
+  via: users
+- from: CSVKeywordGroupMetricsExportRequest
+  to: KeywordGroupMetricsInputModel
+  kind: has_one
+  via: body
+- from: CSVKeywordGroupMetricsExportRequest
+  to: ColumnConfig
+  kind: has_many
+  via: columns
+- from: CSVKeywordMetricsExportRequest
+  to: KeywordsMetricsInputModel
+  kind: has_one
+  via: body
+- from: CSVKeywordMetricsExportRequest
+  to: ColumnConfig
+  kind: has_many
+  via: columns
+- from: Content
+  to: Headings
+  kind: has_one
+  via: headings
+- from: GetWebVitalsData
+  to: DateRange
+  kind: has_one
+  via: range
+- from: GridTypesTrendChartResult
+  to: GridTypesTrendChartTypeItem
+  kind: has_many
+  via: data
+- from: GridTypesTrendChartTypeItem
+  to: GridTypesTrendChartTimeItem
+  kind: has_many
+  via: results
+- from: HTTPValidationError
+  to: ValidationError
+  kind: has_many
+  via: detail
+- from: KeywordGroupDetailOut
+  to: KeywordOut
+  kind: has_many
+  via: keywords
+- from: KeywordGroupMetricsResult
+  to: KeywordGroupMetricsItem
+  kind: has_many
+  via: data
+- from: KeywordGroupOutResp
+  to: KeywordGroupOut
+  kind: has_many
+  via: groups
+- from: KeywordGroups
+  to: KeywordGroupDetail
+  kind: has_many
+  via: keyword_groups
+- from: KeywordMetricsResult
+  to: KeywordMetricsItem
+  kind: has_many
+  via: data
+- from: KeywordOutWithGroupResp
+  to: KeywordOutWithGroup
+  kind: has_many
+  via: keywords
+- from: KeywordsWithProductGridPresenceResult
+  to: KeywordsWithProductGridPresenceItem
+  kind: has_many
+  via: data
+- from: KwIdeasHistoryOut
+  to: KwValue
+  kind: has_many
+  via: values
+- from: LegacyAccountsListOut
+  to: LegacyAccountShortOut
+  kind: has_many
+  via: accounts
+- from: LegacyCompetitorDomainOut
+  to: LegacyDomainShortOut
+  kind: has_many
+  via: domains
+- from: LegacyDatacubeSearchenginesOut
+  to: LegacyDatacubeSearchenginesShortOut
+  kind: has_many
+  via: searchengines
+- from: LegacyKeywordGroupDetailOut
+  to: LegacyKeywordGroupDetailShortOut
+  kind: has_many
+  via: keywordgroups
+- from: LegacyKeywordGroupDetailShortOut
+  to: LegacyKeywordGroupDetailKeywordShortOut
+  kind: has_many
+  via: keywords
+- from: LegacyKeywordGroupOut
+  to: LegacyKeywordGroupShortOut
+  kind: has_many
+  via: keywordgroups
+- from: LegacyKeywordOut
+  to: LegacyKeywordShortOut
+  kind: has_many
+  via: keywords
+- from: LegacySearchenginesOut
+  to: LegacySearchenginesShortOut
+  kind: has_many
+  via: searchengines
+- from: LegacyTimeFrequencyOut
+  to: TimeTimeStringType
+  kind: has_one
+  via: time_frequency
+- from: MarketoPaaResponse
+  to: MarketoResponseInfo
+  kind: has_one
+  via: info
+- from: MarketoPaaResponse
+  to: MarketoPaaResponseData
+  kind: has_one
+  via: data
+- from: MarketoPaaResponseData
+  to: MarketoPaaResponseDataItem
+  kind: has_many
+  via: questions
+- from: MarketoTopKeywordsPerDomainResponse
+  to: MarketoResponseInfo
+  kind: has_one
+  via: info
+- from: MarketoTopKeywordsPerDomainResponse
+  to: MarketoTopKeywordsPerDomainResponseData
+  kind: has_one
+  via: data
+- from: MarketoTopKeywordsPerDomainResponseData
+  to: MarketoTopKeywordsPerDomainResponseDataItem
+  kind: has_many
+  via: keywords
+- from: MarketoTopKeywordsPerPageResponse
+  to: MarketoResponseInfo
+  kind: has_one
+  via: info
+- from: MarketoTopKeywordsPerPageResponse
+  to: MarketoTopKeywordsPerPageResponseData
+  kind: has_one
+  via: data
+- from: MarketoTopKeywordsPerPageResponseData
+  to: MarketoTopKeywordsPerPageResponseDataItem
+  kind: has_many
+  via: keywords
+- from: MarketoTopPagesResponse
+  to: MarketoResponseInfo
+  kind: has_one
+  via: info
+- from: MarketoTopPagesResponse
+  to: MarketoTopPagesResponseData
+  kind: has_one
+  via: data
+- from: MarketoTopPagesResponseData
+  to: MarketoTopPagesResponseDataItem
+  kind: has_many
+  via: pages
+- from: OrganizationUsersOutput
+  to: UserOutput
+  kind: has_many
+  via: users
+- from: PeopleAlsoAskChatgptOut
+  to: PeopleAlsoAskQuestionsChatgpt
+  kind: has_many
+  via: questions
+- from: PeopleAlsoAskHistoricalOut
+  to: PeopleAlsoAskQuestions
+  kind: has_many
+  via: questions
+- from: PeopleAlsoAskLiveOut
+  to: PeopleAlsoAskQuestionsLive
+  kind: has_many
+  via: questions
+- from: PeopleAlsoAskOut
+  to: PeopleAlsoAskQuestionsLive
+  kind: has_many
+  via: questions_live
+- from: PeopleAlsoAskOut
+  to: PeopleAlsoAskQuestionsLive
+  kind: has_many
+  via: questions_historical
+- from: PeopleAlsoAskOut
+  to: PeopleAlsoAskQuestionsChatgpt
+  kind: has_many
+  via: questions_chatgpt
+- from: PresenceTrendChartResult
+  to: PresenceTrendChartItem
+  kind: has_many
+  via: data
+- from: RecommendationKwChangePriorityRequest
+  to: RecommendationKwPriority
+  kind: has_many
+  via: keywords
+- from: RecommendationKwListResponse
+  to: RecommendationKw
+  kind: has_many
+  via: active_keywords
+- from: RecommendationKwListResponse
+  to: RecommendationKw
+  kind: has_many
+  via: inactive_keywords
+- from: ResponseMetadata
+  to: DimensionOptionsMetadata
+  kind: has_one
+  via: dimensionOptions
+- from: SiteAuditPageGroupIn
+  to: SiteAuditDimensionsIn
+  kind: has_one
+  via: dimensionOptions
+- from: SiteAuditPageGroupOut
+  to: SiteAuditResultsOut
+  kind: has_many
+  via: results
+- from: SiteAuditReportOut
+  to: SiteAuditCrawlReportOut
+  kind: has_many
+  via: results
+- from: SiteAuditResultsOut
+  to: SiteAuditRulesOut
+  kind: has_many
+  via: rules
+- from: TimeFrequencyOut
+  to: TimeTimeStringType
+  kind: has_one
+  via: time_frequency
+- from: TrackKeywordsInput
+  to: Pagination
+  kind: has_one
+  via: pagination

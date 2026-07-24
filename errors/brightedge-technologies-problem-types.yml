@@ -1,0 +1,28 @@
+generated: '2026-07-18'
+method: derived
+source: openapi/brightedge-technologies-platform-openapi-original.json
+format: fastapi-validation
+note: BrightEdge does not use RFC 9457 application/problem+json. Validation failures return 422 with a
+  detail[] array of {loc, msg, type}. Derived from OpenAPI response definitions.
+envelope:
+  field: detail
+  shape: array of {loc:[string], msg:string, type:string}
+problems:
+- status: 400
+  title: Bad Request
+  description: The request was malformed or missing required parameters.
+  count: 2
+  schema: null
+  source_operations:
+  - openapi/brightedge-technologies-platform-openapi-original.json#market_insights_data_request_5_0_organizations_marketinsights_data__date_id___report_name__get
+  - openapi/brightedge-technologies-platform-openapi-original.json#market_insights_data_request_latest5_organizations_marketinsights_data__date_id___report_name__get
+- status: 422
+  title: Validation Error
+  description: Request failed schema validation; see the detail[] array for the offending fields (FastAPI
+    HTTPValidationError).
+  count: 226
+  schema: HTTPValidationError
+  source_operations:
+  - openapi/brightedge-technologies-platform-openapi-original.json#get_account_5_0_objects_accounts__account_id__post
+  - openapi/brightedge-technologies-platform-openapi-original.json#get_account_latest5_objects_accounts__account_id__post
+  - openapi/brightedge-technologies-platform-openapi-original.json#save_multi_edit_changes_5_0_objects_be_local_save_multi_edit_changes_post

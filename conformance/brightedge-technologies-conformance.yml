@@ -1,0 +1,28 @@
+generated: '2026-07-18'
+method: derived
+source: openapi/brightedge-technologies-platform-openapi-original.json
+standards:
+- id: openapi-3.1
+  conforms: true
+  evidence: spec declares openapi 3.1.0
+- id: oauth2
+  conforms: false
+  evidence: no oauth2 securityScheme
+- id: oidc
+  conforms: false
+- id: http-basic-auth
+  conforms: true
+  evidence: http_basic scheme (RFC 7617)
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: errors use FastAPI validation envelope, not application/problem+json
+- id: json-api
+  conforms: false
+- id: fhir
+  conforms: false
+- id: fapi
+  conforms: false
+- id: scim
+  conforms: false
+- id: odata
+  conforms: false
