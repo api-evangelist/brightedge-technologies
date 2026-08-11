@@ -681,6 +681,8 @@ apis:
   - type: APIReference
     url: https://api.brightedge.com/portal
 common:
+- type: Overlay
+  url: overlays/brightedge-technologies-platform-overlay.yaml
 - type: DeveloperPortal
   url: https://api.brightedge.com/portal
 - type: Documentation
