@@ -1,0 +1,1020 @@
+{
+  "item": [
+    {
+      "id": "4a476da9-cf88-4dd4-9c0f-2e1469d81246",
+      "name": "bulk_export",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "4bc33ee4-1647-4f57-a8b5-bfd10bb7a18d",
+          "name": "Create bulk export job(s)",
+          "request": {
+            "name": "Create bulk export job(s)",
+            "description": {
+              "content": "Create bulk export job(s) and store them in the database.\n\n- **pod**: Pod number for the job\n- **account_id**: Account ID or list of account IDs for the job(s)\n- **time_value**: Time value string or list of time values for the export\n- **time_cadence**: Time cadence (weekly, monthly, quarterly)\n- **query_type**: Type of query to run (keyword_join, keyword_only)\n- **user_id**: User ID creating the job\n- **path**: Google Cloud Storage path for the export\n- **destination**: Destination for export (default: \"gcs\")\n- **device_id**: Device ID filter (default: \"*\")\n- **group_id**: Group ID filter (default: \"*\")\n- **job_id**: Optional batch job ID (auto-generated if not provided)\n\nIf multiple account IDs are provided, separate jobs will be created for each account.\nIf multiple time values are provided, separate jobs will be created for each time value.\nThe combination of account IDs and time values will create multiple jobs as needed.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "5.0",
+                "jobs"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "username",
+                  "value": "{{basicAuthUsername}}"
+                },
+                {
+                  "key": "password",
+                  "value": "{{basicAuthPassword}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"pod\": \"<integer>\",\n  \"account_id\": \"<integer>\",\n  \"time_value\": \"<string>\",\n  \"time_cadence\": \"<string>\",\n  \"query_type\": \"<string>\",\n  \"user_id\": \"<integer>\",\n  \"path\": \"<string>\",\n  \"destination\": \"gcs\",\n  \"job_id\": \"<string>\",\n  \"device_id\": \"*\",\n  \"group_id\": \"*\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "eb17ef2a-ac99-4d0e-b075-fe183628d47d",
+              "name": "Successful Response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "5.0",
+                    "jobs"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"pod\": \"<integer>\",\n  \"account_id\": \"<integer>\",\n  \"time_value\": \"<string>\",\n  \"time_cadence\": \"<string>\",\n  \"query_type\": \"<string>\",\n  \"user_id\": \"<integer>\",\n  \"path\": \"<string>\",\n  \"destination\": \"gcs\",\n  \"job_id\": \"<string>\",\n  \"device_id\": \"*\",\n  \"group_id\": \"*\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"jobs\": [\n    {\n      \"id\": \"string\",\n      \"job_id\": \"string\",\n      \"pod\": 7123,\n      \"account_id\": 3920,\n      \"time_value\": \"string\",\n      \"time_cadence\": \"string\",\n      \"query_type\": \"string\",\n      \"user_id\": 8595,\n      \"status\": 4,\n      \"job_create_at\": \"1946-11-23T18:44:02.117Z\",\n      \"job_start_at\": \"2013-07-02T07:25:38.755Z\",\n      \"job_finish_at\": \"1967-06-12T16:04:31.713Z\",\n      \"job_exception\": \"string\",\n      \"path\": \"string\",\n      \"retry_count\": 0,\n      \"destination\": \"gcs\",\n      \"device_id\": \"*\",\n      \"group_id\": \"*\"\n    },\n    {\n      \"id\": \"string\",\n      \"job_id\": \"string\",\n      \"pod\": 9110,\n      \"account_id\": 7849,\n      \"time_value\": \"string\",\n      \"time_cadence\": \"string\",\n      \"query_type\": \"string\",\n      \"user_id\": 1536,\n      \"status\": 6818,\n      \"job_create_at\": \"1955-11-25T16:28:53.870Z\",\n      \"job_start_at\": \"1982-07-21T11:18:36.697Z\",\n      \"job_finish_at\": \"2024-01-21T22:54:55.877Z\",\n      \"job_exception\": \"string\",\n      \"path\": \"string\",\n      \"retry_count\": 0,\n      \"destination\": \"gcs\",\n      \"device_id\": \"*\",\n      \"group_id\": \"*\"\n    }\n  ],\n  \"total_jobs_created\": 4108,\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "19c83886-65f9-4202-8d35-91d7825453ae",
+              "name": "Validation Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "5.0",
+                    "jobs"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"pod\": \"<integer>\",\n  \"account_id\": \"<integer>\",\n  \"time_value\": \"<string>\",\n  \"time_cadence\": \"<string>\",\n  \"query_type\": \"<string>\",\n  \"user_id\": \"<integer>\",\n  \"path\": \"<string>\",\n  \"destination\": \"gcs\",\n  \"job_id\": \"<string>\",\n  \"device_id\": \"*\",\n  \"group_id\": \"*\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "73331eac-69fd-45e0-a2fe-8f8ba5c15834",
+          "name": "Get all bulk export jobs by batch job ID",
+          "request": {
+            "name": "Get all bulk export jobs by batch job ID",
+            "description": {
+              "content": "Get all bulk export jobs that share the same batch job ID.\n\n- **job_id**: Batch job ID (UUID) that groups multiple individual jobs",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "5.0",
+                "jobs",
+                ":job_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "job_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "username",
+                  "value": "{{basicAuthUsername}}"
+                },
+                {
+                  "key": "password",
+                  "value": "{{basicAuthPassword}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "ef8ffacf-cd48-4e80-b3b8-27ed3513ff62",
+              "name": "Successful Response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "5.0",
+                    "jobs",
+                    ":job_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "job_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"string\",\n    \"job_id\": \"string\",\n    \"pod\": 1281,\n    \"account_id\": 6364,\n    \"time_value\": \"string\",\n    \"time_cadence\": \"string\",\n    \"query_type\": \"string\",\n    \"user_id\": 1309,\n    \"status\": 3901,\n    \"job_create_at\": \"1960-09-23T19:51:24.186Z\",\n    \"job_start_at\": \"1962-07-14T05:21:28.001Z\",\n    \"job_finish_at\": \"1947-06-16T11:58:56.899Z\",\n    \"job_exception\": \"string\",\n    \"path\": \"string\",\n    \"retry_count\": 0,\n    \"destination\": \"gcs\",\n    \"device_id\": \"*\",\n    \"group_id\": \"*\"\n  },\n  {\n    \"id\": \"string\",\n    \"job_id\": \"string\",\n    \"pod\": 6672,\n    \"account_id\": 6981,\n    \"time_value\": \"string\",\n    \"time_cadence\": \"string\",\n    \"query_type\": \"string\",\n    \"user_id\": 9083,\n    \"status\": 6514,\n    \"job_create_at\": \"2015-05-03T07:54:43.348Z\",\n    \"job_start_at\": \"2009-10-27T06:40:30.353Z\",\n    \"job_finish_at\": \"1996-02-29T18:39:45.594Z\",\n    \"job_exception\": \"string\",\n    \"path\": \"string\",\n    \"retry_count\": 0,\n    \"destination\": \"gcs\",\n    \"device_id\": \"*\",\n    \"group_id\": \"*\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "17bd93e9-1f9f-4f32-b996-1eab4e272d66",
+              "name": "Validation Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "5.0",
+                    "jobs",
+                    ":job_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "job_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7d812f49-b231-4882-bfae-4e8db234887d",
+          "name": "Get all bulk export jobs for an account",
+          "request": {
+            "name": "Get all bulk export jobs for an account",
+            "description": {
+              "content": "Get all bulk export jobs for a specific account.\n\n- **account_id**: Account ID to get jobs for",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "5.0",
+                "jobs",
+                "account",
+                ":account_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "account_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "username",
+                  "value": "{{basicAuthUsername}}"
+                },
+                {
+                  "key": "password",
+                  "value": "{{basicAuthPassword}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "31e45d6f-10ed-456c-b076-b45f2965f1b0",
+              "name": "Successful Response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "5.0",
+                    "jobs",
+                    "account",
+                    ":account_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "account_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"string\",\n    \"job_id\": \"string\",\n    \"pod\": 4706,\n    \"account_id\": 1476,\n    \"time_value\": \"string\",\n    \"time_cadence\": \"string\",\n    \"query_type\": \"string\",\n    \"user_id\": 1607,\n    \"status\": 4551,\n    \"job_create_at\": \"2024-03-10T20:21:24.301Z\",\n    \"job_start_at\": \"1971-11-30T21:14:13.832Z\",\n    \"job_finish_at\": \"1946-08-30T06:51:05.414Z\",\n    \"job_exception\": \"string\",\n    \"path\": \"string\",\n    \"retry_count\": 0,\n    \"destination\": \"gcs\",\n    \"device_id\": \"*\",\n    \"group_id\": \"*\"\n  },\n  {\n    \"id\": \"string\",\n    \"job_id\": \"string\",\n    \"pod\": 1945,\n    \"account_id\": 2609,\n    \"time_value\": \"string\",\n    \"time_cadence\": \"string\",\n    \"query_type\": \"string\",\n    \"user_id\": 900,\n    \"status\": 4459,\n    \"job_create_at\": \"2024-11-02T13:13:43.797Z\",\n    \"job_start_at\": \"2006-05-25T00:51:44.131Z\",\n    \"job_finish_at\": \"1969-12-20T08:06:36.128Z\",\n    \"job_exception\": \"string\",\n    \"path\": \"string\",\n    \"retry_count\": 0,\n    \"destination\": \"gcs\",\n    \"device_id\": \"*\",\n    \"group_id\": \"*\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "42a258a3-9460-427e-aec9-5f9b411f1b69",
+              "name": "Validation Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "5.0",
+                    "jobs",
+                    "account",
+                    ":account_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "account_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "79dcaa43-c842-4b58-a2ec-1f9b0738ae40",
+          "name": "Create bulk export job(s)",
+          "request": {
+            "name": "Create bulk export job(s)",
+            "description": {
+              "content": "Create bulk export job(s) and store them in the database.\n\n- **pod**: Pod number for the job\n- **account_id**: Account ID or list of account IDs for the job(s)\n- **time_value**: Time value string or list of time values for the export\n- **time_cadence**: Time cadence (weekly, monthly, quarterly)\n- **query_type**: Type of query to run (keyword_join, keyword_only)\n- **user_id**: User ID creating the job\n- **path**: Google Cloud Storage path for the export\n- **destination**: Destination for export (default: \"gcs\")\n- **device_id**: Device ID filter (default: \"*\")\n- **group_id**: Group ID filter (default: \"*\")\n- **job_id**: Optional batch job ID (auto-generated if not provided)\n\nIf multiple account IDs are provided, separate jobs will be created for each account.\nIf multiple time values are provided, separate jobs will be created for each time value.\nThe combination of account IDs and time values will create multiple jobs as needed.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "latest5",
+                "jobs"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "username",
+                  "value": "{{basicAuthUsername}}"
+                },
+                {
+                  "key": "password",
+                  "value": "{{basicAuthPassword}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"pod\": \"<integer>\",\n  \"account_id\": \"<integer>\",\n  \"time_value\": \"<string>\",\n  \"time_cadence\": \"<string>\",\n  \"query_type\": \"<string>\",\n  \"user_id\": \"<integer>\",\n  \"path\": \"<string>\",\n  \"destination\": \"gcs\",\n  \"job_id\": \"<string>\",\n  \"device_id\": \"*\",\n  \"group_id\": \"*\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "2808372f-13c4-4f9e-af4f-7b291618ca1f",
+              "name": "Successful Response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "latest5",
+                    "jobs"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"pod\": \"<integer>\",\n  \"account_id\": \"<integer>\",\n  \"time_value\": \"<string>\",\n  \"time_cadence\": \"<string>\",\n  \"query_type\": \"<string>\",\n  \"user_id\": \"<integer>\",\n  \"path\": \"<string>\",\n  \"destination\": \"gcs\",\n  \"job_id\": \"<string>\",\n  \"device_id\": \"*\",\n  \"group_id\": \"*\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"jobs\": [\n    {\n      \"id\": \"string\",\n      \"job_id\": \"string\",\n      \"pod\": 7123,\n      \"account_id\": 3920,\n      \"time_value\": \"string\",\n      \"time_cadence\": \"string\",\n      \"query_type\": \"string\",\n      \"user_id\": 8595,\n      \"status\": 4,\n      \"job_create_at\": \"1946-11-23T18:44:02.117Z\",\n      \"job_start_at\": \"2013-07-02T07:25:38.755Z\",\n      \"job_finish_at\": \"1967-06-12T16:04:31.713Z\",\n      \"job_exception\": \"string\",\n      \"path\": \"string\",\n      \"retry_count\": 0,\n      \"destination\": \"gcs\",\n      \"device_id\": \"*\",\n      \"group_id\": \"*\"\n    },\n    {\n      \"id\": \"string\",\n      \"job_id\": \"string\",\n      \"pod\": 9110,\n      \"account_id\": 7849,\n      \"time_value\": \"string\",\n      \"time_cadence\": \"string\",\n      \"query_type\": \"string\",\n      \"user_id\": 1536,\n      \"status\": 6818,\n      \"job_create_at\": \"1955-11-25T16:28:53.870Z\",\n      \"job_start_at\": \"1982-07-21T11:18:36.697Z\",\n      \"job_finish_at\": \"2024-01-21T22:54:55.877Z\",\n      \"job_exception\": \"string\",\n      \"path\": \"string\",\n      \"retry_count\": 0,\n      \"destination\": \"gcs\",\n      \"device_id\": \"*\",\n      \"group_id\": \"*\"\n    }\n  ],\n  \"total_jobs_created\": 4108,\n  \"message\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "c94d40c6-0fd2-400d-a6d9-38c371806b3d",
+              "name": "Validation Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "latest5",
+                    "jobs"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"pod\": \"<integer>\",\n  \"account_id\": \"<integer>\",\n  \"time_value\": \"<string>\",\n  \"time_cadence\": \"<string>\",\n  \"query_type\": \"<string>\",\n  \"user_id\": \"<integer>\",\n  \"path\": \"<string>\",\n  \"destination\": \"gcs\",\n  \"job_id\": \"<string>\",\n  \"device_id\": \"*\",\n  \"group_id\": \"*\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "d41bf77f-9678-4710-bb2f-9982b22b0f5a",
+          "name": "Get all bulk export jobs by batch job ID",
+          "request": {
+            "name": "Get all bulk export jobs by batch job ID",
+            "description": {
+              "content": "Get all bulk export jobs that share the same batch job ID.\n\n- **job_id**: Batch job ID (UUID) that groups multiple individual jobs",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "latest5",
+                "jobs",
+                ":job_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "job_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "username",
+                  "value": "{{basicAuthUsername}}"
+                },
+                {
+                  "key": "password",
+                  "value": "{{basicAuthPassword}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "1f34b262-d9a3-45ca-ace3-d54945884abf",
+              "name": "Successful Response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "latest5",
+                    "jobs",
+                    ":job_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "job_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"string\",\n    \"job_id\": \"string\",\n    \"pod\": 7287,\n    \"account_id\": 4677,\n    \"time_value\": \"string\",\n    \"time_cadence\": \"string\",\n    \"query_type\": \"string\",\n    \"user_id\": 9774,\n    \"status\": 8759,\n    \"job_create_at\": \"1976-02-01T18:35:56.152Z\",\n    \"job_start_at\": \"2008-08-14T17:08:17.594Z\",\n    \"job_finish_at\": \"2026-03-26T15:52:10.952Z\",\n    \"job_exception\": \"string\",\n    \"path\": \"string\",\n    \"retry_count\": 0,\n    \"destination\": \"gcs\",\n    \"device_id\": \"*\",\n    \"group_id\": \"*\"\n  },\n  {\n    \"id\": \"string\",\n    \"job_id\": \"string\",\n    \"pod\": 6519,\n    \"account_id\": 2947,\n    \"time_value\": \"string\",\n    \"time_cadence\": \"string\",\n    \"query_type\": \"string\",\n    \"user_id\": 1285,\n    \"status\": 9705,\n    \"job_create_at\": \"1979-01-24T21:03:14.970Z\",\n    \"job_start_at\": \"2020-05-31T03:47:07.802Z\",\n    \"job_finish_at\": \"1974-01-10T16:41:23.302Z\",\n    \"job_exception\": \"string\",\n    \"path\": \"string\",\n    \"retry_count\": 0,\n    \"destination\": \"gcs\",\n    \"device_id\": \"*\",\n    \"group_id\": \"*\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "4eb8a6b8-396f-4334-b85a-12a42a3a065c",
+              "name": "Validation Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "latest5",
+                    "jobs",
+                    ":job_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "job_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "148c6a76-d50f-41f3-81e1-f92eda842be2",
+          "name": "Get all bulk export jobs for an account",
+          "request": {
+            "name": "Get all bulk export jobs for an account",
+            "description": {
+              "content": "Get all bulk export jobs for a specific account.\n\n- **account_id**: Account ID to get jobs for",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "latest5",
+                "jobs",
+                "account",
+                ":account_id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "account_id",
+                  "description": "(Required) "
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "username",
+                  "value": "{{basicAuthUsername}}"
+                },
+                {
+                  "key": "password",
+                  "value": "{{basicAuthPassword}}"
+                }
+              ]
+            }
+          },
+          "response": [
+            {
+              "id": "ae3835ef-d109-44e6-9539-4aa8897af9d3",
+              "name": "Successful Response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "latest5",
+                    "jobs",
+                    "account",
+                    ":account_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "account_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "[\n  {\n    \"id\": \"string\",\n    \"job_id\": \"string\",\n    \"pod\": 6266,\n    \"account_id\": 3549,\n    \"time_value\": \"string\",\n    \"time_cadence\": \"string\",\n    \"query_type\": \"string\",\n    \"user_id\": 747,\n    \"status\": 4563,\n    \"job_create_at\": \"1976-04-21T03:56:14.358Z\",\n    \"job_start_at\": \"1954-06-14T21:21:02.552Z\",\n    \"job_finish_at\": \"1970-09-21T06:40:05.458Z\",\n    \"job_exception\": \"string\",\n    \"path\": \"string\",\n    \"retry_count\": 0,\n    \"destination\": \"gcs\",\n    \"device_id\": \"*\",\n    \"group_id\": \"*\"\n  },\n  {\n    \"id\": \"string\",\n    \"job_id\": \"string\",\n    \"pod\": 4158,\n    \"account_id\": 8963,\n    \"time_value\": \"string\",\n    \"time_cadence\": \"string\",\n    \"query_type\": \"string\",\n    \"user_id\": 2958,\n    \"status\": 8115,\n    \"job_create_at\": \"2012-02-06T00:29:31.569Z\",\n    \"job_start_at\": \"1953-01-13T15:26:13.167Z\",\n    \"job_finish_at\": \"1971-12-20T09:33:40.215Z\",\n    \"job_exception\": \"string\",\n    \"path\": \"string\",\n    \"retry_count\": 0,\n    \"destination\": \"gcs\",\n    \"device_id\": \"*\",\n    \"group_id\": \"*\"\n  }\n]",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "a50c679a-9667-41be-a83a-9764f8afe58b",
+              "name": "Validation Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "latest5",
+                    "jobs",
+                    "account",
+                    ":account_id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "account_id",
+                      "description": "(Required) "
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "6b630d0b-8d07-4a2e-bce3-31720abf6320",
+    "name": "BrightEdge Platform accounts bulk_export API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "This API provides the ability to integrate with BrightEdge Platform",
+      "type": "text/plain"
+    }
+  }
+}

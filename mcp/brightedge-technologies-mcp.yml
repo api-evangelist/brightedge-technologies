@@ -466,3 +466,9 @@ tools:
   method: GET
   path: /5.0/pages/details
   source_operation: openapi/brightedge-technologies-platform-openapi-original.json#pages_5_0_pages_details_get
+deployment:
+  mode: none
+  verified: derived
+  tools: 91
+  checked: '2026-08-12'
+  source: catalog MCP census

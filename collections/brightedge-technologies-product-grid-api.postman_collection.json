@@ -1,0 +1,3392 @@
+{
+  "item": [
+    {
+      "id": "0001110c-417a-4639-9fe2-304033da4cad",
+      "name": "product_grid",
+      "description": {
+        "content": "APIs for product grid",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "a0db57b1-40a5-4735-b2db-507d3252487c",
+          "name": "Test",
+          "request": {
+            "name": "Test",
+            "description": {},
+            "url": {
+              "path": [
+                "5.0",
+                "productgrid",
+                "info"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "username",
+                  "value": "{{basicAuthUsername}}"
+                },
+                {
+                  "key": "password",
+                  "value": "{{basicAuthPassword}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"account_id\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "792e8c1e-311d-4dd8-86df-200bf6d043b9",
+              "name": "Successful Response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "5.0",
+                    "productgrid",
+                    "info"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"account_id\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "d0dac297-b16c-4bca-a850-ee8729e0f22c",
+              "name": "Validation Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "5.0",
+                    "productgrid",
+                    "info"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"account_id\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e5498b1a-b9f9-4934-97af-b8ae36094c64",
+          "name": "Get keyword metrics data",
+          "request": {
+            "name": "Get keyword metrics data",
+            "description": {},
+            "url": {
+              "path": [
+                "5.0",
+                "productgrid",
+                "keywords"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "username",
+                  "value": "{{basicAuthUsername}}"
+                },
+                {
+                  "key": "password",
+                  "value": "{{basicAuthPassword}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"account_id\": \"<integer>\",\n  \"time_frequency\": \"<string>\",\n  \"search_engine\": [],\n  \"domain_id\": \"<integer>\",\n  \"compare_time_range\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"filters\": [\n    [\n      \"<string>\",\n      \"<string>\"\n    ],\n    [\n      \"<string>\",\n      \"<string>\"\n    ]\n  ],\n  \"pagination\": {\n    \"limit\": 30000,\n    \"offset\": 0\n  },\n  \"sort_by\": \"<string>\",\n  \"order\": \"<string>\",\n  \"current_domain_filter\": \"<boolean>\",\n  \"is_branded\": \"<boolean>\",\n  \"keyword_groups\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"domain_presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"product_grid_presence_filter\": \"<integer>\",\n  \"time_value\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"count\": false,\n  \"is_lr_enhancement_enabled\": false,\n  \"page_num\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "d8e3827c-30c5-49e3-8417-2ddda3d9520c",
+              "name": "Successful Response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "5.0",
+                    "productgrid",
+                    "keywords"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"account_id\": \"<integer>\",\n  \"time_frequency\": \"<string>\",\n  \"search_engine\": [],\n  \"domain_id\": \"<integer>\",\n  \"compare_time_range\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"filters\": [\n    [\n      \"<string>\",\n      \"<string>\"\n    ],\n    [\n      \"<string>\",\n      \"<string>\"\n    ]\n  ],\n  \"pagination\": {\n    \"limit\": 30000,\n    \"offset\": 0\n  },\n  \"sort_by\": \"<string>\",\n  \"order\": \"<string>\",\n  \"current_domain_filter\": \"<boolean>\",\n  \"is_branded\": \"<boolean>\",\n  \"keyword_groups\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"domain_presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"product_grid_presence_filter\": \"<integer>\",\n  \"time_value\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"count\": false,\n  \"is_lr_enhancement_enabled\": false,\n  \"page_num\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": [\n    {\n      \"id\": 8993,\n      \"keyword\": \"string\",\n      \"group_titles\": [\n        \"string\",\n        \"string\"\n      ],\n      \"stores\": [\n        \"string\",\n        \"string\"\n      ],\n      \"search_volume\": 627,\n      \"search_volume_diff\": 4529,\n      \"search_volume_diffpercent\": 7934.434670256356,\n      \"clicks\": 3037,\n      \"clicks_diff\": 4713,\n      \"clicks_diffpercent\": 9839.696377282222,\n      \"blended_rank\": 5921.248791555778,\n      \"blended_rank_diff\": 9097.365230838845,\n      \"blended_rank_diffpercent\": 8219.018749472445,\n      \"tile_rank\": 6976.433770194484,\n      \"tile_rank_diff\": 339.2943980912866,\n      \"tile_rank_diffpercent\": 9966.622133886596,\n      \"domain_presence_product_grids_count\": 1455,\n      \"total_product_grid_presence_count\": 4590,\n      \"domain_presence_top_grid_rank\": 7959,\n      \"domain_presence_top_grid_rank_diff\": 3411,\n      \"domain_presence_top_grid_rank_prev\": 6899,\n      \"grid_presence_ratio\": 3797.2804524985104\n    },\n    {\n      \"id\": 7951,\n      \"keyword\": \"string\",\n      \"group_titles\": [\n        \"string\",\n        \"string\"\n      ],\n      \"stores\": [\n        \"string\",\n        \"string\"\n      ],\n      \"search_volume\": 5818,\n      \"search_volume_diff\": 9040,\n      \"search_volume_diffpercent\": 8133.864398180813,\n      \"clicks\": 4907,\n      \"clicks_diff\": 1584,\n      \"clicks_diffpercent\": 886.0163681577293,\n      \"blended_rank\": 9933.686980042967,\n      \"blended_rank_diff\": 394.56729918440294,\n      \"blended_rank_diffpercent\": 7022.2046617153555,\n      \"tile_rank\": 9539.100800051408,\n      \"tile_rank_diff\": 2276.2967959690695,\n      \"tile_rank_diffpercent\": 4080.89868984569,\n      \"domain_presence_product_grids_count\": 3892,\n      \"total_product_grid_presence_count\": 4195,\n      \"domain_presence_top_grid_rank\": 2490,\n      \"domain_presence_top_grid_rank_diff\": 3446,\n      \"domain_presence_top_grid_rank_prev\": 5094,\n      \"grid_presence_ratio\": 3985.2944647573863\n    }\n  ],\n  \"total\": 4377,\n  \"branded_keywords\": 8942,\n  \"non_branded_keywords\": 1949\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "107d91a7-d8c2-436e-9623-d46f0b4e5305",
+              "name": "Validation Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "5.0",
+                    "productgrid",
+                    "keywords"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"account_id\": \"<integer>\",\n  \"time_frequency\": \"<string>\",\n  \"search_engine\": [],\n  \"domain_id\": \"<integer>\",\n  \"compare_time_range\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"filters\": [\n    [\n      \"<string>\",\n      \"<string>\"\n    ],\n    [\n      \"<string>\",\n      \"<string>\"\n    ]\n  ],\n  \"pagination\": {\n    \"limit\": 30000,\n    \"offset\": 0\n  },\n  \"sort_by\": \"<string>\",\n  \"order\": \"<string>\",\n  \"current_domain_filter\": \"<boolean>\",\n  \"is_branded\": \"<boolean>\",\n  \"keyword_groups\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"domain_presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"product_grid_presence_filter\": \"<integer>\",\n  \"time_value\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"count\": false,\n  \"is_lr_enhancement_enabled\": false,\n  \"page_num\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "15b45f97-9767-45a7-b627-ffabfa26b68e",
+          "name": "Get keyword group metrics data",
+          "request": {
+            "name": "Get keyword group metrics data",
+            "description": {},
+            "url": {
+              "path": [
+                "5.0",
+                "productgrid",
+                "keyword_groups"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "username",
+                  "value": "{{basicAuthUsername}}"
+                },
+                {
+                  "key": "password",
+                  "value": "{{basicAuthPassword}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"account_id\": \"<integer>\",\n  \"time_frequency\": \"<string>\",\n  \"search_engine\": [],\n  \"domain_id\": \"<integer>\",\n  \"compare_time_range\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"filters\": [\n    [\n      \"<string>\",\n      \"<string>\"\n    ],\n    [\n      \"<string>\",\n      \"<string>\"\n    ]\n  ],\n  \"pagination\": {\n    \"limit\": 30000,\n    \"offset\": 0\n  },\n  \"sort_by\": \"<string>\",\n  \"order\": \"<string>\",\n  \"current_domain_filter\": \"<boolean>\",\n  \"is_branded\": \"<boolean>\",\n  \"keyword_groups\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"domain_presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"product_grid_presence_filter\": \"<integer>\",\n  \"time_value\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"count\": false,\n  \"is_lr_enhancement_enabled\": false,\n  \"page_num\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "368939b4-c1be-40f9-bac7-ebf385fd757b",
+              "name": "Successful Response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "5.0",
+                    "productgrid",
+                    "keyword_groups"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"account_id\": \"<integer>\",\n  \"time_frequency\": \"<string>\",\n  \"search_engine\": [],\n  \"domain_id\": \"<integer>\",\n  \"compare_time_range\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"filters\": [\n    [\n      \"<string>\",\n      \"<string>\"\n    ],\n    [\n      \"<string>\",\n      \"<string>\"\n    ]\n  ],\n  \"pagination\": {\n    \"limit\": 30000,\n    \"offset\": 0\n  },\n  \"sort_by\": \"<string>\",\n  \"order\": \"<string>\",\n  \"current_domain_filter\": \"<boolean>\",\n  \"is_branded\": \"<boolean>\",\n  \"keyword_groups\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"domain_presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"product_grid_presence_filter\": \"<integer>\",\n  \"time_value\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"count\": false,\n  \"is_lr_enhancement_enabled\": false,\n  \"page_num\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": [\n    {\n      \"keywordgroup\": \"string\",\n      \"keyword_group_id\": 4648,\n      \"time\": 1822,\n      \"parent_keyword_group_id\": 6082,\n      \"search_volume\": 8860,\n      \"avg_volume\": 5911,\n      \"clicks\": 2231,\n      \"product_grid_count\": 3958.6065367881874,\n      \"blended_rank\": 2768.5683503770765,\n      \"tile_rank\": 968.3538223686095,\n      \"search_volume_previous_value\": 1377,\n      \"clicks_previous_value\": 515,\n      \"product_grid_count_previous_value\": 1129.0237704016004,\n      \"tile_rank_previous_value\": 2333.799312847493,\n      \"search_volume_diff\": 5688,\n      \"clicks_diff\": 611,\n      \"product_grid_count_diff\": 3357,\n      \"blended_rank_diff\": 7465.75466341758,\n      \"tile_rank_diff\": 7291.912833155957,\n      \"search_volume_diffpercent\": 9096.64666512111,\n      \"clicks_diffpercent\": 2020.6293894528726,\n      \"product_grid_count_diffpercent\": 5824.221628871107,\n      \"blended_rank_diffpercent\": 799.3098913875407,\n      \"tile_rank_diffpercent\": 6151.23269235891,\n      \"both_no_product_grid_and_regular_listing_diffpercent\": 6106.011146483223,\n      \"regular_listing_only_diffpercent\": 4240.329971805559,\n      \"product_grid_only_diffpercent\": 8613.32124570684,\n      \"both_product_grid_and_regular_listing_diffpercent\": 9379.134477364538,\n      \"keywords_count\": 9949,\n      \"keywords_count_previous_value\": 43,\n      \"keywords_count_diff\": 105,\n      \"keywords_count_diffpercent\": 9422.893663708559,\n      \"opportunity_count\": 2611.566617050326,\n      \"opportunity_count_previous_value\": 1792.7592661261626,\n      \"product_grid_coverage_percentage\": 6923.120345229256,\n      \"product_grid_coverage_percentage_previous_value\": 5223.855872774583,\n      \"product_grid_rank1_count\": 8439.011967715162,\n      \"product_grid_rank1_count_previous_value\": 9025.321334437687,\n      \"product_grid_rank1_count_diff\": 2822.694341547407,\n      \"product_grid_rank1_count_diffpercent\": 2507.0616786604205,\n      \"avg_top_grid_rank\": 7623.309231858838,\n      \"avg_top_grid_rank_previous_value\": 2095.58804153255,\n      \"avg_top_grid_rank_diff\": 7176.748509172214,\n      \"avg_top_grid_rank_diffpercent\": 8177.591932682998,\n      \"avg_grid_count\": 7684.986674399279,\n      \"domain_product_grid_count\": 3605.7660629569664,\n      \"search_volume_with_domain_presence\": 1005.1740321822078,\n      \"search_volume_with_domain_presence_prev\": 5916.748111938174,\n      \"avg_grid_count_with_domain_presence\": 9705.687021297419\n    },\n    {\n      \"keywordgroup\": \"string\",\n      \"keyword_group_id\": 7488,\n      \"time\": 2760,\n      \"parent_keyword_group_id\": 4049,\n      \"search_volume\": 9479,\n      \"avg_volume\": 5910,\n      \"clicks\": 3024,\n      \"product_grid_count\": 7976.125137471639,\n      \"blended_rank\": 3266.9776847816665,\n      \"tile_rank\": 939.6938048330861,\n      \"search_volume_previous_value\": 2870,\n      \"clicks_previous_value\": 7006,\n      \"product_grid_count_previous_value\": 8996.695172722104,\n      \"tile_rank_previous_value\": 5532.753581962396,\n      \"search_volume_diff\": 3391,\n      \"clicks_diff\": 7619,\n      \"product_grid_count_diff\": 2632,\n      \"blended_rank_diff\": 6047.291576433412,\n      \"tile_rank_diff\": 3736.7083441496397,\n      \"search_volume_diffpercent\": 5930.837752308801,\n      \"clicks_diffpercent\": 1103.6010957024346,\n      \"product_grid_count_diffpercent\": 7443.107138026353,\n      \"blended_rank_diffpercent\": 1874.2136402090337,\n      \"tile_rank_diffpercent\": 7434.178853229372,\n      \"both_no_product_grid_and_regular_listing_diffpercent\": 6579.867485290122,\n      \"regular_listing_only_diffpercent\": 819.8858375293938,\n      \"product_grid_only_diffpercent\": 2998.669025941848,\n      \"both_product_grid_and_regular_listing_diffpercent\": 4311.897678802602,\n      \"keywords_count\": 856,\n      \"keywords_count_previous_value\": 1954,\n      \"keywords_count_diff\": 1733,\n      \"keywords_count_diffpercent\": 2628.933205947744,\n      \"opportunity_count\": 5084.987346963474,\n      \"opportunity_count_previous_value\": 6951.713395689866,\n      \"product_grid_coverage_percentage\": 1559.7971480707895,\n      \"product_grid_coverage_percentage_previous_value\": 7725.075585828127,\n      \"product_grid_rank1_count\": 9078.161163520994,\n      \"product_grid_rank1_count_previous_value\": 2616.5709929998593,\n      \"product_grid_rank1_count_diff\": 6762.801855161012,\n      \"product_grid_rank1_count_diffpercent\": 3446.5127290904175,\n      \"avg_top_grid_rank\": 5634.003376168472,\n      \"avg_top_grid_rank_previous_value\": 7249.837215744159,\n      \"avg_top_grid_rank_diff\": 5981.92147201522,\n      \"avg_top_grid_rank_diffpercent\": 5759.171121413161,\n      \"avg_grid_count\": 3839.549919741969,\n      \"domain_product_grid_count\": 1593.402919304656,\n      \"search_volume_with_domain_presence\": 3724.802728069685,\n      \"search_volume_with_domain_presence_prev\": 1600.7447760112336,\n      \"avg_grid_count_with_domain_presence\": 9206.747328879099\n    }\n  ],\n  \"total\": 544\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "ce5ab481-92f2-4b6e-ae85-bc8aa5b721d6",
+              "name": "Validation Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "5.0",
+                    "productgrid",
+                    "keyword_groups"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"account_id\": \"<integer>\",\n  \"time_frequency\": \"<string>\",\n  \"search_engine\": [],\n  \"domain_id\": \"<integer>\",\n  \"compare_time_range\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"filters\": [\n    [\n      \"<string>\",\n      \"<string>\"\n    ],\n    [\n      \"<string>\",\n      \"<string>\"\n    ]\n  ],\n  \"pagination\": {\n    \"limit\": 30000,\n    \"offset\": 0\n  },\n  \"sort_by\": \"<string>\",\n  \"order\": \"<string>\",\n  \"current_domain_filter\": \"<boolean>\",\n  \"is_branded\": \"<boolean>\",\n  \"keyword_groups\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"domain_presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"product_grid_presence_filter\": \"<integer>\",\n  \"time_value\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"count\": false,\n  \"is_lr_enhancement_enabled\": false,\n  \"page_num\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3e2b9b33-c01c-426a-a784-0a85487e856b",
+          "name": "Get keyword top sellers trend chart",
+          "request": {
+            "name": "Get keyword top sellers trend chart",
+            "description": {
+              "content": "Get top sellers trend chart data for a given account and time range.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "5.0",
+                "productgrid",
+                "top_sellers",
+                "trend_chart"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "username",
+                  "value": "{{basicAuthUsername}}"
+                },
+                {
+                  "key": "password",
+                  "value": "{{basicAuthPassword}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"account_id\": \"<integer>\",\n  \"time_frequency\": \"<string>\",\n  \"search_engine\": [],\n  \"domain_id\": \"<integer>\",\n  \"compare_time_range\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"filters\": [\n    [\n      \"<string>\",\n      \"<string>\"\n    ],\n    [\n      \"<string>\",\n      \"<string>\"\n    ]\n  ],\n  \"pagination\": {\n    \"limit\": 30000,\n    \"offset\": 0\n  },\n  \"sort_by\": \"<string>\",\n  \"order\": \"<string>\",\n  \"current_domain_filter\": \"<boolean>\",\n  \"is_branded\": \"<boolean>\",\n  \"keyword_groups\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"domain_presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"product_grid_presence_filter\": \"<integer>\",\n  \"time_value\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"is_lr_enhancement_enabled\": false,\n  \"page_num\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "111dc3a9-5989-4d5a-85d2-83302bd18ee7",
+              "name": "Successful Response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "5.0",
+                    "productgrid",
+                    "top_sellers",
+                    "trend_chart"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"account_id\": \"<integer>\",\n  \"time_frequency\": \"<string>\",\n  \"search_engine\": [],\n  \"domain_id\": \"<integer>\",\n  \"compare_time_range\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"filters\": [\n    [\n      \"<string>\",\n      \"<string>\"\n    ],\n    [\n      \"<string>\",\n      \"<string>\"\n    ]\n  ],\n  \"pagination\": {\n    \"limit\": 30000,\n    \"offset\": 0\n  },\n  \"sort_by\": \"<string>\",\n  \"order\": \"<string>\",\n  \"current_domain_filter\": \"<boolean>\",\n  \"is_branded\": \"<boolean>\",\n  \"keyword_groups\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"domain_presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"product_grid_presence_filter\": \"<integer>\",\n  \"time_value\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"is_lr_enhancement_enabled\": false,\n  \"page_num\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": [],\n  \"total\": 2757\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "2cdd82b1-2429-4d15-84e5-38a2a6dc098d",
+              "name": "Validation Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "5.0",
+                    "productgrid",
+                    "top_sellers",
+                    "trend_chart"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"account_id\": \"<integer>\",\n  \"time_frequency\": \"<string>\",\n  \"search_engine\": [],\n  \"domain_id\": \"<integer>\",\n  \"compare_time_range\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"filters\": [\n    [\n      \"<string>\",\n      \"<string>\"\n    ],\n    [\n      \"<string>\",\n      \"<string>\"\n    ]\n  ],\n  \"pagination\": {\n    \"limit\": 30000,\n    \"offset\": 0\n  },\n  \"sort_by\": \"<string>\",\n  \"order\": \"<string>\",\n  \"current_domain_filter\": \"<boolean>\",\n  \"is_branded\": \"<boolean>\",\n  \"keyword_groups\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"domain_presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"product_grid_presence_filter\": \"<integer>\",\n  \"time_value\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"is_lr_enhancement_enabled\": false,\n  \"page_num\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "4461ff4c-53fb-48b9-948c-0e93ba6d653e",
+          "name": "Get presence breakdown info",
+          "request": {
+            "name": "Get presence breakdown info",
+            "description": {},
+            "url": {
+              "path": [
+                "5.0",
+                "productgrid",
+                "presence",
+                "trend_chart"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "username",
+                  "value": "{{basicAuthUsername}}"
+                },
+                {
+                  "key": "password",
+                  "value": "{{basicAuthPassword}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"account_id\": \"<integer>\",\n  \"time_frequency\": \"<string>\",\n  \"search_engine\": [],\n  \"domain_id\": \"<integer>\",\n  \"compare_time_range\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"filters\": [\n    [\n      \"<string>\",\n      \"<string>\"\n    ],\n    [\n      \"<string>\",\n      \"<string>\"\n    ]\n  ],\n  \"pagination\": {\n    \"limit\": 30000,\n    \"offset\": 0\n  },\n  \"sort_by\": \"<string>\",\n  \"order\": \"<string>\",\n  \"current_domain_filter\": \"<boolean>\",\n  \"is_branded\": \"<boolean>\",\n  \"keyword_groups\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"domain_presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"product_grid_presence_filter\": \"<integer>\",\n  \"time_value\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"is_lr_enhancement_enabled\": false,\n  \"page_num\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "5af29a9d-3c5e-4668-a507-6915e9de0193",
+              "name": "Successful Response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "5.0",
+                    "productgrid",
+                    "presence",
+                    "trend_chart"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"account_id\": \"<integer>\",\n  \"time_frequency\": \"<string>\",\n  \"search_engine\": [],\n  \"domain_id\": \"<integer>\",\n  \"compare_time_range\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"filters\": [\n    [\n      \"<string>\",\n      \"<string>\"\n    ],\n    [\n      \"<string>\",\n      \"<string>\"\n    ]\n  ],\n  \"pagination\": {\n    \"limit\": 30000,\n    \"offset\": 0\n  },\n  \"sort_by\": \"<string>\",\n  \"order\": \"<string>\",\n  \"current_domain_filter\": \"<boolean>\",\n  \"is_branded\": \"<boolean>\",\n  \"keyword_groups\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"domain_presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"product_grid_presence_filter\": \"<integer>\",\n  \"time_value\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"is_lr_enhancement_enabled\": false,\n  \"page_num\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": [\n    {\n      \"time\": 7445,\n      \"product_grid_presence\": 9017,\n      \"only_product_grid\": 2362,\n      \"regular_presence\": 1208,\n      \"all_presence\": 7915,\n      \"absent\": 5647,\n      \"total_keywords\": 7530\n    },\n    {\n      \"time\": 4725,\n      \"product_grid_presence\": 179,\n      \"only_product_grid\": 4491,\n      \"regular_presence\": 3580,\n      \"all_presence\": 337,\n      \"absent\": 7332,\n      \"total_keywords\": 3669\n    }\n  ],\n  \"total\": 1789\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "48a9620a-3484-4675-87c4-759b16155cec",
+              "name": "Validation Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "5.0",
+                    "productgrid",
+                    "presence",
+                    "trend_chart"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"account_id\": \"<integer>\",\n  \"time_frequency\": \"<string>\",\n  \"search_engine\": [],\n  \"domain_id\": \"<integer>\",\n  \"compare_time_range\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"filters\": [\n    [\n      \"<string>\",\n      \"<string>\"\n    ],\n    [\n      \"<string>\",\n      \"<string>\"\n    ]\n  ],\n  \"pagination\": {\n    \"limit\": 30000,\n    \"offset\": 0\n  },\n  \"sort_by\": \"<string>\",\n  \"order\": \"<string>\",\n  \"current_domain_filter\": \"<boolean>\",\n  \"is_branded\": \"<boolean>\",\n  \"keyword_groups\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"domain_presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"product_grid_presence_filter\": \"<integer>\",\n  \"time_value\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"is_lr_enhancement_enabled\": false,\n  \"page_num\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f8014db1-cf0c-4a83-8755-8a1d5831d828",
+          "name": "Get grid types breakdown info",
+          "request": {
+            "name": "Get grid types breakdown info",
+            "description": {},
+            "url": {
+              "path": [
+                "5.0",
+                "productgrid",
+                "grid_types",
+                "trend_chart"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "username",
+                  "value": "{{basicAuthUsername}}"
+                },
+                {
+                  "key": "password",
+                  "value": "{{basicAuthPassword}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"account_id\": \"<integer>\",\n  \"time_frequency\": \"<string>\",\n  \"search_engine\": [],\n  \"domain_id\": \"<integer>\",\n  \"compare_time_range\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"filters\": [\n    [\n      \"<string>\",\n      \"<string>\"\n    ],\n    [\n      \"<string>\",\n      \"<string>\"\n    ]\n  ],\n  \"pagination\": {\n    \"limit\": 30000,\n    \"offset\": 0\n  },\n  \"sort_by\": \"<string>\",\n  \"order\": \"<string>\",\n  \"current_domain_filter\": \"<boolean>\",\n  \"is_branded\": \"<boolean>\",\n  \"keyword_groups\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"domain_presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"product_grid_presence_filter\": \"<integer>\",\n  \"time_value\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"is_lr_enhancement_enabled\": false,\n  \"page_num\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "10910d0f-3107-4cf9-8d9f-66add7683b1e",
+              "name": "Successful Response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "5.0",
+                    "productgrid",
+                    "grid_types",
+                    "trend_chart"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"account_id\": \"<integer>\",\n  \"time_frequency\": \"<string>\",\n  \"search_engine\": [],\n  \"domain_id\": \"<integer>\",\n  \"compare_time_range\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"filters\": [\n    [\n      \"<string>\",\n      \"<string>\"\n    ],\n    [\n      \"<string>\",\n      \"<string>\"\n    ]\n  ],\n  \"pagination\": {\n    \"limit\": 30000,\n    \"offset\": 0\n  },\n  \"sort_by\": \"<string>\",\n  \"order\": \"<string>\",\n  \"current_domain_filter\": \"<boolean>\",\n  \"is_branded\": \"<boolean>\",\n  \"keyword_groups\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"domain_presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"product_grid_presence_filter\": \"<integer>\",\n  \"time_value\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"is_lr_enhancement_enabled\": false,\n  \"page_num\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": [\n    {\n      \"group_title\": \"string\",\n      \"results\": [\n        {\n          \"time\": 7260,\n          \"keywords\": 7\n        },\n        {\n          \"time\": 2273,\n          \"keywords\": 1124\n        }\n      ]\n    },\n    {\n      \"group_title\": \"string\",\n      \"results\": [\n        {\n          \"time\": 8759,\n          \"keywords\": 6926\n        },\n        {\n          \"time\": 6748,\n          \"keywords\": 817\n        }\n      ]\n    }\n  ],\n  \"total\": 2958\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "a3eb6109-3396-4a4c-a9b3-d58606088790",
+              "name": "Validation Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "5.0",
+                    "productgrid",
+                    "grid_types",
+                    "trend_chart"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"account_id\": \"<integer>\",\n  \"time_frequency\": \"<string>\",\n  \"search_engine\": [],\n  \"domain_id\": \"<integer>\",\n  \"compare_time_range\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"filters\": [\n    [\n      \"<string>\",\n      \"<string>\"\n    ],\n    [\n      \"<string>\",\n      \"<string>\"\n    ]\n  ],\n  \"pagination\": {\n    \"limit\": 30000,\n    \"offset\": 0\n  },\n  \"sort_by\": \"<string>\",\n  \"order\": \"<string>\",\n  \"current_domain_filter\": \"<boolean>\",\n  \"is_branded\": \"<boolean>\",\n  \"keyword_groups\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"domain_presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"product_grid_presence_filter\": \"<integer>\",\n  \"time_value\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"is_lr_enhancement_enabled\": false,\n  \"page_num\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "94b7fb0d-0b73-4030-886b-310ac97707a3",
+          "name": "Get keyword top products trend chart",
+          "request": {
+            "name": "Get keyword top products trend chart",
+            "description": {
+              "content": "Get top products trend chart data for a given account and time range.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "5.0",
+                "productgrid",
+                "top_products",
+                "trend_chart"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "username",
+                  "value": "{{basicAuthUsername}}"
+                },
+                {
+                  "key": "password",
+                  "value": "{{basicAuthPassword}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"account_id\": \"<integer>\",\n  \"time_frequency\": \"<string>\",\n  \"search_engine\": [],\n  \"domain_id\": \"<integer>\",\n  \"compare_time_range\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"filters\": [\n    [\n      \"<string>\",\n      \"<string>\"\n    ],\n    [\n      \"<string>\",\n      \"<string>\"\n    ]\n  ],\n  \"pagination\": {\n    \"limit\": 30000,\n    \"offset\": 0\n  },\n  \"sort_by\": \"<string>\",\n  \"order\": \"<string>\",\n  \"current_domain_filter\": \"<boolean>\",\n  \"is_branded\": \"<boolean>\",\n  \"keyword_groups\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"domain_presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"product_grid_presence_filter\": \"<integer>\",\n  \"time_value\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"is_lr_enhancement_enabled\": false,\n  \"page_num\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "459ffc1f-52ff-4909-ac32-b9b178942463",
+              "name": "Successful Response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "5.0",
+                    "productgrid",
+                    "top_products",
+                    "trend_chart"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"account_id\": \"<integer>\",\n  \"time_frequency\": \"<string>\",\n  \"search_engine\": [],\n  \"domain_id\": \"<integer>\",\n  \"compare_time_range\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"filters\": [\n    [\n      \"<string>\",\n      \"<string>\"\n    ],\n    [\n      \"<string>\",\n      \"<string>\"\n    ]\n  ],\n  \"pagination\": {\n    \"limit\": 30000,\n    \"offset\": 0\n  },\n  \"sort_by\": \"<string>\",\n  \"order\": \"<string>\",\n  \"current_domain_filter\": \"<boolean>\",\n  \"is_branded\": \"<boolean>\",\n  \"keyword_groups\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"domain_presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"product_grid_presence_filter\": \"<integer>\",\n  \"time_value\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"is_lr_enhancement_enabled\": false,\n  \"page_num\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": [],\n  \"total\": 1429\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "a837a1db-8a5a-4a46-9520-eb6dd2d81357",
+              "name": "Validation Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "5.0",
+                    "productgrid",
+                    "top_products",
+                    "trend_chart"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"account_id\": \"<integer>\",\n  \"time_frequency\": \"<string>\",\n  \"search_engine\": [],\n  \"domain_id\": \"<integer>\",\n  \"compare_time_range\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"filters\": [\n    [\n      \"<string>\",\n      \"<string>\"\n    ],\n    [\n      \"<string>\",\n      \"<string>\"\n    ]\n  ],\n  \"pagination\": {\n    \"limit\": 30000,\n    \"offset\": 0\n  },\n  \"sort_by\": \"<string>\",\n  \"order\": \"<string>\",\n  \"current_domain_filter\": \"<boolean>\",\n  \"is_branded\": \"<boolean>\",\n  \"keyword_groups\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"domain_presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"product_grid_presence_filter\": \"<integer>\",\n  \"time_value\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"is_lr_enhancement_enabled\": false,\n  \"page_num\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ebf7ea60-a231-4eac-9d60-aace9402fbd5",
+          "name": "Get keywords with product grid presence info",
+          "request": {
+            "name": "Get keywords with product grid presence info",
+            "description": {},
+            "url": {
+              "path": [
+                "5.0",
+                "productgrid",
+                "keywords_with_product_grid_presence"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "username",
+                  "value": "{{basicAuthUsername}}"
+                },
+                {
+                  "key": "password",
+                  "value": "{{basicAuthPassword}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"account_id\": \"<integer>\",\n  \"time_frequency\": \"<string>\",\n  \"search_engine\": [],\n  \"domain_id\": \"<integer>\",\n  \"compare_time_range\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"filters\": [\n    [\n      \"<string>\",\n      \"<string>\"\n    ],\n    [\n      \"<string>\",\n      \"<string>\"\n    ]\n  ],\n  \"pagination\": {\n    \"limit\": 30000,\n    \"offset\": 0\n  },\n  \"sort_by\": \"<string>\",\n  \"order\": \"<string>\",\n  \"current_domain_filter\": \"<boolean>\",\n  \"is_branded\": \"<boolean>\",\n  \"keyword_groups\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"domain_presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"product_grid_presence_filter\": \"<integer>\",\n  \"time_value\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"is_lr_enhancement_enabled\": false,\n  \"page_num\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "ee49b250-bda9-4771-a1f5-5cd3647042dc",
+              "name": "Successful Response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "5.0",
+                    "productgrid",
+                    "keywords_with_product_grid_presence"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"account_id\": \"<integer>\",\n  \"time_frequency\": \"<string>\",\n  \"search_engine\": [],\n  \"domain_id\": \"<integer>\",\n  \"compare_time_range\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"filters\": [\n    [\n      \"<string>\",\n      \"<string>\"\n    ],\n    [\n      \"<string>\",\n      \"<string>\"\n    ]\n  ],\n  \"pagination\": {\n    \"limit\": 30000,\n    \"offset\": 0\n  },\n  \"sort_by\": \"<string>\",\n  \"order\": \"<string>\",\n  \"current_domain_filter\": \"<boolean>\",\n  \"is_branded\": \"<boolean>\",\n  \"keyword_groups\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"domain_presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"product_grid_presence_filter\": \"<integer>\",\n  \"time_value\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"is_lr_enhancement_enabled\": false,\n  \"page_num\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": [\n    {\n      \"time\": 6330,\n      \"product_grid_presence_number\": 2010,\n      \"clicks\": 5228,\n      \"search_volume\": 8417,\n      \"tile_rank\": 6553.42101694513,\n      \"blended_rank\": 890.4345724262164,\n      \"keywords_with_domain_presence\": 343,\n      \"avg_top_grid_rank\": 3206.168131623914,\n      \"avg_grid_count\": 8748.8594027229\n    },\n    {\n      \"time\": 8009,\n      \"product_grid_presence_number\": 4697,\n      \"clicks\": 6205,\n      \"search_volume\": 457,\n      \"tile_rank\": 7754.7792526761,\n      \"blended_rank\": 5164.97372295193,\n      \"keywords_with_domain_presence\": 7155,\n      \"avg_top_grid_rank\": 3790.341021629331,\n      \"avg_grid_count\": 6348.378746558644\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "26f8eeac-a381-44eb-94bd-16d2669f1002",
+              "name": "Validation Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "5.0",
+                    "productgrid",
+                    "keywords_with_product_grid_presence"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"account_id\": \"<integer>\",\n  \"time_frequency\": \"<string>\",\n  \"search_engine\": [],\n  \"domain_id\": \"<integer>\",\n  \"compare_time_range\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"filters\": [\n    [\n      \"<string>\",\n      \"<string>\"\n    ],\n    [\n      \"<string>\",\n      \"<string>\"\n    ]\n  ],\n  \"pagination\": {\n    \"limit\": 30000,\n    \"offset\": 0\n  },\n  \"sort_by\": \"<string>\",\n  \"order\": \"<string>\",\n  \"current_domain_filter\": \"<boolean>\",\n  \"is_branded\": \"<boolean>\",\n  \"keyword_groups\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"domain_presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"product_grid_presence_filter\": \"<integer>\",\n  \"time_value\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"is_lr_enhancement_enabled\": false,\n  \"page_num\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "30eeab52-711d-4fe8-a030-420ac98a4d72",
+          "name": "Export keyword metrics data as CSV",
+          "request": {
+            "name": "Export keyword metrics data as CSV",
+            "description": {
+              "content": "Export keyword metrics data as CSV with specified columns.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "5.0",
+                "productgrid",
+                "keywords",
+                "export"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "username",
+                  "value": "{{basicAuthUsername}}"
+                },
+                {
+                  "key": "password",
+                  "value": "{{basicAuthPassword}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"body\": {\n    \"account_id\": \"<integer>\",\n    \"time_frequency\": \"<string>\",\n    \"domain_id\": \"<integer>\",\n    \"compare_time_range\": [\n      \"<integer>\",\n      \"<integer>\"\n    ],\n    \"filters\": [\n      [\n        \"<string>\",\n        \"<string>\"\n      ],\n      [\n        \"<string>\",\n        \"<string>\"\n      ]\n    ],\n    \"pagination\": {\n      \"limit\": 30000,\n      \"offset\": 0\n    },\n    \"sort_by\": \"<string>\",\n    \"order\": \"<string>\",\n    \"current_domain_filter\": \"<boolean>\",\n    \"is_branded\": \"<boolean>\",\n    \"keyword_groups\": [\n      \"<integer>\",\n      \"<integer>\"\n    ],\n    \"presence_filter\": [\n      \"<integer>\",\n      \"<integer>\"\n    ],\n    \"domain_presence_filter\": [\n      \"<integer>\",\n      \"<integer>\"\n    ],\n    \"product_grid_presence_filter\": \"<integer>\",\n    \"time_value\": [\n      \"<integer>\",\n      \"<integer>\"\n    ],\n    \"count\": false,\n    \"is_lr_enhancement_enabled\": false,\n    \"page_num\": \"<integer>\"\n  },\n  \"columns\": [\n    {\n      \"field\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\"\n    },\n    {\n      \"field\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "98a655e5-78ea-49b4-b35f-f12fff98965d",
+              "name": "Successful Response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "5.0",
+                    "productgrid",
+                    "keywords",
+                    "export"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"body\": {\n    \"account_id\": 8997,\n    \"time_frequency\": \"string\",\n    \"domain_id\": 5202,\n    \"compare_time_range\": [\n      1665,\n      5119\n    ],\n    \"filters\": [\n      [\n        \"string\",\n        \"string\"\n      ],\n      [\n        \"string\",\n        \"string\"\n      ]\n    ],\n    \"pagination\": {\n      \"limit\": 30000,\n      \"offset\": 0\n    },\n    \"sort_by\": \"string\",\n    \"order\": \"string\",\n    \"current_domain_filter\": true,\n    \"is_branded\": false,\n    \"keyword_groups\": [\n      5070,\n      2786\n    ],\n    \"presence_filter\": [\n      3037,\n      1188\n    ],\n    \"domain_presence_filter\": [\n      6325,\n      2070\n    ],\n    \"product_grid_presence_filter\": 8758,\n    \"time_value\": [\n      8982,\n      2321\n    ],\n    \"count\": false,\n    \"is_lr_enhancement_enabled\": false,\n    \"page_num\": 6838\n  },\n  \"columns\": [\n    {\n      \"field\": \"string\",\n      \"title\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"field\": \"string\",\n      \"title\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "af70f074-f077-45bd-9ccd-136943bc076c",
+              "name": "Validation Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "5.0",
+                    "productgrid",
+                    "keywords",
+                    "export"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"body\": {\n    \"account_id\": 8997,\n    \"time_frequency\": \"string\",\n    \"domain_id\": 5202,\n    \"compare_time_range\": [\n      1665,\n      5119\n    ],\n    \"filters\": [\n      [\n        \"string\",\n        \"string\"\n      ],\n      [\n        \"string\",\n        \"string\"\n      ]\n    ],\n    \"pagination\": {\n      \"limit\": 30000,\n      \"offset\": 0\n    },\n    \"sort_by\": \"string\",\n    \"order\": \"string\",\n    \"current_domain_filter\": true,\n    \"is_branded\": false,\n    \"keyword_groups\": [\n      5070,\n      2786\n    ],\n    \"presence_filter\": [\n      3037,\n      1188\n    ],\n    \"domain_presence_filter\": [\n      6325,\n      2070\n    ],\n    \"product_grid_presence_filter\": 8758,\n    \"time_value\": [\n      8982,\n      2321\n    ],\n    \"count\": false,\n    \"is_lr_enhancement_enabled\": false,\n    \"page_num\": 6838\n  },\n  \"columns\": [\n    {\n      \"field\": \"string\",\n      \"title\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"field\": \"string\",\n      \"title\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "0eb0e8ba-551a-4809-9318-564788233689",
+          "name": "Export keyword group metrics data as CSV",
+          "request": {
+            "name": "Export keyword group metrics data as CSV",
+            "description": {
+              "content": "Export keyword group metrics data as CSV with specified columns.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "5.0",
+                "productgrid",
+                "keyword_groups",
+                "export"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "username",
+                  "value": "{{basicAuthUsername}}"
+                },
+                {
+                  "key": "password",
+                  "value": "{{basicAuthPassword}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"body\": {\n    \"account_id\": \"<integer>\",\n    \"time_frequency\": \"<string>\",\n    \"domain_id\": \"<integer>\",\n    \"compare_time_range\": [\n      \"<integer>\",\n      \"<integer>\"\n    ],\n    \"filters\": [\n      [\n        \"<string>\",\n        \"<string>\"\n      ],\n      [\n        \"<string>\",\n        \"<string>\"\n      ]\n    ],\n    \"pagination\": {\n      \"limit\": 30000,\n      \"offset\": 0\n    },\n    \"sort_by\": \"<string>\",\n    \"order\": \"<string>\",\n    \"current_domain_filter\": \"<boolean>\",\n    \"is_branded\": \"<boolean>\",\n    \"keyword_groups\": [\n      \"<integer>\",\n      \"<integer>\"\n    ],\n    \"presence_filter\": [\n      \"<integer>\",\n      \"<integer>\"\n    ],\n    \"domain_presence_filter\": [\n      \"<integer>\",\n      \"<integer>\"\n    ],\n    \"product_grid_presence_filter\": \"<integer>\",\n    \"time_value\": [\n      \"<integer>\",\n      \"<integer>\"\n    ],\n    \"count\": false,\n    \"is_lr_enhancement_enabled\": false,\n    \"page_num\": \"<integer>\"\n  },\n  \"columns\": [\n    {\n      \"field\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\"\n    },\n    {\n      \"field\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "9746633b-cfee-4df3-9c6e-90163a60f265",
+              "name": "Successful Response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "5.0",
+                    "productgrid",
+                    "keyword_groups",
+                    "export"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"body\": {\n    \"account_id\": 7458,\n    \"time_frequency\": \"string\",\n    \"domain_id\": 5161,\n    \"compare_time_range\": [\n      3245,\n      423\n    ],\n    \"filters\": [\n      [\n        \"string\",\n        \"string\"\n      ],\n      [\n        \"string\",\n        \"string\"\n      ]\n    ],\n    \"pagination\": {\n      \"limit\": 30000,\n      \"offset\": 0\n    },\n    \"sort_by\": \"string\",\n    \"order\": \"string\",\n    \"current_domain_filter\": true,\n    \"is_branded\": false,\n    \"keyword_groups\": [\n      7069,\n      675\n    ],\n    \"presence_filter\": [\n      369,\n      6486\n    ],\n    \"domain_presence_filter\": [\n      7826,\n      6861\n    ],\n    \"product_grid_presence_filter\": 7429,\n    \"time_value\": [\n      8913,\n      5129\n    ],\n    \"count\": false,\n    \"is_lr_enhancement_enabled\": false,\n    \"page_num\": 1104\n  },\n  \"columns\": [\n    {\n      \"field\": \"string\",\n      \"title\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"field\": \"string\",\n      \"title\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "82d0de5a-2662-406a-85ee-431d76ba75df",
+              "name": "Validation Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "5.0",
+                    "productgrid",
+                    "keyword_groups",
+                    "export"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"body\": {\n    \"account_id\": 7458,\n    \"time_frequency\": \"string\",\n    \"domain_id\": 5161,\n    \"compare_time_range\": [\n      3245,\n      423\n    ],\n    \"filters\": [\n      [\n        \"string\",\n        \"string\"\n      ],\n      [\n        \"string\",\n        \"string\"\n      ]\n    ],\n    \"pagination\": {\n      \"limit\": 30000,\n      \"offset\": 0\n    },\n    \"sort_by\": \"string\",\n    \"order\": \"string\",\n    \"current_domain_filter\": true,\n    \"is_branded\": false,\n    \"keyword_groups\": [\n      7069,\n      675\n    ],\n    \"presence_filter\": [\n      369,\n      6486\n    ],\n    \"domain_presence_filter\": [\n      7826,\n      6861\n    ],\n    \"product_grid_presence_filter\": 7429,\n    \"time_value\": [\n      8913,\n      5129\n    ],\n    \"count\": false,\n    \"is_lr_enhancement_enabled\": false,\n    \"page_num\": 1104\n  },\n  \"columns\": [\n    {\n      \"field\": \"string\",\n      \"title\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"field\": \"string\",\n      \"title\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "97aad59b-8125-46c4-9c55-9281ee1a80e1",
+          "name": "Test",
+          "request": {
+            "name": "Test",
+            "description": {},
+            "url": {
+              "path": [
+                "latest5",
+                "productgrid",
+                "info"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "username",
+                  "value": "{{basicAuthUsername}}"
+                },
+                {
+                  "key": "password",
+                  "value": "{{basicAuthPassword}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"account_id\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "302493bd-9629-48c5-b8b4-9c65054b4187",
+              "name": "Successful Response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "latest5",
+                    "productgrid",
+                    "info"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"account_id\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "be1d1e14-1aad-4434-9157-ab7358cc5205",
+              "name": "Validation Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "latest5",
+                    "productgrid",
+                    "info"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"account_id\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "989f9fb7-9692-471e-98b8-2863495c70f7",
+          "name": "Get keyword metrics data",
+          "request": {
+            "name": "Get keyword metrics data",
+            "description": {},
+            "url": {
+              "path": [
+                "latest5",
+                "productgrid",
+                "keywords"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "username",
+                  "value": "{{basicAuthUsername}}"
+                },
+                {
+                  "key": "password",
+                  "value": "{{basicAuthPassword}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"account_id\": \"<integer>\",\n  \"time_frequency\": \"<string>\",\n  \"search_engine\": [],\n  \"domain_id\": \"<integer>\",\n  \"compare_time_range\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"filters\": [\n    [\n      \"<string>\",\n      \"<string>\"\n    ],\n    [\n      \"<string>\",\n      \"<string>\"\n    ]\n  ],\n  \"pagination\": {\n    \"limit\": 30000,\n    \"offset\": 0\n  },\n  \"sort_by\": \"<string>\",\n  \"order\": \"<string>\",\n  \"current_domain_filter\": \"<boolean>\",\n  \"is_branded\": \"<boolean>\",\n  \"keyword_groups\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"domain_presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"product_grid_presence_filter\": \"<integer>\",\n  \"time_value\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"count\": false,\n  \"is_lr_enhancement_enabled\": false,\n  \"page_num\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "0c99d26a-d190-477a-8a80-7b71a1fff4bf",
+              "name": "Successful Response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "latest5",
+                    "productgrid",
+                    "keywords"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"account_id\": \"<integer>\",\n  \"time_frequency\": \"<string>\",\n  \"search_engine\": [],\n  \"domain_id\": \"<integer>\",\n  \"compare_time_range\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"filters\": [\n    [\n      \"<string>\",\n      \"<string>\"\n    ],\n    [\n      \"<string>\",\n      \"<string>\"\n    ]\n  ],\n  \"pagination\": {\n    \"limit\": 30000,\n    \"offset\": 0\n  },\n  \"sort_by\": \"<string>\",\n  \"order\": \"<string>\",\n  \"current_domain_filter\": \"<boolean>\",\n  \"is_branded\": \"<boolean>\",\n  \"keyword_groups\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"domain_presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"product_grid_presence_filter\": \"<integer>\",\n  \"time_value\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"count\": false,\n  \"is_lr_enhancement_enabled\": false,\n  \"page_num\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": [\n    {\n      \"id\": 8993,\n      \"keyword\": \"string\",\n      \"group_titles\": [\n        \"string\",\n        \"string\"\n      ],\n      \"stores\": [\n        \"string\",\n        \"string\"\n      ],\n      \"search_volume\": 627,\n      \"search_volume_diff\": 4529,\n      \"search_volume_diffpercent\": 7934.434670256356,\n      \"clicks\": 3037,\n      \"clicks_diff\": 4713,\n      \"clicks_diffpercent\": 9839.696377282222,\n      \"blended_rank\": 5921.248791555778,\n      \"blended_rank_diff\": 9097.365230838845,\n      \"blended_rank_diffpercent\": 8219.018749472445,\n      \"tile_rank\": 6976.433770194484,\n      \"tile_rank_diff\": 339.2943980912866,\n      \"tile_rank_diffpercent\": 9966.622133886596,\n      \"domain_presence_product_grids_count\": 1455,\n      \"total_product_grid_presence_count\": 4590,\n      \"domain_presence_top_grid_rank\": 7959,\n      \"domain_presence_top_grid_rank_diff\": 3411,\n      \"domain_presence_top_grid_rank_prev\": 6899,\n      \"grid_presence_ratio\": 3797.2804524985104\n    },\n    {\n      \"id\": 7951,\n      \"keyword\": \"string\",\n      \"group_titles\": [\n        \"string\",\n        \"string\"\n      ],\n      \"stores\": [\n        \"string\",\n        \"string\"\n      ],\n      \"search_volume\": 5818,\n      \"search_volume_diff\": 9040,\n      \"search_volume_diffpercent\": 8133.864398180813,\n      \"clicks\": 4907,\n      \"clicks_diff\": 1584,\n      \"clicks_diffpercent\": 886.0163681577293,\n      \"blended_rank\": 9933.686980042967,\n      \"blended_rank_diff\": 394.56729918440294,\n      \"blended_rank_diffpercent\": 7022.2046617153555,\n      \"tile_rank\": 9539.100800051408,\n      \"tile_rank_diff\": 2276.2967959690695,\n      \"tile_rank_diffpercent\": 4080.89868984569,\n      \"domain_presence_product_grids_count\": 3892,\n      \"total_product_grid_presence_count\": 4195,\n      \"domain_presence_top_grid_rank\": 2490,\n      \"domain_presence_top_grid_rank_diff\": 3446,\n      \"domain_presence_top_grid_rank_prev\": 5094,\n      \"grid_presence_ratio\": 3985.2944647573863\n    }\n  ],\n  \"total\": 4377,\n  \"branded_keywords\": 8942,\n  \"non_branded_keywords\": 1949\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "6d17b313-3d4e-4f43-9b19-3c2f67416c48",
+              "name": "Validation Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "latest5",
+                    "productgrid",
+                    "keywords"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"account_id\": \"<integer>\",\n  \"time_frequency\": \"<string>\",\n  \"search_engine\": [],\n  \"domain_id\": \"<integer>\",\n  \"compare_time_range\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"filters\": [\n    [\n      \"<string>\",\n      \"<string>\"\n    ],\n    [\n      \"<string>\",\n      \"<string>\"\n    ]\n  ],\n  \"pagination\": {\n    \"limit\": 30000,\n    \"offset\": 0\n  },\n  \"sort_by\": \"<string>\",\n  \"order\": \"<string>\",\n  \"current_domain_filter\": \"<boolean>\",\n  \"is_branded\": \"<boolean>\",\n  \"keyword_groups\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"domain_presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"product_grid_presence_filter\": \"<integer>\",\n  \"time_value\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"count\": false,\n  \"is_lr_enhancement_enabled\": false,\n  \"page_num\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "7ae42435-1d51-4b85-8143-82a7d1a389ca",
+          "name": "Get keyword group metrics data",
+          "request": {
+            "name": "Get keyword group metrics data",
+            "description": {},
+            "url": {
+              "path": [
+                "latest5",
+                "productgrid",
+                "keyword_groups"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "username",
+                  "value": "{{basicAuthUsername}}"
+                },
+                {
+                  "key": "password",
+                  "value": "{{basicAuthPassword}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"account_id\": \"<integer>\",\n  \"time_frequency\": \"<string>\",\n  \"search_engine\": [],\n  \"domain_id\": \"<integer>\",\n  \"compare_time_range\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"filters\": [\n    [\n      \"<string>\",\n      \"<string>\"\n    ],\n    [\n      \"<string>\",\n      \"<string>\"\n    ]\n  ],\n  \"pagination\": {\n    \"limit\": 30000,\n    \"offset\": 0\n  },\n  \"sort_by\": \"<string>\",\n  \"order\": \"<string>\",\n  \"current_domain_filter\": \"<boolean>\",\n  \"is_branded\": \"<boolean>\",\n  \"keyword_groups\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"domain_presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"product_grid_presence_filter\": \"<integer>\",\n  \"time_value\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"count\": false,\n  \"is_lr_enhancement_enabled\": false,\n  \"page_num\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "b789560d-5745-4778-a6fc-7ed3800e9e38",
+              "name": "Successful Response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "latest5",
+                    "productgrid",
+                    "keyword_groups"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"account_id\": \"<integer>\",\n  \"time_frequency\": \"<string>\",\n  \"search_engine\": [],\n  \"domain_id\": \"<integer>\",\n  \"compare_time_range\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"filters\": [\n    [\n      \"<string>\",\n      \"<string>\"\n    ],\n    [\n      \"<string>\",\n      \"<string>\"\n    ]\n  ],\n  \"pagination\": {\n    \"limit\": 30000,\n    \"offset\": 0\n  },\n  \"sort_by\": \"<string>\",\n  \"order\": \"<string>\",\n  \"current_domain_filter\": \"<boolean>\",\n  \"is_branded\": \"<boolean>\",\n  \"keyword_groups\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"domain_presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"product_grid_presence_filter\": \"<integer>\",\n  \"time_value\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"count\": false,\n  \"is_lr_enhancement_enabled\": false,\n  \"page_num\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": [\n    {\n      \"keywordgroup\": \"string\",\n      \"keyword_group_id\": 4648,\n      \"time\": 1822,\n      \"parent_keyword_group_id\": 6082,\n      \"search_volume\": 8860,\n      \"avg_volume\": 5911,\n      \"clicks\": 2231,\n      \"product_grid_count\": 3958.6065367881874,\n      \"blended_rank\": 2768.5683503770765,\n      \"tile_rank\": 968.3538223686095,\n      \"search_volume_previous_value\": 1377,\n      \"clicks_previous_value\": 515,\n      \"product_grid_count_previous_value\": 1129.0237704016004,\n      \"tile_rank_previous_value\": 2333.799312847493,\n      \"search_volume_diff\": 5688,\n      \"clicks_diff\": 611,\n      \"product_grid_count_diff\": 3357,\n      \"blended_rank_diff\": 7465.75466341758,\n      \"tile_rank_diff\": 7291.912833155957,\n      \"search_volume_diffpercent\": 9096.64666512111,\n      \"clicks_diffpercent\": 2020.6293894528726,\n      \"product_grid_count_diffpercent\": 5824.221628871107,\n      \"blended_rank_diffpercent\": 799.3098913875407,\n      \"tile_rank_diffpercent\": 6151.23269235891,\n      \"both_no_product_grid_and_regular_listing_diffpercent\": 6106.011146483223,\n      \"regular_listing_only_diffpercent\": 4240.329971805559,\n      \"product_grid_only_diffpercent\": 8613.32124570684,\n      \"both_product_grid_and_regular_listing_diffpercent\": 9379.134477364538,\n      \"keywords_count\": 9949,\n      \"keywords_count_previous_value\": 43,\n      \"keywords_count_diff\": 105,\n      \"keywords_count_diffpercent\": 9422.893663708559,\n      \"opportunity_count\": 2611.566617050326,\n      \"opportunity_count_previous_value\": 1792.7592661261626,\n      \"product_grid_coverage_percentage\": 6923.120345229256,\n      \"product_grid_coverage_percentage_previous_value\": 5223.855872774583,\n      \"product_grid_rank1_count\": 8439.011967715162,\n      \"product_grid_rank1_count_previous_value\": 9025.321334437687,\n      \"product_grid_rank1_count_diff\": 2822.694341547407,\n      \"product_grid_rank1_count_diffpercent\": 2507.0616786604205,\n      \"avg_top_grid_rank\": 7623.309231858838,\n      \"avg_top_grid_rank_previous_value\": 2095.58804153255,\n      \"avg_top_grid_rank_diff\": 7176.748509172214,\n      \"avg_top_grid_rank_diffpercent\": 8177.591932682998,\n      \"avg_grid_count\": 7684.986674399279,\n      \"domain_product_grid_count\": 3605.7660629569664,\n      \"search_volume_with_domain_presence\": 1005.1740321822078,\n      \"search_volume_with_domain_presence_prev\": 5916.748111938174,\n      \"avg_grid_count_with_domain_presence\": 9705.687021297419\n    },\n    {\n      \"keywordgroup\": \"string\",\n      \"keyword_group_id\": 7488,\n      \"time\": 2760,\n      \"parent_keyword_group_id\": 4049,\n      \"search_volume\": 9479,\n      \"avg_volume\": 5910,\n      \"clicks\": 3024,\n      \"product_grid_count\": 7976.125137471639,\n      \"blended_rank\": 3266.9776847816665,\n      \"tile_rank\": 939.6938048330861,\n      \"search_volume_previous_value\": 2870,\n      \"clicks_previous_value\": 7006,\n      \"product_grid_count_previous_value\": 8996.695172722104,\n      \"tile_rank_previous_value\": 5532.753581962396,\n      \"search_volume_diff\": 3391,\n      \"clicks_diff\": 7619,\n      \"product_grid_count_diff\": 2632,\n      \"blended_rank_diff\": 6047.291576433412,\n      \"tile_rank_diff\": 3736.7083441496397,\n      \"search_volume_diffpercent\": 5930.837752308801,\n      \"clicks_diffpercent\": 1103.6010957024346,\n      \"product_grid_count_diffpercent\": 7443.107138026353,\n      \"blended_rank_diffpercent\": 1874.2136402090337,\n      \"tile_rank_diffpercent\": 7434.178853229372,\n      \"both_no_product_grid_and_regular_listing_diffpercent\": 6579.867485290122,\n      \"regular_listing_only_diffpercent\": 819.8858375293938,\n      \"product_grid_only_diffpercent\": 2998.669025941848,\n      \"both_product_grid_and_regular_listing_diffpercent\": 4311.897678802602,\n      \"keywords_count\": 856,\n      \"keywords_count_previous_value\": 1954,\n      \"keywords_count_diff\": 1733,\n      \"keywords_count_diffpercent\": 2628.933205947744,\n      \"opportunity_count\": 5084.987346963474,\n      \"opportunity_count_previous_value\": 6951.713395689866,\n      \"product_grid_coverage_percentage\": 1559.7971480707895,\n      \"product_grid_coverage_percentage_previous_value\": 7725.075585828127,\n      \"product_grid_rank1_count\": 9078.161163520994,\n      \"product_grid_rank1_count_previous_value\": 2616.5709929998593,\n      \"product_grid_rank1_count_diff\": 6762.801855161012,\n      \"product_grid_rank1_count_diffpercent\": 3446.5127290904175,\n      \"avg_top_grid_rank\": 5634.003376168472,\n      \"avg_top_grid_rank_previous_value\": 7249.837215744159,\n      \"avg_top_grid_rank_diff\": 5981.92147201522,\n      \"avg_top_grid_rank_diffpercent\": 5759.171121413161,\n      \"avg_grid_count\": 3839.549919741969,\n      \"domain_product_grid_count\": 1593.402919304656,\n      \"search_volume_with_domain_presence\": 3724.802728069685,\n      \"search_volume_with_domain_presence_prev\": 1600.7447760112336,\n      \"avg_grid_count_with_domain_presence\": 9206.747328879099\n    }\n  ],\n  \"total\": 544\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "0e5e0671-3f6b-4308-8375-65a4895daaf3",
+              "name": "Validation Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "latest5",
+                    "productgrid",
+                    "keyword_groups"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"account_id\": \"<integer>\",\n  \"time_frequency\": \"<string>\",\n  \"search_engine\": [],\n  \"domain_id\": \"<integer>\",\n  \"compare_time_range\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"filters\": [\n    [\n      \"<string>\",\n      \"<string>\"\n    ],\n    [\n      \"<string>\",\n      \"<string>\"\n    ]\n  ],\n  \"pagination\": {\n    \"limit\": 30000,\n    \"offset\": 0\n  },\n  \"sort_by\": \"<string>\",\n  \"order\": \"<string>\",\n  \"current_domain_filter\": \"<boolean>\",\n  \"is_branded\": \"<boolean>\",\n  \"keyword_groups\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"domain_presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"product_grid_presence_filter\": \"<integer>\",\n  \"time_value\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"count\": false,\n  \"is_lr_enhancement_enabled\": false,\n  \"page_num\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "2701c8ee-6eed-4b67-8815-c46d4a561fbc",
+          "name": "Get keyword top sellers trend chart",
+          "request": {
+            "name": "Get keyword top sellers trend chart",
+            "description": {
+              "content": "Get top sellers trend chart data for a given account and time range.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "latest5",
+                "productgrid",
+                "top_sellers",
+                "trend_chart"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "username",
+                  "value": "{{basicAuthUsername}}"
+                },
+                {
+                  "key": "password",
+                  "value": "{{basicAuthPassword}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"account_id\": \"<integer>\",\n  \"time_frequency\": \"<string>\",\n  \"search_engine\": [],\n  \"domain_id\": \"<integer>\",\n  \"compare_time_range\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"filters\": [\n    [\n      \"<string>\",\n      \"<string>\"\n    ],\n    [\n      \"<string>\",\n      \"<string>\"\n    ]\n  ],\n  \"pagination\": {\n    \"limit\": 30000,\n    \"offset\": 0\n  },\n  \"sort_by\": \"<string>\",\n  \"order\": \"<string>\",\n  \"current_domain_filter\": \"<boolean>\",\n  \"is_branded\": \"<boolean>\",\n  \"keyword_groups\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"domain_presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"product_grid_presence_filter\": \"<integer>\",\n  \"time_value\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"is_lr_enhancement_enabled\": false,\n  \"page_num\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "ec5b1f89-01a4-41e9-b5f0-753b0f9282fc",
+              "name": "Successful Response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "latest5",
+                    "productgrid",
+                    "top_sellers",
+                    "trend_chart"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"account_id\": \"<integer>\",\n  \"time_frequency\": \"<string>\",\n  \"search_engine\": [],\n  \"domain_id\": \"<integer>\",\n  \"compare_time_range\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"filters\": [\n    [\n      \"<string>\",\n      \"<string>\"\n    ],\n    [\n      \"<string>\",\n      \"<string>\"\n    ]\n  ],\n  \"pagination\": {\n    \"limit\": 30000,\n    \"offset\": 0\n  },\n  \"sort_by\": \"<string>\",\n  \"order\": \"<string>\",\n  \"current_domain_filter\": \"<boolean>\",\n  \"is_branded\": \"<boolean>\",\n  \"keyword_groups\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"domain_presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"product_grid_presence_filter\": \"<integer>\",\n  \"time_value\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"is_lr_enhancement_enabled\": false,\n  \"page_num\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": [],\n  \"total\": 2757\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "924946e7-aa34-4330-9d64-5bd1623824dc",
+              "name": "Validation Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "latest5",
+                    "productgrid",
+                    "top_sellers",
+                    "trend_chart"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"account_id\": \"<integer>\",\n  \"time_frequency\": \"<string>\",\n  \"search_engine\": [],\n  \"domain_id\": \"<integer>\",\n  \"compare_time_range\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"filters\": [\n    [\n      \"<string>\",\n      \"<string>\"\n    ],\n    [\n      \"<string>\",\n      \"<string>\"\n    ]\n  ],\n  \"pagination\": {\n    \"limit\": 30000,\n    \"offset\": 0\n  },\n  \"sort_by\": \"<string>\",\n  \"order\": \"<string>\",\n  \"current_domain_filter\": \"<boolean>\",\n  \"is_branded\": \"<boolean>\",\n  \"keyword_groups\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"domain_presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"product_grid_presence_filter\": \"<integer>\",\n  \"time_value\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"is_lr_enhancement_enabled\": false,\n  \"page_num\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "9afc1f91-d71b-4374-922f-1e059e95ed62",
+          "name": "Get presence breakdown info",
+          "request": {
+            "name": "Get presence breakdown info",
+            "description": {},
+            "url": {
+              "path": [
+                "latest5",
+                "productgrid",
+                "presence",
+                "trend_chart"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "username",
+                  "value": "{{basicAuthUsername}}"
+                },
+                {
+                  "key": "password",
+                  "value": "{{basicAuthPassword}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"account_id\": \"<integer>\",\n  \"time_frequency\": \"<string>\",\n  \"search_engine\": [],\n  \"domain_id\": \"<integer>\",\n  \"compare_time_range\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"filters\": [\n    [\n      \"<string>\",\n      \"<string>\"\n    ],\n    [\n      \"<string>\",\n      \"<string>\"\n    ]\n  ],\n  \"pagination\": {\n    \"limit\": 30000,\n    \"offset\": 0\n  },\n  \"sort_by\": \"<string>\",\n  \"order\": \"<string>\",\n  \"current_domain_filter\": \"<boolean>\",\n  \"is_branded\": \"<boolean>\",\n  \"keyword_groups\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"domain_presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"product_grid_presence_filter\": \"<integer>\",\n  \"time_value\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"is_lr_enhancement_enabled\": false,\n  \"page_num\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "1325661b-7fbe-4a4d-ba50-231d9718e539",
+              "name": "Successful Response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "latest5",
+                    "productgrid",
+                    "presence",
+                    "trend_chart"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"account_id\": \"<integer>\",\n  \"time_frequency\": \"<string>\",\n  \"search_engine\": [],\n  \"domain_id\": \"<integer>\",\n  \"compare_time_range\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"filters\": [\n    [\n      \"<string>\",\n      \"<string>\"\n    ],\n    [\n      \"<string>\",\n      \"<string>\"\n    ]\n  ],\n  \"pagination\": {\n    \"limit\": 30000,\n    \"offset\": 0\n  },\n  \"sort_by\": \"<string>\",\n  \"order\": \"<string>\",\n  \"current_domain_filter\": \"<boolean>\",\n  \"is_branded\": \"<boolean>\",\n  \"keyword_groups\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"domain_presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"product_grid_presence_filter\": \"<integer>\",\n  \"time_value\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"is_lr_enhancement_enabled\": false,\n  \"page_num\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": [\n    {\n      \"time\": 7445,\n      \"product_grid_presence\": 9017,\n      \"only_product_grid\": 2362,\n      \"regular_presence\": 1208,\n      \"all_presence\": 7915,\n      \"absent\": 5647,\n      \"total_keywords\": 7530\n    },\n    {\n      \"time\": 4725,\n      \"product_grid_presence\": 179,\n      \"only_product_grid\": 4491,\n      \"regular_presence\": 3580,\n      \"all_presence\": 337,\n      \"absent\": 7332,\n      \"total_keywords\": 3669\n    }\n  ],\n  \"total\": 1789\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "f5e5ef9b-6857-4a61-8efa-e2d85c5bf3b3",
+              "name": "Validation Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "latest5",
+                    "productgrid",
+                    "presence",
+                    "trend_chart"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"account_id\": \"<integer>\",\n  \"time_frequency\": \"<string>\",\n  \"search_engine\": [],\n  \"domain_id\": \"<integer>\",\n  \"compare_time_range\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"filters\": [\n    [\n      \"<string>\",\n      \"<string>\"\n    ],\n    [\n      \"<string>\",\n      \"<string>\"\n    ]\n  ],\n  \"pagination\": {\n    \"limit\": 30000,\n    \"offset\": 0\n  },\n  \"sort_by\": \"<string>\",\n  \"order\": \"<string>\",\n  \"current_domain_filter\": \"<boolean>\",\n  \"is_branded\": \"<boolean>\",\n  \"keyword_groups\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"domain_presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"product_grid_presence_filter\": \"<integer>\",\n  \"time_value\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"is_lr_enhancement_enabled\": false,\n  \"page_num\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "59525533-9b6b-4c96-9229-454eb8113004",
+          "name": "Get grid types breakdown info",
+          "request": {
+            "name": "Get grid types breakdown info",
+            "description": {},
+            "url": {
+              "path": [
+                "latest5",
+                "productgrid",
+                "grid_types",
+                "trend_chart"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "username",
+                  "value": "{{basicAuthUsername}}"
+                },
+                {
+                  "key": "password",
+                  "value": "{{basicAuthPassword}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"account_id\": \"<integer>\",\n  \"time_frequency\": \"<string>\",\n  \"search_engine\": [],\n  \"domain_id\": \"<integer>\",\n  \"compare_time_range\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"filters\": [\n    [\n      \"<string>\",\n      \"<string>\"\n    ],\n    [\n      \"<string>\",\n      \"<string>\"\n    ]\n  ],\n  \"pagination\": {\n    \"limit\": 30000,\n    \"offset\": 0\n  },\n  \"sort_by\": \"<string>\",\n  \"order\": \"<string>\",\n  \"current_domain_filter\": \"<boolean>\",\n  \"is_branded\": \"<boolean>\",\n  \"keyword_groups\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"domain_presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"product_grid_presence_filter\": \"<integer>\",\n  \"time_value\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"is_lr_enhancement_enabled\": false,\n  \"page_num\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "edcffd53-a23b-48f7-a736-bcc175b0fd71",
+              "name": "Successful Response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "latest5",
+                    "productgrid",
+                    "grid_types",
+                    "trend_chart"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"account_id\": \"<integer>\",\n  \"time_frequency\": \"<string>\",\n  \"search_engine\": [],\n  \"domain_id\": \"<integer>\",\n  \"compare_time_range\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"filters\": [\n    [\n      \"<string>\",\n      \"<string>\"\n    ],\n    [\n      \"<string>\",\n      \"<string>\"\n    ]\n  ],\n  \"pagination\": {\n    \"limit\": 30000,\n    \"offset\": 0\n  },\n  \"sort_by\": \"<string>\",\n  \"order\": \"<string>\",\n  \"current_domain_filter\": \"<boolean>\",\n  \"is_branded\": \"<boolean>\",\n  \"keyword_groups\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"domain_presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"product_grid_presence_filter\": \"<integer>\",\n  \"time_value\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"is_lr_enhancement_enabled\": false,\n  \"page_num\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": [\n    {\n      \"group_title\": \"string\",\n      \"results\": [\n        {\n          \"time\": 7260,\n          \"keywords\": 7\n        },\n        {\n          \"time\": 2273,\n          \"keywords\": 1124\n        }\n      ]\n    },\n    {\n      \"group_title\": \"string\",\n      \"results\": [\n        {\n          \"time\": 8759,\n          \"keywords\": 6926\n        },\n        {\n          \"time\": 6748,\n          \"keywords\": 817\n        }\n      ]\n    }\n  ],\n  \"total\": 2958\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "ef2a3fd9-e53a-4d97-b0bb-e5dff3d5417b",
+              "name": "Validation Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "latest5",
+                    "productgrid",
+                    "grid_types",
+                    "trend_chart"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"account_id\": \"<integer>\",\n  \"time_frequency\": \"<string>\",\n  \"search_engine\": [],\n  \"domain_id\": \"<integer>\",\n  \"compare_time_range\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"filters\": [\n    [\n      \"<string>\",\n      \"<string>\"\n    ],\n    [\n      \"<string>\",\n      \"<string>\"\n    ]\n  ],\n  \"pagination\": {\n    \"limit\": 30000,\n    \"offset\": 0\n  },\n  \"sort_by\": \"<string>\",\n  \"order\": \"<string>\",\n  \"current_domain_filter\": \"<boolean>\",\n  \"is_branded\": \"<boolean>\",\n  \"keyword_groups\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"domain_presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"product_grid_presence_filter\": \"<integer>\",\n  \"time_value\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"is_lr_enhancement_enabled\": false,\n  \"page_num\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "5d2f2945-4a3b-4bf7-9ce3-5ae41e0a2f35",
+          "name": "Get keyword top products trend chart",
+          "request": {
+            "name": "Get keyword top products trend chart",
+            "description": {
+              "content": "Get top products trend chart data for a given account and time range.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "latest5",
+                "productgrid",
+                "top_products",
+                "trend_chart"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "username",
+                  "value": "{{basicAuthUsername}}"
+                },
+                {
+                  "key": "password",
+                  "value": "{{basicAuthPassword}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"account_id\": \"<integer>\",\n  \"time_frequency\": \"<string>\",\n  \"search_engine\": [],\n  \"domain_id\": \"<integer>\",\n  \"compare_time_range\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"filters\": [\n    [\n      \"<string>\",\n      \"<string>\"\n    ],\n    [\n      \"<string>\",\n      \"<string>\"\n    ]\n  ],\n  \"pagination\": {\n    \"limit\": 30000,\n    \"offset\": 0\n  },\n  \"sort_by\": \"<string>\",\n  \"order\": \"<string>\",\n  \"current_domain_filter\": \"<boolean>\",\n  \"is_branded\": \"<boolean>\",\n  \"keyword_groups\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"domain_presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"product_grid_presence_filter\": \"<integer>\",\n  \"time_value\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"is_lr_enhancement_enabled\": false,\n  \"page_num\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "0655280a-e753-4413-8390-750627f5c504",
+              "name": "Successful Response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "latest5",
+                    "productgrid",
+                    "top_products",
+                    "trend_chart"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"account_id\": \"<integer>\",\n  \"time_frequency\": \"<string>\",\n  \"search_engine\": [],\n  \"domain_id\": \"<integer>\",\n  \"compare_time_range\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"filters\": [\n    [\n      \"<string>\",\n      \"<string>\"\n    ],\n    [\n      \"<string>\",\n      \"<string>\"\n    ]\n  ],\n  \"pagination\": {\n    \"limit\": 30000,\n    \"offset\": 0\n  },\n  \"sort_by\": \"<string>\",\n  \"order\": \"<string>\",\n  \"current_domain_filter\": \"<boolean>\",\n  \"is_branded\": \"<boolean>\",\n  \"keyword_groups\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"domain_presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"product_grid_presence_filter\": \"<integer>\",\n  \"time_value\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"is_lr_enhancement_enabled\": false,\n  \"page_num\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": [],\n  \"total\": 1429\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "44c9e20a-3f72-461c-a3e2-67f31e6e0e03",
+              "name": "Validation Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "latest5",
+                    "productgrid",
+                    "top_products",
+                    "trend_chart"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"account_id\": \"<integer>\",\n  \"time_frequency\": \"<string>\",\n  \"search_engine\": [],\n  \"domain_id\": \"<integer>\",\n  \"compare_time_range\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"filters\": [\n    [\n      \"<string>\",\n      \"<string>\"\n    ],\n    [\n      \"<string>\",\n      \"<string>\"\n    ]\n  ],\n  \"pagination\": {\n    \"limit\": 30000,\n    \"offset\": 0\n  },\n  \"sort_by\": \"<string>\",\n  \"order\": \"<string>\",\n  \"current_domain_filter\": \"<boolean>\",\n  \"is_branded\": \"<boolean>\",\n  \"keyword_groups\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"domain_presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"product_grid_presence_filter\": \"<integer>\",\n  \"time_value\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"is_lr_enhancement_enabled\": false,\n  \"page_num\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "1b2de5b4-009b-4c92-914f-41f9759c9638",
+          "name": "Get keywords with product grid presence info",
+          "request": {
+            "name": "Get keywords with product grid presence info",
+            "description": {},
+            "url": {
+              "path": [
+                "latest5",
+                "productgrid",
+                "keywords_with_product_grid_presence"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "username",
+                  "value": "{{basicAuthUsername}}"
+                },
+                {
+                  "key": "password",
+                  "value": "{{basicAuthPassword}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"account_id\": \"<integer>\",\n  \"time_frequency\": \"<string>\",\n  \"search_engine\": [],\n  \"domain_id\": \"<integer>\",\n  \"compare_time_range\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"filters\": [\n    [\n      \"<string>\",\n      \"<string>\"\n    ],\n    [\n      \"<string>\",\n      \"<string>\"\n    ]\n  ],\n  \"pagination\": {\n    \"limit\": 30000,\n    \"offset\": 0\n  },\n  \"sort_by\": \"<string>\",\n  \"order\": \"<string>\",\n  \"current_domain_filter\": \"<boolean>\",\n  \"is_branded\": \"<boolean>\",\n  \"keyword_groups\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"domain_presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"product_grid_presence_filter\": \"<integer>\",\n  \"time_value\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"is_lr_enhancement_enabled\": false,\n  \"page_num\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "e8fb7bfa-0310-45f8-8492-450872b569e3",
+              "name": "Successful Response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "latest5",
+                    "productgrid",
+                    "keywords_with_product_grid_presence"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"account_id\": \"<integer>\",\n  \"time_frequency\": \"<string>\",\n  \"search_engine\": [],\n  \"domain_id\": \"<integer>\",\n  \"compare_time_range\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"filters\": [\n    [\n      \"<string>\",\n      \"<string>\"\n    ],\n    [\n      \"<string>\",\n      \"<string>\"\n    ]\n  ],\n  \"pagination\": {\n    \"limit\": 30000,\n    \"offset\": 0\n  },\n  \"sort_by\": \"<string>\",\n  \"order\": \"<string>\",\n  \"current_domain_filter\": \"<boolean>\",\n  \"is_branded\": \"<boolean>\",\n  \"keyword_groups\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"domain_presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"product_grid_presence_filter\": \"<integer>\",\n  \"time_value\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"is_lr_enhancement_enabled\": false,\n  \"page_num\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"data\": [\n    {\n      \"time\": 6330,\n      \"product_grid_presence_number\": 2010,\n      \"clicks\": 5228,\n      \"search_volume\": 8417,\n      \"tile_rank\": 6553.42101694513,\n      \"blended_rank\": 890.4345724262164,\n      \"keywords_with_domain_presence\": 343,\n      \"avg_top_grid_rank\": 3206.168131623914,\n      \"avg_grid_count\": 8748.8594027229\n    },\n    {\n      \"time\": 8009,\n      \"product_grid_presence_number\": 4697,\n      \"clicks\": 6205,\n      \"search_volume\": 457,\n      \"tile_rank\": 7754.7792526761,\n      \"blended_rank\": 5164.97372295193,\n      \"keywords_with_domain_presence\": 7155,\n      \"avg_top_grid_rank\": 3790.341021629331,\n      \"avg_grid_count\": 6348.378746558644\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "a1e42873-bb53-4116-a4b6-5c7031c4faba",
+              "name": "Validation Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "latest5",
+                    "productgrid",
+                    "keywords_with_product_grid_presence"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"account_id\": \"<integer>\",\n  \"time_frequency\": \"<string>\",\n  \"search_engine\": [],\n  \"domain_id\": \"<integer>\",\n  \"compare_time_range\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"filters\": [\n    [\n      \"<string>\",\n      \"<string>\"\n    ],\n    [\n      \"<string>\",\n      \"<string>\"\n    ]\n  ],\n  \"pagination\": {\n    \"limit\": 30000,\n    \"offset\": 0\n  },\n  \"sort_by\": \"<string>\",\n  \"order\": \"<string>\",\n  \"current_domain_filter\": \"<boolean>\",\n  \"is_branded\": \"<boolean>\",\n  \"keyword_groups\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"domain_presence_filter\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"product_grid_presence_filter\": \"<integer>\",\n  \"time_value\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"is_lr_enhancement_enabled\": false,\n  \"page_num\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "f4891026-3af2-4920-bad0-cd3991b98bda",
+          "name": "Export keyword metrics data as CSV",
+          "request": {
+            "name": "Export keyword metrics data as CSV",
+            "description": {
+              "content": "Export keyword metrics data as CSV with specified columns.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "latest5",
+                "productgrid",
+                "keywords",
+                "export"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "username",
+                  "value": "{{basicAuthUsername}}"
+                },
+                {
+                  "key": "password",
+                  "value": "{{basicAuthPassword}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"body\": {\n    \"account_id\": \"<integer>\",\n    \"time_frequency\": \"<string>\",\n    \"domain_id\": \"<integer>\",\n    \"compare_time_range\": [\n      \"<integer>\",\n      \"<integer>\"\n    ],\n    \"filters\": [\n      [\n        \"<string>\",\n        \"<string>\"\n      ],\n      [\n        \"<string>\",\n        \"<string>\"\n      ]\n    ],\n    \"pagination\": {\n      \"limit\": 30000,\n      \"offset\": 0\n    },\n    \"sort_by\": \"<string>\",\n    \"order\": \"<string>\",\n    \"current_domain_filter\": \"<boolean>\",\n    \"is_branded\": \"<boolean>\",\n    \"keyword_groups\": [\n      \"<integer>\",\n      \"<integer>\"\n    ],\n    \"presence_filter\": [\n      \"<integer>\",\n      \"<integer>\"\n    ],\n    \"domain_presence_filter\": [\n      \"<integer>\",\n      \"<integer>\"\n    ],\n    \"product_grid_presence_filter\": \"<integer>\",\n    \"time_value\": [\n      \"<integer>\",\n      \"<integer>\"\n    ],\n    \"count\": false,\n    \"is_lr_enhancement_enabled\": false,\n    \"page_num\": \"<integer>\"\n  },\n  \"columns\": [\n    {\n      \"field\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\"\n    },\n    {\n      \"field\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "1a65c4e2-e412-4270-9a1f-a23b6ce57806",
+              "name": "Successful Response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "latest5",
+                    "productgrid",
+                    "keywords",
+                    "export"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"body\": {\n    \"account_id\": 8997,\n    \"time_frequency\": \"string\",\n    \"domain_id\": 5202,\n    \"compare_time_range\": [\n      1665,\n      5119\n    ],\n    \"filters\": [\n      [\n        \"string\",\n        \"string\"\n      ],\n      [\n        \"string\",\n        \"string\"\n      ]\n    ],\n    \"pagination\": {\n      \"limit\": 30000,\n      \"offset\": 0\n    },\n    \"sort_by\": \"string\",\n    \"order\": \"string\",\n    \"current_domain_filter\": true,\n    \"is_branded\": false,\n    \"keyword_groups\": [\n      5070,\n      2786\n    ],\n    \"presence_filter\": [\n      3037,\n      1188\n    ],\n    \"domain_presence_filter\": [\n      6325,\n      2070\n    ],\n    \"product_grid_presence_filter\": 8758,\n    \"time_value\": [\n      8982,\n      2321\n    ],\n    \"count\": false,\n    \"is_lr_enhancement_enabled\": false,\n    \"page_num\": 6838\n  },\n  \"columns\": [\n    {\n      \"field\": \"string\",\n      \"title\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"field\": \"string\",\n      \"title\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "7dc202d7-17e4-4d4a-aa73-523d07b40772",
+              "name": "Validation Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "latest5",
+                    "productgrid",
+                    "keywords",
+                    "export"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"body\": {\n    \"account_id\": 8997,\n    \"time_frequency\": \"string\",\n    \"domain_id\": 5202,\n    \"compare_time_range\": [\n      1665,\n      5119\n    ],\n    \"filters\": [\n      [\n        \"string\",\n        \"string\"\n      ],\n      [\n        \"string\",\n        \"string\"\n      ]\n    ],\n    \"pagination\": {\n      \"limit\": 30000,\n      \"offset\": 0\n    },\n    \"sort_by\": \"string\",\n    \"order\": \"string\",\n    \"current_domain_filter\": true,\n    \"is_branded\": false,\n    \"keyword_groups\": [\n      5070,\n      2786\n    ],\n    \"presence_filter\": [\n      3037,\n      1188\n    ],\n    \"domain_presence_filter\": [\n      6325,\n      2070\n    ],\n    \"product_grid_presence_filter\": 8758,\n    \"time_value\": [\n      8982,\n      2321\n    ],\n    \"count\": false,\n    \"is_lr_enhancement_enabled\": false,\n    \"page_num\": 6838\n  },\n  \"columns\": [\n    {\n      \"field\": \"string\",\n      \"title\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"field\": \"string\",\n      \"title\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "cf19e7d4-323a-4d7b-9989-e5fd7ceb77b9",
+          "name": "Export keyword group metrics data as CSV",
+          "request": {
+            "name": "Export keyword group metrics data as CSV",
+            "description": {
+              "content": "Export keyword group metrics data as CSV with specified columns.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "latest5",
+                "productgrid",
+                "keyword_groups",
+                "export"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": {
+              "type": "basic",
+              "basic": [
+                {
+                  "key": "username",
+                  "value": "{{basicAuthUsername}}"
+                },
+                {
+                  "key": "password",
+                  "value": "{{basicAuthPassword}}"
+                }
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"body\": {\n    \"account_id\": \"<integer>\",\n    \"time_frequency\": \"<string>\",\n    \"domain_id\": \"<integer>\",\n    \"compare_time_range\": [\n      \"<integer>\",\n      \"<integer>\"\n    ],\n    \"filters\": [\n      [\n        \"<string>\",\n        \"<string>\"\n      ],\n      [\n        \"<string>\",\n        \"<string>\"\n      ]\n    ],\n    \"pagination\": {\n      \"limit\": 30000,\n      \"offset\": 0\n    },\n    \"sort_by\": \"<string>\",\n    \"order\": \"<string>\",\n    \"current_domain_filter\": \"<boolean>\",\n    \"is_branded\": \"<boolean>\",\n    \"keyword_groups\": [\n      \"<integer>\",\n      \"<integer>\"\n    ],\n    \"presence_filter\": [\n      \"<integer>\",\n      \"<integer>\"\n    ],\n    \"domain_presence_filter\": [\n      \"<integer>\",\n      \"<integer>\"\n    ],\n    \"product_grid_presence_filter\": \"<integer>\",\n    \"time_value\": [\n      \"<integer>\",\n      \"<integer>\"\n    ],\n    \"count\": false,\n    \"is_lr_enhancement_enabled\": false,\n    \"page_num\": \"<integer>\"\n  },\n  \"columns\": [\n    {\n      \"field\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\"\n    },\n    {\n      \"field\": \"<string>\",\n      \"title\": \"<string>\",\n      \"type\": \"<string>\"\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "f4650def-5a05-439d-81be-36b36b533703",
+              "name": "Successful Response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "latest5",
+                    "productgrid",
+                    "keyword_groups",
+                    "export"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"body\": {\n    \"account_id\": 7458,\n    \"time_frequency\": \"string\",\n    \"domain_id\": 5161,\n    \"compare_time_range\": [\n      3245,\n      423\n    ],\n    \"filters\": [\n      [\n        \"string\",\n        \"string\"\n      ],\n      [\n        \"string\",\n        \"string\"\n      ]\n    ],\n    \"pagination\": {\n      \"limit\": 30000,\n      \"offset\": 0\n    },\n    \"sort_by\": \"string\",\n    \"order\": \"string\",\n    \"current_domain_filter\": true,\n    \"is_branded\": false,\n    \"keyword_groups\": [\n      7069,\n      675\n    ],\n    \"presence_filter\": [\n      369,\n      6486\n    ],\n    \"domain_presence_filter\": [\n      7826,\n      6861\n    ],\n    \"product_grid_presence_filter\": 7429,\n    \"time_value\": [\n      8913,\n      5129\n    ],\n    \"count\": false,\n    \"is_lr_enhancement_enabled\": false,\n    \"page_num\": 1104\n  },\n  \"columns\": [\n    {\n      \"field\": \"string\",\n      \"title\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"field\": \"string\",\n      \"title\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "22c6e412-1a9e-4790-809b-c818f3f7d5a8",
+              "name": "Validation Error",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "latest5",
+                    "productgrid",
+                    "keyword_groups",
+                    "export"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: basic",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Basic <credentials>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"body\": {\n    \"account_id\": 7458,\n    \"time_frequency\": \"string\",\n    \"domain_id\": 5161,\n    \"compare_time_range\": [\n      3245,\n      423\n    ],\n    \"filters\": [\n      [\n        \"string\",\n        \"string\"\n      ],\n      [\n        \"string\",\n        \"string\"\n      ]\n    ],\n    \"pagination\": {\n      \"limit\": 30000,\n      \"offset\": 0\n    },\n    \"sort_by\": \"string\",\n    \"order\": \"string\",\n    \"current_domain_filter\": true,\n    \"is_branded\": false,\n    \"keyword_groups\": [\n      7069,\n      675\n    ],\n    \"presence_filter\": [\n      369,\n      6486\n    ],\n    \"domain_presence_filter\": [\n      7826,\n      6861\n    ],\n    \"product_grid_presence_filter\": 7429,\n    \"time_value\": [\n      8913,\n      5129\n    ],\n    \"count\": false,\n    \"is_lr_enhancement_enabled\": false,\n    \"page_num\": 1104\n  },\n  \"columns\": [\n    {\n      \"field\": \"string\",\n      \"title\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"field\": \"string\",\n      \"title\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+              "code": 422,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"detail\": [\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    },\n    {\n      \"loc\": [\n        \"string\",\n        \"string\"\n      ],\n      \"msg\": \"string\",\n      \"type\": \"string\"\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "/",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "43b6fdc5-af50-4571-84d5-7786ec095d83",
+    "name": "BrightEdge Platform accounts product_grid API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "This API provides the ability to integrate with BrightEdge Platform",
+      "type": "text/plain"
+    }
+  }
+}
