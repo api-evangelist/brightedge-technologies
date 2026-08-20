@@ -58,6 +58,8 @@ apis:
   humanURL: https://api.brightedge.com/portal
   baseURL: https://api.brightedge.com
   tags:
+  - Account
+  tags_raw:
   - accounts
   properties:
   - type: OpenAPI
@@ -71,7 +73,8 @@ apis:
   description: APIs for ai_catalyst dataset
   humanURL: https://api.brightedge.com/portal
   baseURL: https://api.brightedge.com
-  tags:
+  tags: []
+  tags_raw:
   - ai_catalyst
   properties:
   - type: OpenAPI
@@ -86,6 +89,8 @@ apis:
   humanURL: https://api.brightedge.com/portal
   baseURL: https://api.brightedge.com
   tags:
+  - Autopilot
+  tags_raw:
   - autopilot
   properties:
   - type: OpenAPI
@@ -100,6 +105,8 @@ apis:
   humanURL: https://api.brightedge.com/portal
   baseURL: https://api.brightedge.com
   tags:
+  - Backlinks
+  tags_raw:
   - backlinks
   properties:
   - type: OpenAPI
@@ -113,7 +120,8 @@ apis:
   description: Operation related to BE Local
   humanURL: https://api.brightedge.com/portal
   baseURL: https://api.brightedge.com
-  tags:
+  tags: []
+  tags_raw:
   - be_local
   properties:
   - type: OpenAPI
@@ -142,6 +150,8 @@ apis:
   humanURL: https://api.brightedge.com/portal
   baseURL: https://api.brightedge.com
   tags:
+  - Bulk Export
+  tags_raw:
   - bulk_export
   properties:
   - type: OpenAPI
@@ -157,6 +167,8 @@ apis:
   humanURL: https://api.brightedge.com/portal
   baseURL: https://api.brightedge.com
   tags:
+  - Chrome Extension
+  tags_raw:
   - chrome_extension
   properties:
   - type: OpenAPI
@@ -203,6 +215,8 @@ apis:
   humanURL: https://api.brightedge.com/portal
   baseURL: https://api.brightedge.com
   tags:
+  - Chrome Extension
+  tags_raw:
   - chromeextension
   properties:
   - type: OpenAPI
@@ -217,6 +231,8 @@ apis:
   humanURL: https://api.brightedge.com/portal
   baseURL: https://api.brightedge.com
   tags:
+  - Competitors
+  tags_raw:
   - competitors
   properties:
   - type: OpenAPI
@@ -231,6 +247,8 @@ apis:
   humanURL: https://api.brightedge.com/portal
   baseURL: https://api.brightedge.com
   tags:
+  - Core
+  tags_raw:
   - core
   properties:
   - type: OpenAPI
@@ -245,7 +263,8 @@ apis:
     The datacube_searchengines API from BrightEdge Technologies — 2 operation(s) for datacube_searchengines.
   humanURL: https://api.brightedge.com/portal
   baseURL: https://api.brightedge.com
-  tags:
+  tags: []
+  tags_raw:
   - datacube_searchengines
   properties:
   - type: OpenAPI
@@ -260,6 +279,8 @@ apis:
   humanURL: https://api.brightedge.com/portal
   baseURL: https://api.brightedge.com
   tags:
+  - Dataset
+  tags_raw:
   - dataset
   properties:
   - type: OpenAPI
@@ -274,6 +295,8 @@ apis:
   humanURL: https://api.brightedge.com/portal
   baseURL: https://api.brightedge.com
   tags:
+  - Domains
+  tags_raw:
   - domains
   properties:
   - type: OpenAPI
@@ -316,6 +339,8 @@ apis:
   humanURL: https://api.brightedge.com/portal
   baseURL: https://api.brightedge.com
   tags:
+  - Keywords
+  tags_raw:
   - keywords
   properties:
   - type: OpenAPI
@@ -344,6 +369,8 @@ apis:
   humanURL: https://api.brightedge.com/portal
   baseURL: https://api.brightedge.com
   tags:
+  - Legacy
+  tags_raw:
   - legacy
   properties:
   - type: OpenAPI
@@ -358,6 +385,8 @@ apis:
   humanURL: https://api.brightedge.com/portal
   baseURL: https://api.brightedge.com
   tags:
+  - Market Insights
+  tags_raw:
   - marketinsights
   properties:
   - type: OpenAPI
@@ -372,6 +401,8 @@ apis:
   humanURL: https://api.brightedge.com/portal
   baseURL: https://api.brightedge.com
   tags:
+  - Marketo
+  tags_raw:
   - marketo
   properties:
   - type: OpenAPI
@@ -386,6 +417,8 @@ apis:
   humanURL: https://api.brightedge.com/portal
   baseURL: https://api.brightedge.com
   tags:
+  - Organization
+  tags_raw:
   - organizations
   properties:
   - type: OpenAPI
@@ -457,7 +490,8 @@ apis:
     The people_also_ask API from BrightEdge Technologies — 8 operation(s) for people_also_ask.
   humanURL: https://api.brightedge.com/portal
   baseURL: https://api.brightedge.com
-  tags:
+  tags: []
+  tags_raw:
   - people_also_ask
   properties:
   - type: OpenAPI
@@ -472,6 +506,8 @@ apis:
   humanURL: https://api.brightedge.com/portal
   baseURL: https://api.brightedge.com
   tags:
+  - Ping
+  tags_raw:
   - ping
   properties:
   - type: OpenAPI
@@ -485,7 +521,8 @@ apis:
   description: APIs for product grid
   humanURL: https://api.brightedge.com/portal
   baseURL: https://api.brightedge.com
-  tags:
+  tags: []
+  tags_raw:
   - product_grid
   properties:
   - type: OpenAPI
@@ -500,6 +537,8 @@ apis:
   humanURL: https://api.brightedge.com/portal
   baseURL: https://api.brightedge.com
   tags:
+  - QA
+  tags_raw:
   - qa
   properties:
   - type: OpenAPI
@@ -514,6 +553,8 @@ apis:
   humanURL: https://api.brightedge.com/portal
   baseURL: https://api.brightedge.com
   tags:
+  - Query
+  tags_raw:
   - query
   properties:
   - type: OpenAPI
@@ -529,6 +570,8 @@ apis:
   humanURL: https://api.brightedge.com/portal
   baseURL: https://api.brightedge.com
   tags:
+  - Recommendations
+  tags_raw:
   - recommendations
   properties:
   - type: OpenAPI
@@ -543,6 +586,8 @@ apis:
   humanURL: https://api.brightedge.com/portal
   baseURL: https://api.brightedge.com
   tags:
+  - Search Engines
+  tags_raw:
   - searchengines
   properties:
   - type: OpenAPI
@@ -571,6 +616,8 @@ apis:
   humanURL: https://api.brightedge.com/portal
   baseURL: https://api.brightedge.com
   tags:
+  - Time
+  tags_raw:
   - time
   properties:
   - type: OpenAPI
@@ -630,6 +677,8 @@ apis:
   humanURL: https://api.brightedge.com/portal
   baseURL: https://api.brightedge.com
   tags:
+  - User Settings
+  tags_raw:
   - user_settings
   properties:
   - type: OpenAPI
@@ -644,6 +693,8 @@ apis:
   humanURL: https://api.brightedge.com/portal
   baseURL: https://api.brightedge.com
   tags:
+  - User
+  tags_raw:
   - users
   properties:
   - type: OpenAPI
@@ -657,7 +708,8 @@ apis:
   description: The web_vitals API from BrightEdge Technologies — 4 operation(s) for web_vitals.
   humanURL: https://api.brightedge.com/portal
   baseURL: https://api.brightedge.com
-  tags:
+  tags: []
+  tags_raw:
   - web_vitals
   properties:
   - type: OpenAPI
@@ -672,6 +724,8 @@ apis:
   humanURL: https://api.brightedge.com/portal
   baseURL: https://api.brightedge.com
   tags:
+  - Webhook
+  tags_raw:
   - webhook
   properties:
   - type: OpenAPI
