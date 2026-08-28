@@ -13,6 +13,18 @@ description: >-
   bulk export jobs, and user administration, letting enterprise customers pull
   BrightEdge insights into platforms such as Salesforce Marketing Cloud, Domo,
   and Marketo. BrightEdge serves 1,700+ brands including dozens of the Fortune 100.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
