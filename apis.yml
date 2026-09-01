@@ -101,7 +101,7 @@ apis:
   humanURL: https://api.brightedge.com/portal
   baseURL: https://api.brightedge.com
   tags:
-  - autopilot
+  - Autopilot
   tags_raw:
   - autopilot
   properties:
@@ -117,7 +117,7 @@ apis:
   humanURL: https://api.brightedge.com/portal
   baseURL: https://api.brightedge.com
   tags:
-  - backlinks
+  - Backlinks
   tags_raw:
   - backlinks
   properties:
@@ -161,7 +161,8 @@ apis:
   description: The bulk_export API from BrightEdge Technologies — 6 operation(s) for bulk_export.
   humanURL: https://api.brightedge.com/portal
   baseURL: https://api.brightedge.com
-  tags: []
+  tags:
+  - Bulk Export
   tags_raw:
   - bulk_export
   properties:
@@ -177,7 +178,8 @@ apis:
     The chrome_extension API from BrightEdge Technologies — 12 operation(s) for chrome_extension.
   humanURL: https://api.brightedge.com/portal
   baseURL: https://api.brightedge.com
-  tags: []
+  tags:
+  - Chrome Extension
   tags_raw:
   - chrome_extension
   properties:
@@ -193,7 +195,7 @@ apis:
   humanURL: https://api.brightedge.com/portal
   baseURL: https://api.brightedge.com
   tags:
-  - chromeextension
+  - Chrome Extension
   tags_raw:
   - chromeextension
   properties:
@@ -285,7 +287,7 @@ apis:
   humanURL: https://api.brightedge.com/portal
   baseURL: https://api.brightedge.com
   tags:
-  - keywords
+  - Keywords
   tags_raw:
   - keywords
   properties:
@@ -331,7 +333,7 @@ apis:
   humanURL: https://api.brightedge.com/portal
   baseURL: https://api.brightedge.com
   tags:
-  - marketinsights
+  - Market Insights
   tags_raw:
   - marketinsights
   properties:
@@ -347,7 +349,7 @@ apis:
   humanURL: https://api.brightedge.com/portal
   baseURL: https://api.brightedge.com
   tags:
-  - marketo
+  - Marketo
   tags_raw:
   - marketo
   properties:
@@ -425,7 +427,7 @@ apis:
   humanURL: https://api.brightedge.com/portal
   baseURL: https://api.brightedge.com
   tags:
-  - searchengines
+  - Search Engines
   tags_raw:
   - searchengines
   properties:
@@ -455,7 +457,7 @@ apis:
   humanURL: https://api.brightedge.com/portal
   baseURL: https://api.brightedge.com
   tags:
-  - time
+  - Time
   tags_raw:
   - time
   properties:
@@ -470,7 +472,8 @@ apis:
   description: The user_settings API from BrightEdge Technologies — 4 operation(s) for user_settings.
   humanURL: https://api.brightedge.com/portal
   baseURL: https://api.brightedge.com
-  tags: []
+  tags:
+  - User Settings
   tags_raw:
   - user_settings
   properties:
