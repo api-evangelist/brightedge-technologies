@@ -27,15 +27,16 @@ deliveryModel:
   method: derived
 accessModel:
   pricing: unknown
-  onboarding: self-serve
+  onboarding: unknown
   trial: false
   try_now: false
   public: false
-  label: Self-serve signup
-  confidence: medium
+  label: Unknown
+  confidence: low
   source:
   - authentication
-  generated: '2026-07-22'
+  - security
+  generated: '2026-09-03'
   method: derived
 image: https://logos.brightedge.com/images/be_logo.png
 url: https://raw.githubusercontent.com/api-evangelist/brightedge-technologies/refs/heads/main/apis.yml
@@ -515,6 +516,9 @@ apis:
   - type: APIReference
     url: https://api.brightedge.com/portal
 common:
+- type: CapabilityMap
+  url: capabilities/brightedge-technologies-capability-edges.yml
+  name: BrightEdge Technologies Business Capability Map
 - type: Overlay
   url: overlays/brightedge-technologies-platform-overlay.yaml
 - type: DeveloperPortal
@@ -545,8 +549,9 @@ common:
   url: errors/brightedge-technologies-problem-types.yml
 - type: Lifecycle
   url: lifecycle/brightedge-technologies-lifecycle.yml
-- type: MCPServer
+- type: X-MCPServerCandidate
   url: mcp/brightedge-technologies-mcp.yml
+  note: 'Renamed from MCPServer 2026-09-03 (roadmap#247): the manifest self-describes as status: candidate — a tool list derived from the published API contracts, not an existing server. The scorer already read the manifest and reported mcp_server correctly; the MCPServer type was crediting the artifact-type surfaces with a server that does not exist.'
 - type: Conformance
   url: conformance/brightedge-technologies-conformance.yml
 - type: DataModel
