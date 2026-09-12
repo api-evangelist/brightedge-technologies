@@ -516,6 +516,8 @@ apis:
   - type: APIReference
     url: https://api.brightedge.com/portal
 common:
+- type: Website
+  url: https://www.brightedge.com/
 - type: CapabilityMap
   url: capabilities/brightedge-technologies-capability-edges.yml
   name: BrightEdge Technologies Business Capability Map
