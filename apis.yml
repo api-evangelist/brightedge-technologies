@@ -190,22 +190,6 @@ apis:
     url: https://api.brightedge.com/portal
   - type: APIReference
     url: https://api.brightedge.com/portal
-- aid: brightedge-technologies:brightedge-technologies-chromeextension-api
-  name: BrightEdge Technologies chromeextension API
-  description: Supports ChromeExtension functionality.
-  humanURL: https://api.brightedge.com/portal
-  baseURL: https://api.brightedge.com
-  tags:
-  - Chrome Extension
-  tags_raw:
-  - chromeextension
-  properties:
-  - type: OpenAPI
-    url: openapi/brightedge-technologies-chromeextension-api-openapi.yml
-  - type: Documentation
-    url: https://api.brightedge.com/portal
-  - type: APIReference
-    url: https://api.brightedge.com/portal
 - aid: brightedge-technologies:brightedge-technologies-core-api
   name: BrightEdge Technologies core API
   description: The core API from BrightEdge Technologies — 6 operation(s) for core.
