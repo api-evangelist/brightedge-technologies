@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: BrightEdge Platform accounts be_local API
+  title: BrightEdge Platform Be Local API
   description: This API provides the ability to integrate with BrightEdge Platform
   version: 5.0.0
 tags:
@@ -576,27 +576,38 @@ components:
       required:
       - location_name
       title: UpdateFieldsGmbConfig
-    ValidationError:
+    SaveGMBMultiEdit:
       properties:
-        loc:
+        be_account_id:
+          type: integer
+          title: Be Account Id
+        changes:
           items:
-            anyOf:
-            - type: string
-            - type: integer
+            type: object
           type: array
-          title: Location
-        msg:
+          title: Changes
+        multi_edit_id:
           type: string
-          title: Message
-        type:
-          type: string
-          title: Error Type
+          title: Multi Edit Id
+        batch_attribute_update:
+          type: boolean
+          title: Batch Attribute Update
+          default: false
       type: object
       required:
-      - loc
-      - msg
-      - type
-      title: ValidationError
+      - be_account_id
+      - changes
+      - multi_edit_id
+      title: SaveGMBMultiEdit
+    GetLocationAttributes:
+      properties:
+        location_name:
+          type: string
+          title: Location Name
+      type: object
+      required:
+      - location_name
+      title: GetLocationAttributes
     HTTPValidationError:
       properties:
         detail:
@@ -606,6 +617,38 @@ components:
           title: Detail
       type: object
       title: HTTPValidationError
+    GetAccountsData:
+      properties:
+        account_id:
+          type: integer
+          title: Account Id
+        external_id:
+          type: string
+          title: External Id
+      type: object
+      required:
+      - account_id
+      title: GetAccountsData
+    GetAllAttributes:
+      properties:
+        language_code:
+          type: string
+          title: Language Code
+          default: en
+        region_code:
+          type: string
+          title: Region Code
+          default: US
+        showAll:
+          type: boolean
+          title: Showall
+          default: true
+        do_live_fallback_call:
+          type: boolean
+          title: Do Live Fallback Call
+          default: true
+      type: object
+      title: GetAllAttributes
     StoreUpdatesConfig:
       properties:
         be_account_id:
@@ -655,6 +698,27 @@ components:
       required:
       - be_account_id
       title: LocationDetailConfigV2
+    ValidationError:
+      properties:
+        loc:
+          items:
+            anyOf:
+            - type: string
+            - type: integer
+          type: array
+          title: Location
+        msg:
+          type: string
+          title: Message
+        type:
+          type: string
+          title: Error Type
+      type: object
+      required:
+      - loc
+      - msg
+      - type
+      title: ValidationError
     BELocalResponse:
       properties:
         status:
@@ -671,70 +735,6 @@ components:
       required:
       - status
       title: BELocalResponse
-    GetAccountsData:
-      properties:
-        account_id:
-          type: integer
-          title: Account Id
-        external_id:
-          type: string
-          title: External Id
-      type: object
-      required:
-      - account_id
-      title: GetAccountsData
-    SaveGMBMultiEdit:
-      properties:
-        be_account_id:
-          type: integer
-          title: Be Account Id
-        changes:
-          items:
-            type: object
-          type: array
-          title: Changes
-        multi_edit_id:
-          type: string
-          title: Multi Edit Id
-        batch_attribute_update:
-          type: boolean
-          title: Batch Attribute Update
-          default: false
-      type: object
-      required:
-      - be_account_id
-      - changes
-      - multi_edit_id
-      title: SaveGMBMultiEdit
-    GetLocationAttributes:
-      properties:
-        location_name:
-          type: string
-          title: Location Name
-      type: object
-      required:
-      - location_name
-      title: GetLocationAttributes
-    GetAllAttributes:
-      properties:
-        language_code:
-          type: string
-          title: Language Code
-          default: en
-        region_code:
-          type: string
-          title: Region Code
-          default: US
-        showAll:
-          type: boolean
-          title: Showall
-          default: true
-        do_live_fallback_call:
-          type: boolean
-          title: Do Live Fallback Call
-          default: true
-      type: object
-      title: GetAllAttributes
   securitySchemes:
     http_basic:
       type: http

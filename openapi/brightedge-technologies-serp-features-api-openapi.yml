@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: BrightEdge Platform accounts Serp Features API
+  title: BrightEdge Platform Serp Features API
   description: This API provides the ability to integrate with BrightEdge Platform
   version: 5.0.0
 tags:
@@ -11,7 +11,7 @@ paths:
     post:
       tags:
       - Serp Features
-      summary: This call returns a list of questions asked for the keyword historically for the past n-weeks
+      summary: This call returns a list of questions asked for the keyword historically for…
       operationId: get_keyword_linked_questions_5_0_objects_serp_features_people_also_ask_historical_post
       requestBody:
         content:
@@ -107,7 +107,7 @@ paths:
     post:
       tags:
       - Serp Features
-      summary: This call returns a list of questions asked optionally via historic means, on demand live call and via chatgpt
+      summary: This call returns a list of questions asked optionally via historic means, on…
       operationId: get_live_questions_5_0_objects_serp_features_people_also_ask_post
       requestBody:
         content:
@@ -139,7 +139,7 @@ paths:
     post:
       tags:
       - Serp Features
-      summary: This call returns a list of questions asked for the keyword historically for the past n-weeks
+      summary: This call returns a list of questions asked for the keyword historically for…
       operationId: get_keyword_linked_questions_latest5_objects_serp_features_people_also_ask_historical_post
       requestBody:
         content:
@@ -235,7 +235,7 @@ paths:
     post:
       tags:
       - Serp Features
-      summary: This call returns a list of questions asked optionally via historic means, on demand live call and via chatgpt
+      summary: This call returns a list of questions asked optionally via historic means, on…
       operationId: get_live_questions_latest5_objects_serp_features_people_also_ask_post
       requestBody:
         content:
@@ -265,58 +265,7 @@ paths:
       - bearer_token: []
 components:
   schemas:
-    PeopleAlsoAskQuestionsLive:
-      properties:
-        title:
-          type: string
-          title: Title
-        answer_text:
-          type: string
-          title: Answer Text
-        description:
-          type: string
-          title: Description
-        url:
-          type: string
-          title: Url
-      type: object
-      title: PeopleAlsoAskQuestionsLive
-    PeopleAlsoAskChatgptOut:
-      properties:
-        questions:
-          items:
-            $ref: '#/components/schemas/PeopleAlsoAskQuestionsChatgpt'
-          type: array
-          title: Questions
-        assistant:
-          type: string
-          title: Assistant
-      type: object
-      required:
-      - questions
-      title: PeopleAlsoAskChatgptOut
-    ValidationError:
-      properties:
-        loc:
-          items:
-            anyOf:
-            - type: string
-            - type: integer
-          type: array
-          title: Location
-        msg:
-          type: string
-          title: Message
-        type:
-          type: string
-          title: Error Type
-      type: object
-      required:
-      - loc
-      - msg
-      - type
-      title: ValidationError
-    PeopleAlsoAskHistoricalIn:
+    PeopleAlsoAskQuestions:
       properties:
         keyword:
           type: string
@@ -324,14 +273,23 @@ components:
         collector_id:
           type: integer
           title: Collector Id
-        num_of_weeks_back:
-          type: integer
-          title: Num Of Weeks Back
+        display_title:
+          type: string
+          title: Display Title
+        answer_text:
+          type: string
+          title: Answer Text
+        landing_url_title:
+          type: string
+          title: Landing Url Title
+        landing_url:
+          type: string
+          title: Landing Url
       type: object
       required:
       - keyword
       - collector_id
-      title: PeopleAlsoAskHistoricalIn
+      title: PeopleAlsoAskQuestions
     HTTPValidationError:
       properties:
         detail:
@@ -341,6 +299,17 @@ components:
           title: Detail
       type: object
       title: HTTPValidationError
+    PeopleAlsoAskLiveOut:
+      properties:
+        questions:
+          items:
+            $ref: '#/components/schemas/PeopleAlsoAskQuestionsLive'
+          type: array
+          title: Questions
+      type: object
+      required:
+      - questions
+      title: PeopleAlsoAskLiveOut
     PeopleAlsoAskIn:
       properties:
         keyword:
@@ -372,7 +341,21 @@ components:
       - keyword
       - collector_id
       title: PeopleAlsoAskIn
-    PeopleAlsoAskQuestions:
+    PeopleAlsoAskChatgptOut:
+      properties:
+        questions:
+          items:
+            $ref: '#/components/schemas/PeopleAlsoAskQuestionsChatgpt'
+          type: array
+          title: Questions
+        assistant:
+          type: string
+          title: Assistant
+      type: object
+      required:
+      - questions
+      title: PeopleAlsoAskChatgptOut
+    PeopleAlsoAskLiveIn:
       properties:
         keyword:
           type: string
@@ -380,23 +363,14 @@ components:
         collector_id:
           type: integer
           title: Collector Id
-        display_title:
-          type: string
-          title: Display Title
-        answer_text:
-          type: string
-          title: Answer Text
-        landing_url_title:
-          type: string
-          title: Landing Url Title
-        landing_url:
-          type: string
-          title: Landing Url
+        click_depth:
+          type: integer
+          title: Click Depth
       type: object
       required:
       - keyword
       - collector_id
-      title: PeopleAlsoAskQuestions
+      title: PeopleAlsoAskLiveIn
     PeopleAlsoAskQuestionsChatgpt:
       properties:
         title:
@@ -404,6 +378,27 @@ components:
           title: Title
       type: object
       title: PeopleAlsoAskQuestionsChatgpt
+    ValidationError:
+      properties:
+        loc:
+          items:
+            anyOf:
+            - type: string
+            - type: integer
+          type: array
+          title: Location
+        msg:
+          type: string
+          title: Message
+        type:
+          type: string
+          title: Error Type
+      type: object
+      required:
+      - loc
+      - msg
+      - type
+      title: ValidationError
     PeopleAlsoAskOut:
       properties:
         questions_live:
@@ -438,6 +433,22 @@ components:
       required:
       - questions
       title: PeopleAlsoAskHistoricalOut
+    PeopleAlsoAskHistoricalIn:
+      properties:
+        keyword:
+          type: string
+          title: Keyword
+        collector_id:
+          type: integer
+          title: Collector Id
+        num_of_weeks_back:
+          type: integer
+          title: Num Of Weeks Back
+      type: object
+      required:
+      - keyword
+      - collector_id
+      title: PeopleAlsoAskHistoricalIn
     PeopleAlsoAskChatgptIn:
       properties:
         keyword:
@@ -447,33 +458,22 @@ components:
       required:
       - keyword
       title: PeopleAlsoAskChatgptIn
-    PeopleAlsoAskLiveIn:
+    PeopleAlsoAskQuestionsLive:
       properties:
-        keyword:
+        title:
           type: string
-          title: Keyword
-        collector_id:
-          type: integer
-          title: Collector Id
-        click_depth:
-          type: integer
-          title: Click Depth
+          title: Title
+        answer_text:
+          type: string
+          title: Answer Text
+        description:
+          type: string
+          title: Description
+        url:
+          type: string
+          title: Url
       type: object
-      required:
-      - keyword
-      - collector_id
-      title: PeopleAlsoAskLiveIn
-    PeopleAlsoAskLiveOut:
-      properties:
-        questions:
-          items:
-            $ref: '#/components/schemas/PeopleAlsoAskQuestionsLive'
-          type: array
-          title: Questions
-      type: object
-      required:
-      - questions
-      title: PeopleAlsoAskLiveOut
+      title: PeopleAlsoAskQuestionsLive
   securitySchemes:
     http_basic:
       type: http
